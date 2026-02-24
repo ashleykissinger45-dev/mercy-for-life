@@ -1,6 +1,7 @@
 'use client';
 
 import { MapPin, Calendar, Clock, Navigation } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function RosarySchedule() {
   const locations = [
@@ -25,6 +26,7 @@ export default function RosarySchedule() {
   ];
 
   return (
+    <ScrollReveal>
     <section id="rosary" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -95,5 +97,6 @@ export default function RosarySchedule() {
         </div>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

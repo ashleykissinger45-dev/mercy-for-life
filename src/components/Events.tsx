@@ -1,6 +1,7 @@
 'use client';
 
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Events() {
   const events = [
@@ -26,6 +27,7 @@ export default function Events() {
   ];
 
   return (
+    <ScrollReveal>
     <section id="events" className="py-20 bg-gradient-to-br from-gold-50 via-white to-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -104,5 +106,6 @@ export default function Events() {
         </div>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

@@ -76,6 +76,7 @@ export default function Resources() {
   ];
 
   return (
+    <ScrollReveal>
     <section id="resources" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -138,5 +139,6 @@ export default function Resources() {
         </div>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

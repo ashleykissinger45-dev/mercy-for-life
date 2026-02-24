@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,6 +51,7 @@ export default function Contact() {
   };
 
   return (
+    <ScrollReveal>
     <section id="contact" className="py-20 bg-gradient-to-br from-primary-50 via-white to-gold-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -170,5 +172,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

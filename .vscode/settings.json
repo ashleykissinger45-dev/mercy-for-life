@@ -107,6 +107,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Add cool transition effects throughout site\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Add scroll reveal animations to all sections\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

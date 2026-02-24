@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, CheckCircle } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function EmailSignup() {
   const [formData, setFormData] = useState({ name: '', email: '' });
@@ -45,6 +46,7 @@ export default function EmailSignup() {
   };
 
   return (
+    <ScrollReveal>
     <section id="email-signup" className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
@@ -115,5 +117,6 @@ export default function EmailSignup() {
         </form>
       </div>
     </section>
+    </ScrollReveal>
   );
 }

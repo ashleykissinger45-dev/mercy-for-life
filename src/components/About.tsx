@@ -1,9 +1,11 @@
 'use client';
 
 import { Church, Users, BookOpen } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function About() {
   return (
+    <ScrollReveal>
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -87,5 +89,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </ScrollReveal>
   );
 }
