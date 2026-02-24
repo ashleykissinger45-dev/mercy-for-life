@@ -14,9 +14,9 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center">
-          <div className="relative float-animation">
-            <Heart className="h-24 w-24 text-primary-600 fill-primary-600 drop-shadow-lg" />
-            <div className="absolute inset-0 h-24 w-24 text-primary-400 fill-primary-400 blur-xl opacity-40 animate-pulse"></div>
+          <div className="relative heartbeat-animation">
+            <Heart className="h-24 w-24 text-logoRed-600 fill-logoRed-600 drop-shadow-2xl heart-gradient-animation" />
+            <div className="absolute inset-0 h-24 w-24 blur-2xl opacity-50" style={{ background: 'radial-gradient(circle, #e21f25 0%, transparent 70%)' }}></div>
           </div>
         </div>
         

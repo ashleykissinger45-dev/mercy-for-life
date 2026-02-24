@@ -21,6 +21,10 @@ const config: Config = {
           800: '#154c7c',
           900: '#174067',
         },
+        logoRed: {
+          600: '#e21f25',
+          700: '#c71b20',
+        },
         neutral: {
           50: '#f8fafc',
           100: '#f1f5f9',
