@@ -1,0 +1,107 @@
+'use client';
+
+import { useState } from 'react';
+import { Mail, CheckCircle } from 'lucide-react';
+
+export default function EmailSignup() {
+  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Simulate form submission (replace with actual API call)
+    try {
+      setStatus('idle');
+      // Here you would integrate with your email service (Mailchimp, ConvertKit, etc.)
+      // For now, we'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setStatus('success');
+      setMessage('Thank you for joining our mission! Check your email for confirmation.');
+      setFormData({ name: '', email: '' });
+      
+      setTimeout(() => {
+        setStatus('idle');
+        setMessage('');
+      }, 5000);
+    } catch (error) {
+      setStatus('error');
+      setMessage('Something went wrong. Please try again.');
+    }
+  };
+
+  return (
+    <section id="email-signup" className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <Mail className="h-12 w-12 text-white mx-auto mb-4" />
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Stay Connected
+          </h2>
+          <p className="text-xl text-primary-100">
+            Receive updates about prayer times, events, and ways to make a difference
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+          <div className="bg-white rounded-xl shadow-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <button type="submit" className="w-full btn-primary">
+              Join Our Email List
+            </button>
+
+            <p className="text-xs text-gray-500 mt-4 text-center">
+              We respect your privacy. Your information will never be shared with third parties.
+            </p>
+
+            {status === 'success' && (
+              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start space-x-3">
+                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <p className="text-green-800">{message}</p>
+              </div>
+            )}
+
+            {status === 'error' && (
+              <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-800">{message}</p>
+              </div>
+            )}
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,52 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^which node && node --version$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^node --version$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^npm install$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && mkdir -p public$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx vercel --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx vercel login$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx vercel --name mercyforlife --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life/public\" && mv \"Screenshot 2026-02-23 at 11\\.55\\.14 PM\\.png\" logo\\.png$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx vercel --prod$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build && npx vercel --prod$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git init && git add \\. && git commit -m \"Remove volunteer and support sections from Get Involved\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
