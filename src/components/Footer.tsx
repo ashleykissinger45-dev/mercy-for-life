@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image 
-                src="/logo.png" 
+                src="/Transparent logo.png" 
                 alt="Mercy for Life - St. Thomas the Apostle" 
                 width={240} 
                 height={70}
-                className="h-14 w-auto brightness-0 invert opacity-95"
+                className="h-14 w-auto opacity-95"
                 style={{ imageRendering: '-webkit-optimize-contrast' }}
               />
             </div>

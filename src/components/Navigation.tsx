@@ -22,7 +22,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-24">
           <a href="#home" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105">
             <Image 
-              src="/logo.png" 
+              src="/Transparent logo.png" 
               alt="Mercy for Life - St. Thomas the Apostle" 
               width={280} 
               height={80}

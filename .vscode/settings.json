@@ -47,6 +47,14 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git init && git add \\. && git commit -m \"Remove volunteer and support sections from Get Involved\"$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Replace logo with transparent version\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
