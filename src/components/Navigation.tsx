@@ -20,13 +20,13 @@ export default function Navigation() {
     <nav className="bg-white/80 backdrop-blur-xl shadow-sm fixed w-full top-0 z-50 border-b border-primary-100/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
-          <a href="#home" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105">
+          <a href="#home" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105 group">
             <Image 
               src="/Transparent logo (use).png" 
               alt="Mercy for Life - St. Thomas the Apostle" 
               width={280} 
               height={80}
-              className="h-16 w-auto drop-shadow-sm"
+              className="h-16 w-auto drop-shadow-sm transition-all duration-300 group-hover:drop-shadow-md"
               priority
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />

@@ -34,27 +34,27 @@ export default function Footer() {
             <h4 className="text-white font-serif font-bold mb-5 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#rosary" className="hover:text-primary-400 transition-colors">
+                <a href="#rosary" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Prayer Schedule
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-primary-400 transition-colors">
+                <a href="#about" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#involved" className="hover:text-primary-400 transition-colors">
+                <a href="#involved" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Get Involved
                 </a>
               </li>
               <li>
-                <a href="#resources" className="hover:text-primary-400 transition-colors">
+                <a href="#resources" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Resources
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-primary-400 transition-colors">
+                <a href="#contact" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Contact
                 </a>
               </li>
@@ -68,7 +68,7 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-primary-400" />
                 <a
                   href="mailto:mercyforlife@staphx.org"
-                  className="hover:text-primary-400 transition-colors text-sm"
+                  className="link-underline hover:text-primary-400 transition-colors text-sm inline-block"
                 >
                   mercyforlife@staphx.org
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-primary-400 transition-colors"
+                className="link-underline text-sm hover:text-primary-400 transition-colors inline-block"
               >
                 Follow our Instagram!
               </a>
