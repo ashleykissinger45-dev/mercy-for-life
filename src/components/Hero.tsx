@@ -14,30 +14,17 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center">
-          <div className="relative inline-block">
-            {/* Pulsing rings */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="heart-pulse absolute w-32 h-32 rounded-full border-4 border-[#e21f25]"></div>
-              <div className="heart-pulse absolute w-32 h-32 rounded-full border-4 border-[#ff4d54]" style={{ animationDelay: '0.5s' }}></div>
-            </div>
-            
-            {/* Main heart */}
-            <div className="relative heartbeat-animation heart-glow z-10">
-              <Heart className="h-32 w-32" style={{ color: '#e21f25', fill: 'url(#heartGradient)', strokeWidth: 1.5 }} />
-              <svg width="0" height="0" className="absolute">
-                <defs>
-                  <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#ff0000', stopOpacity: 1 }} />
-                    <stop offset="30%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
-                    <stop offset="60%" style={{ stopColor: '#ff4d54', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            
-            {/* Ambient glow */}
-            <div className="absolute inset-0 blur-2xl opacity-60" style={{ background: 'radial-gradient(circle, #e21f25 0%, #ff4d54 40%, transparent 70%)' }}></div>
+          <div className="relative heartbeat-animation">
+            <Heart className="h-28 w-28" style={{ fill: 'url(#heartGradient)', stroke: 'none' }} />
+            <svg width="0" height="0" className="absolute">
+              <defs>
+                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#ff6b6f', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
         </div>
         

@@ -87,6 +87,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Enhance heart with realistic pulsing effects and dramatic animations\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Simplify heart to modern minimal design with subtle animation\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
