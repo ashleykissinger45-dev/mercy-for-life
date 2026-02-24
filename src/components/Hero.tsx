@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center">
           <div className="relative heartbeat-animation">
-            <Heart className="h-28 w-28" style={{ fill: 'url(#heartGradient)', stroke: 'none', filter: 'blur(0.3px) drop-shadow(0 2px 8px rgba(226, 31, 37, 0.15))' }} />
+            <Heart className="h-28 w-28" style={{ fill: 'url(#heartGradient)', stroke: 'none', filter: 'drop-shadow(0 4px 12px rgba(226, 31, 37, 0.2))' }} />
             <svg width="0" height="0" className="absolute">
               <defs>
                 <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
