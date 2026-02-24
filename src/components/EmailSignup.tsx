@@ -11,21 +11,33 @@ export default function EmailSignup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission (replace with actual API call)
     try {
       setStatus('idle');
-      // Here you would integrate with your email service (Mailchimp, ConvertKit, etc.)
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      setStatus('success');
-      setMessage('Thank you for joining our mission! Check your email for confirmation.');
-      setFormData({ name: '', email: '' });
+      const response = await fetch('https://formspree.io/f/xanykorv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: 'New Email List Signup - Mercy for Life',
+        }),
+      });
       
-      setTimeout(() => {
-        setStatus('idle');
-        setMessage('');
-      }, 5000);
+      if (response.ok) {
+        setStatus('success');
+        setMessage('Thank you for joining our mission! Check your email for confirmation.');
+        setFormData({ name: '', email: '' });
+        
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setStatus('error');
       setMessage('Something went wrong. Please try again.');

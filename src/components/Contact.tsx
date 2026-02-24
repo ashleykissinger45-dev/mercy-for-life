@@ -17,17 +17,32 @@ export default function Contact() {
     
     try {
       setStatus('idle');
-      // Here you would integrate with your email service
-      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      setStatus('success');
-      setMessage('Thank you for reaching out! We\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+      const response = await fetch('https://formspree.io/f/xanykorv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Contact Form Message - Mercy for Life',
+        }),
+      });
       
-      setTimeout(() => {
-        setStatus('idle');
-        setMessage('');
-      }, 5000);
+      if (response.ok) {
+        setStatus('success');
+        setMessage('Thank you for reaching out! We\'ll get back to you soon.');
+        setFormData({ name: '', email: '', message: '' });
+        
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
