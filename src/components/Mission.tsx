@@ -1,6 +1,7 @@
 'use client';
 
 import { Target, Users, Heart, Church } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Mission() {
   const values = [
