@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image 
-                src="/Transparent logo.png" 
+                src="/Transparent logo (use).png" 
                 alt="Mercy for Life - St. Thomas the Apostle" 
                 width={240} 
                 height={70}
