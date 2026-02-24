@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Facebook, Instagram } from 'lucide-react';
+import { Mail, Instagram } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -77,16 +77,7 @@ export default function Footer() {
 
             <div className="flex space-x-3">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-neutral-800 p-3 rounded-full hover:bg-primary-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-neutral-800 p-3 rounded-full hover:bg-primary-600 transition-colors"
