@@ -1,6 +1,7 @@
 'use client';
 
 import { ExternalLink, Heart, Baby, Users, Phone } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Resources() {
   const resources = [
