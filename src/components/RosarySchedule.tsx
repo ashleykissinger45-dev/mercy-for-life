@@ -6,8 +6,8 @@ export default function RosarySchedule() {
   const locations = [
     {
       name: 'Camelback Family Planning',
-      address: '4141 N 32nd Street',
-      coordinates: '33.4761,-111.9944',
+      address: '4141 N 32nd Street, Phoenix, AZ',
+      mapsQuery: '4141+N+32nd+Street+Phoenix+AZ',
       times: [
         { day: 'Wednesday', time: '9:30am' },
         { day: 'Thursday', time: '8:30am' },
@@ -16,8 +16,8 @@ export default function RosarySchedule() {
     },
     {
       name: 'Planned Parenthood',
-      address: '4715 N 15th Street',
-      coordinates: '33.4953,-112.0561',
+      address: '4715 N 15th Street, Phoenix, AZ',
+      mapsQuery: '4715+N+15th+Street+Phoenix+AZ',
       times: [
         { day: 'Friday', time: '9:30am' },
       ],
@@ -76,7 +76,7 @@ export default function RosarySchedule() {
               </div>
 
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${location.coordinates}`}
+                href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
