@@ -84,28 +84,12 @@
     }
   }
   
-  @keyframes heartGradient {
-    0% {
-      filter: hue-rotate(0deg) brightness(1);
-    }
-    50% {
-      filter: hue-rotate(5deg) brightness(1.1);
-    }
-    100% {
-      filter: hue-rotate(0deg) brightness(1);
-    }
-  }
-  
   .float-animation {
     animation: float 6s ease-in-out infinite;
   }
   
   .heartbeat-animation {
-    animation: heartbeat 1.5s ease-in-out infinite;
-  }
-  
-  .heart-gradient-animation {
-    animation: heartGradient 3s ease-in-out infinite;
+    animation: heartbeat 2s ease-in-out infinite;
   }
   
   .glass-effect {
