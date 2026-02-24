@@ -75,7 +75,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex space-x-3">
+            <div className="flex items-center space-x-3">
               <a
                 href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
@@ -84,6 +84,14 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/stamercyforlife"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm hover:text-primary-400 transition-colors"
+              >
+                Follow our Instagram!
               </a>
             </div>
           </div>
