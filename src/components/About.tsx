@@ -50,9 +50,9 @@ export default function About() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gold-50 to-white rounded-xl p-8 shadow-lg border border-gold-100">
+            <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 shadow-lg border border-primary-100">
               <div className="flex items-start space-x-4">
-                <div className="bg-gold-500 p-3 rounded-lg flex-shrink-0">
+                <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
                   <Users className="h-6 w-6 text-white" />
                 </div>
                 <div>
