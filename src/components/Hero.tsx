@@ -15,27 +15,27 @@ export default function Hero() {
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative">
             <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-lg">
-              {/* Rosary beads forming heart shape - elegant spacing */}
+              {/* Rosary beads forming heart shape - perfectly evenly spaced */}
               {(() => {
-                // Elegant heart curve with well-spaced beads
-                const heartBeads = [
-                  // Top left curve
-                  {x: 75, y: 52}, {x: 58, y: 45}, {x: 43, y: 48}, {x: 30, y: 58},
-                  // Left side down
-                  {x: 24, y: 73}, {x: 26, y: 90}, {x: 35, y: 106}, {x: 50, y: 120},
-                  // Bottom left
-                  {x: 68, y: 132}, {x: 82, y: 140},
-                  // Bottom center
-                  {x: 90, y: 143},
-                  // Bottom right
-                  {x: 98, y: 140}, {x: 112, y: 132},
-                  // Right side up
-                  {x: 130, y: 120}, {x: 145, y: 106}, {x: 154, y: 90},
-                  // Top right curve
-                  {x: 156, y: 73}, {x: 150, y: 58}, {x: 137, y: 48}, {x: 122, y: 45},
-                  // Top center
-                  {x: 105, y: 52}
-                ];
+                // Create perfectly spaced beads using parametric heart equation
+                const numBeads = 20;
+                const heartBeads = [];
+                const centerX = 90;
+                const centerY = 90;
+                const scale = 35;
+                
+                for (let i = 0; i < numBeads; i++) {
+                  const t = (i / numBeads) * 2 * Math.PI;
+                  
+                  // Parametric heart curve equations
+                  const x = 16 * Math.sin(t) ** 3;
+                  const y = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+                  
+                  heartBeads.push({
+                    x: centerX + (x * scale / 16),
+                    y: centerY + (y * scale / 16) - 5
+                  });
+                }
                 
                 return heartBeads.map((bead, i) => (
                   <circle key={i} cx={bead.x} cy={bead.y} r="5" fill="#000000" />
@@ -45,9 +45,9 @@ export default function Hero() {
               {/* Cross in center - crisp black */}
               <g>
                 {/* Vertical beam */}
-                <rect x="85" y="70" width="10" height="50" rx="1" fill="#000000" />
+                <rect x="85" y="75" width="10" height="45" rx="1" fill="#000000" />
                 {/* Horizontal beam */}
-                <rect x="70" y="87" width="40" height="10" rx="1" fill="#000000" />
+                <rect x="70" y="90" width="40" height="10" rx="1" fill="#000000" />
               </g>
             </svg>
           </div>
