@@ -183,6 +183,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Fix TypeScript types for rosary heart logo\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Replace with candle heart flame logo - simple, modern, symbolizes prayer vigils\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
