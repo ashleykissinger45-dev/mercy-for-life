@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
 
-const playfairDisplay = Playfair_Display({ 
-  weight: ['400', '500', '600', '700'],
+const cormorantGaramond = Cormorant_Garamond({ 
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ["latin"],
   variable: '--font-serif',
 });
 
-const inter = Inter({ 
+const poppins = Poppins({ 
+  weight: ['300', '400', '500', '600'],
   subsets: ["latin"],
   variable: '--font-sans',
 });
@@ -34,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfairDisplay.variable} font-sans`}>{children}</body>
+      <body className={`${poppins.variable} ${cormorantGaramond.variable} font-sans`}>{children}</body>
     </html>
   );
 }
