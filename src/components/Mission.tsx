@@ -63,20 +63,22 @@ export default function Mission() {
 
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary-400 to-pink-400 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border-4 border-primary-200">
+            <div className="absolute -inset-4 bg-gradient-to-br from-primary-300 to-primary-500 rounded-3xl blur-2xl opacity-20"></div>
+            <div className="relative bg-white rounded-2xl shadow-xl p-6 border-2 border-primary-100">
               <Image 
                 src="/Photo.png"
                 alt="Mother and Child - Celebrating Life"
-                width={400}
-                height={600}
-                className="w-full h-auto"
+                width={500}
+                height={750}
+                className="w-full h-auto rounded-lg"
+                quality={100}
+                priority
               />
             </div>
           </div>
           
           <div>
-            <div className="bg-gradient-to-br from-primary-600 to-pink-500 rounded-2xl shadow-2xl p-10 text-white">
+            <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl shadow-2xl p-10 text-white">
               <h3 className="text-4xl font-bold mb-6">
                 Our Vision
               </h3>
