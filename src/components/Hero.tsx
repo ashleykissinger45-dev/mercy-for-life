@@ -14,61 +14,83 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative heartbeat-animation">
-            <svg width="140" height="180" viewBox="0 0 140 180" className="drop-shadow-lg">
+            <svg width="160" height="200" viewBox="0 0 160 200" className="drop-shadow-2xl">
               <defs>
                 <linearGradient id="beadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#1a1a1a', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#404040', stopOpacity: 1 }} />
+                  <stop offset="0%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#2ea3f2', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
                 </linearGradient>
                 <radialGradient id="mysteryBeadGradient" cx="30%" cy="30%">
-                  <stop offset="0%" style={{ stopColor: '#3a3a3a', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#1a1a1a', stopOpacity: 1 }} />
+                  <stop offset="0%" style={{ stopColor: '#ff6b6f', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#b81519', stopOpacity: 1 }} />
                 </radialGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
               </defs>
               
-              {/* Heart-shaped rosary beads */}
-              {/* Top of heart */}
-              <circle cx="50" cy="30" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="90" cy="30" r="4" fill="url(#beadGradient)" opacity="0.9" />
+              {/* Connecting string/thread through beads */}
+              <path 
+                d="M 55 35 Q 35 25 25 35 Q 15 45 18 60 Q 22 80 35 95 Q 50 110 80 125 Q 110 110 125 95 Q 138 80 142 60 Q 145 45 135 35 Q 125 25 105 35 Q 90 40 80 35 Q 70 40 55 35 M 80 125 L 80 170"
+                stroke="#176fb9"
+                strokeWidth="2"
+                fill="none"
+                opacity="0.3"
+              />
               
-              {/* Left curve */}
-              <circle cx="38" cy="22" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="28" cy="18" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="18" cy="20" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="12" cy="28" r="6" fill="url(#mysteryBeadGradient)" />
-              <circle cx="10" cy="40" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="12" cy="52" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="18" cy="64" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="26" cy="76" r="6" fill="url(#mysteryBeadGradient)" />
-              <circle cx="36" cy="86" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="48" cy="94" r="4" fill="url(#beadGradient)" opacity="0.9" />
+              {/* Left side of heart - evenly spaced */}
+              <circle cx="55" cy="35" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="40" cy="30" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="28" cy="32" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="20" cy="40" r="7" fill="url(#mysteryBeadGradient)" filter="url(#glow)" />
+              <circle cx="16" cy="52" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="18" cy="65" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="24" cy="78" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="33" cy="90" r="7" fill="url(#mysteryBeadGradient)" filter="url(#glow)" />
+              <circle cx="45" cy="100" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="60" cy="110" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
               
-              {/* Right curve */}
-              <circle cx="102" cy="22" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="112" cy="18" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="122" cy="20" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="128" cy="28" r="6" fill="url(#mysteryBeadGradient)" />
-              <circle cx="130" cy="40" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="128" cy="52" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="122" cy="64" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="114" cy="76" r="6" fill="url(#mysteryBeadGradient)" />
-              <circle cx="104" cy="86" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="92" cy="94" r="4" fill="url(#beadGradient)" opacity="0.9" />
+              {/* Right side of heart - evenly spaced */}
+              <circle cx="105" cy="35" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="120" cy="30" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="132" cy="32" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="140" cy="40" r="7" fill="url(#mysteryBeadGradient)" filter="url(#glow)" />
+              <circle cx="144" cy="52" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="142" cy="65" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="136" cy="78" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="127" cy="90" r="7" fill="url(#mysteryBeadGradient)" filter="url(#glow)" />
+              <circle cx="115" cy="100" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="100" cy="110" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
               
-              {/* Bottom point of heart */}
-              <circle cx="70" cy="100" r="6" fill="url(#mysteryBeadGradient)" />
-              <circle cx="60" cy="98" r="4" fill="url(#beadGradient)" opacity="0.9" />
-              <circle cx="80" cy="98" r="4" fill="url(#beadGradient)" opacity="0.9" />
+              {/* Top center of heart */}
+              <circle cx="80" cy="35" r="5" fill="url(#beadGradient)" filter="url(#glow)" />
               
-              {/* Strand going down to cross */}
-              <circle cx="70" cy="110" r="3.5" fill="url(#beadGradient)" opacity="0.85" />
-              <circle cx="70" cy="120" r="3.5" fill="url(#beadGradient)" opacity="0.85" />
-              <circle cx="70" cy="130" r="3.5" fill="url(#beadGradient)" opacity="0.85" />
+              {/* Bottom point */}
+              <circle cx="80" cy="125" r="7" fill="url(#mysteryBeadGradient)" filter="url(#glow)" />
               
-              {/* Cross */}
-              <g transform="translate(70, 155)">
-                <rect x="-2" y="-18" width="4" height="36" fill="#2a2a2a" rx="1" />
-                <rect x="-12" y="-8" width="24" height="4" fill="#2a2a2a" rx="1" />
+              {/* Strand beads going down */}
+              <circle cx="80" cy="140" r="4.5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="80" cy="152" r="4.5" fill="url(#beadGradient)" filter="url(#glow)" />
+              <circle cx="80" cy="164" r="4.5" fill="url(#beadGradient)" filter="url(#glow)" />
+              
+              {/* Cross with gradient */}
+              <defs>
+                <linearGradient id="crossGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#e21f25', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#b81519', stopOpacity: 1 }} />
+                </linearGradient>
+              </defs>
+              <g transform="translate(80, 185)" filter="url(#glow)">
+                <rect x="-2.5" y="-20" width="5" height="40" fill="url(#crossGradient)" rx="1.5" />
+                <rect x="-14" y="-8" width="28" height="5" fill="url(#crossGradient)" rx="1.5" />
+                {/* Center medallion on cross */}
+                <circle cx="0" cy="-3" r="4" fill="url(#mysteryBeadGradient)" />
               </g>
             </svg>
           </div>
