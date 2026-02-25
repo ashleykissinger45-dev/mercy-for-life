@@ -70,7 +70,7 @@ export default function Hero() {
               
               {/* Helper function to create bead with shadow and highlight */}
               {(() => {
-                const createBead = (cx, cy, size, isAccent = false) => (
+                const createBead = (cx: number, cy: number, size: number, isAccent: boolean = false) => (
                   <g filter="url(#premiumShadow)">
                     {/* Main bead */}
                     <circle 
@@ -99,7 +99,7 @@ export default function Hero() {
                   </g>
                 );
                 
-                const beads = [
+                const beads: Array<{ x: number; y: number; size: number; accent?: boolean }> = [
                   // Left curve of heart
                   { x: 125, y: 65, size: 9 },
                   { x: 103, y: 58, size: 9 },
