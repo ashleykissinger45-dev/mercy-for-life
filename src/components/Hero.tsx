@@ -14,150 +14,47 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative heartbeat-animation">
-            <svg width="200" height="240" viewBox="0 0 200 240" className="drop-shadow-2xl">
+            <svg width="140" height="140" viewBox="0 0 140 140" className="drop-shadow-xl">
               <defs>
-                {/* Candle body gradient - elegant blue */}
-                <linearGradient id="candleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#0d4d7d', stopOpacity: 1 }} />
-                  <stop offset="20%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
+                {/* Sophisticated gradient */}
+                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
                   <stop offset="50%" style={{ stopColor: '#2d8cd4', stopOpacity: 1 }} />
-                  <stop offset="80%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#0d4d7d', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
                 </linearGradient>
                 
-                {/* Flame gradient - warm to bright */}
-                <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ff6b35', stopOpacity: 1 }} />
-                  <stop offset="30%" style={{ stopColor: '#ffa726', stopOpacity: 1 }} />
-                  <stop offset="60%" style={{ stopColor: '#ffeb3b', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#fff9e6', stopOpacity: 0.95 }} />
-                </linearGradient>
-                
-                {/* Inner flame - bright white/yellow */}
-                <radialGradient id="innerFlame" cx="50%" cy="60%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-                  <stop offset="40%" style={{ stopColor: '#ffeb3b', stopOpacity: 0.9 }} />
-                  <stop offset="100%" style={{ stopColor: '#ffa726', stopOpacity: 0 }} />
-                </radialGradient>
-                
-                {/* Glow effect for flame */}
-                <filter id="flameGlow">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                  <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-                
-                {/* Shadow for candle */}
-                <filter id="candleShadow">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-                  <feOffset dx="0" dy="3" result="offsetblur"/>
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.2"/>
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-                
-                {/* Candle highlight */}
-                <linearGradient id="candleHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
-                  <stop offset="30%" style={{ stopColor: '#ffffff', stopOpacity: 0.15 }} />
-                  <stop offset="50%" style={{ stopColor: '#ffffff', stopOpacity: 0.25 }} />
-                  <stop offset="70%" style={{ stopColor: '#ffffff', stopOpacity: 0.15 }} />
+                {/* Subtle inner glow */}
+                <radialGradient id="innerGlow" cx="50%" cy="40%">
+                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.3 }} />
                   <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
-                </linearGradient>
+                </radialGradient>
               </defs>
               
-              {/* Candle body */}
-              <g filter="url(#candleShadow)">
-                {/* Main candle cylinder */}
-                <rect 
-                  x="70" 
-                  y="90" 
-                  width="60" 
-                  height="130" 
-                  rx="6" 
-                  fill="url(#candleGradient)"
-                />
-                
-                {/* Candle top (melted wax effect) */}
-                <ellipse 
-                  cx="100" 
-                  cy="90" 
-                  rx="30" 
-                  ry="8" 
-                  fill="url(#candleGradient)"
-                />
-                
-                {/* Highlight on candle */}
-                <rect 
-                  x="75" 
-                  y="95" 
-                  width="35" 
-                  height="120" 
-                  rx="4" 
-                  fill="url(#candleHighlight)"
-                />
-                
-                {/* Wick */}
-                <rect 
-                  x="98" 
-                  y="75" 
-                  width="4" 
-                  height="18" 
-                  rx="2" 
-                  fill="#2c2416"
-                />
-              </g>
+              {/* Clean, modern heart */}
+              <path
+                d="M 70 45
+                   C 70 45, 60 30, 45 30
+                   C 25 30, 20 45, 20 55
+                   C 20 75, 70 110, 70 110
+                   C 70 110, 120 75, 120 55
+                   C 120 45, 115 30, 95 30
+                   C 80 30, 70 45, 70 45 Z"
+                fill="url(#heartGrad)"
+                stroke="#ffffff"
+                strokeWidth="1.5"
+                opacity="0.95"
+              />
               
-              {/* Heart-shaped flame */}
-              <g filter="url(#flameGlow)">
-                {/* Outer flame (heart shape) */}
-                <path
-                  d="M 100 45
-                     C 100 45, 90 35, 80 35
-                     C 65 35, 60 45, 60 55
-                     C 60 70, 100 95, 100 95
-                     C 100 95, 140 70, 140 55
-                     C 140 45, 135 35, 120 35
-                     C 110 35, 100 45, 100 45 Z"
-                  fill="url(#flameGradient)"
-                  opacity="0.95"
-                />
-                
-                {/* Inner bright glow */}
-                <ellipse 
-                  cx="100" 
-                  cy="60" 
-                  rx="18" 
-                  ry="22" 
-                  fill="url(#innerFlame)"
-                />
-                
-                {/* Highlight sparkle */}
-                <ellipse 
-                  cx="95" 
-                  cy="52" 
-                  rx="6" 
-                  ry="8" 
-                  fill="#ffffff" 
-                  opacity="0.7"
-                />
-              </g>
-              
-              {/* Soft ambient glow around flame */}
-              <ellipse 
-                cx="100" 
-                cy="65" 
-                rx="45" 
-                ry="35" 
-                fill="url(#flameGradient)" 
-                opacity="0.08"
+              {/* Inner glow overlay */}
+              <path
+                d="M 70 45
+                   C 70 45, 60 30, 45 30
+                   C 25 30, 20 45, 20 55
+                   C 20 75, 70 110, 70 110
+                   C 70 110, 120 75, 120 55
+                   C 120 45, 115 30, 95 30
+                   C 80 30, 70 45, 70 45 Z"
+                fill="url(#innerGlow)"
               />
             </svg>
           </div>
