@@ -28,8 +28,10 @@ export default function Events() {
 
   return (
     <ScrollReveal>
-    <section id="events" className="py-20 bg-gradient-to-br from-gold-50 via-white to-primary-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="events" className="py-20 bg-gradient-to-br from-white via-primary-50/40 to-white relative overflow-hidden">
+        <div className="absolute top-10 left-0 w-80 h-80 bg-red-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-0 w-72 h-72 bg-primary-300/25 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="section-title">Upcoming Events</h2>
           <p className="section-subtitle">
@@ -105,8 +107,7 @@ export default function Events() {
           </a>
         </div>
       </div>
-      </div>
-    </section>
+      </section>
     </ScrollReveal>
   );
 }

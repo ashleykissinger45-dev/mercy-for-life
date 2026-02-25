@@ -27,10 +27,10 @@ export default function RosarySchedule() {
 
   return (
     <ScrollReveal>
-    <section id="rosary" className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white relative overflow-hidden">
-      <div className="absolute top-20 left-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="rosary" className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white relative overflow-hidden">
+        <div className="absolute top-20 left-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="section-title">Join Us in Prayer</h2>
           <p className="section-subtitle">
@@ -98,8 +98,7 @@ export default function RosarySchedule() {
           </p>
         </div>
       </div>
-      </div>
-    </section>
+      </section>
     </ScrollReveal>
   );
 }

@@ -6,8 +6,10 @@ import ScrollReveal from './ScrollReveal';
 export default function About() {
   return (
     <ScrollReveal>
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="py-20 bg-gradient-to-b from-primary-50/50 via-white to-primary-50/50 relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-72 h-72 bg-primary-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary-300/20 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -88,8 +90,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      </div>
-    </section>
+      </section>
     </ScrollReveal>
   );
 }
