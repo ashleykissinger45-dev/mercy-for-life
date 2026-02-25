@@ -14,20 +14,22 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative animate-heartbeat">
-            <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-2xl">
+            <svg width="120" height="120" viewBox="0 0 120 120" className="drop-shadow-2xl">
               <defs>
-                {/* Modern vibrant red gradient */}
-                <linearGradient id="modernHeartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
+                {/* Gradient matching reference heart - orange coral to red to deep magenta */}
+                <linearGradient id="heartGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#ff7961', stopOpacity: 1 }} />
+                  <stop offset="35%" style={{ stopColor: '#f44336', stopOpacity: 1 }} />
+                  <stop offset="70%" style={{ stopColor: '#e91e63', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#880e4f', stopOpacity: 1 }} />
                 </linearGradient>
               </defs>
               
-              {/* Clean, sharp, modern heart shape */}
+              {/* Professional heart shape */}
               <path
-                d="M50,85 L20,55 C15,50 15,40 20,35 C25,30 35,30 40,35 L50,45 L60,35 C65,30 75,30 80,35 C85,40 85,50 80,55 Z"
-                fill="url(#modernHeartGradient)"
-                strokeWidth="0"
+                d="M60,100 C60,100 20,75 20,52 C20,40 27,32 37,32 C47,32 55,40 60,48 C65,40 73,32 83,32 C93,32 100,40 100,52 C100,75 60,100 60,100 Z"
+                fill="url(#heartGradient)"
+                stroke="none"
               />
             </svg>
           </div>

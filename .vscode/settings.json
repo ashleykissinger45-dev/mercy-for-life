@@ -211,6 +211,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Create minimal modern animated heart - sharp clean professional design\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Update heart with coral to magenta gradient and heartbeat animation\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
