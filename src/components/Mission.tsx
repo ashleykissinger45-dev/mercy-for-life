@@ -62,12 +62,12 @@ export default function Mission() {
         </div>
 
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-10 border border-primary-100">
-          <div className="grid lg:grid-cols-3 gap-8 items-center">
-            <div className="lg:col-span-2">
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex-1">
               <h3 className="text-3xl font-bold text-gray-800 mb-6">
                 Our Vision
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Mercy for Life envisions a world where every human life is cherished and protected. 
                 Through the power of prayer, peaceful witness, and compassionate outreach, we strive 
                 to transform hearts and minds, building a culture that welcomes life at every stage. 
@@ -76,7 +76,7 @@ export default function Mission() {
               </p>
             </div>
             
-            <div className="flex justify-center lg:justify-end">
+            <div className="lg:ml-8">
               <div className="animate-float">
                 <Image 
                   src="/Photo.png"
