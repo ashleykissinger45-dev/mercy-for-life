@@ -13,39 +13,21 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
-          <div className="relative">
-            <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-xl">
+          <div className="relative animate-heartbeat">
+            <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-2xl">
               <defs>
-                {/* Vibrant elegant red gradient */}
-                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
+                {/* Modern vibrant red gradient */}
+                <linearGradient id="modernHeartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
                 </linearGradient>
-                
-                {/* Soft inner glow */}
-                <radialGradient id="heartHighlight" cx="30%" cy="30%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.3 }} />
-                  <stop offset="50%" style={{ stopColor: '#ef4444', stopOpacity: 0.1 }} />
-                  <stop offset="100%" style={{ stopColor: 'transparent', stopOpacity: 0 }} />
-                </radialGradient>
               </defs>
               
-              {/* Heart shape */}
+              {/* Clean, sharp, modern heart shape */}
               <path
-                d="M 90 145 C 90 145 25 105 25 70 C 25 50 40 40 55 40 C 70 40 85 55 90 65 C 95 55 110 40 125 40 C 140 40 155 50 155 70 C 155 105 90 145 90 145 Z"
-                fill="url(#heartGradient)"
-                className="drop-shadow-lg"
-              />
-              
-              {/* Subtle highlight overlay */}
-              <ellipse
-                cx="75"
-                cy="70"
-                rx="35"
-                ry="30"
-                fill="url(#heartHighlight)"
-                opacity="0.6"
+                d="M50,85 L20,55 C15,50 15,40 20,35 C25,30 35,30 40,35 L50,45 L60,35 C65,30 75,30 80,35 C85,40 85,50 80,55 Z"
+                fill="url(#modernHeartGradient)"
+                strokeWidth="0"
               />
             </svg>
           </div>
