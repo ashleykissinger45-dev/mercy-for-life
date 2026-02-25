@@ -13,40 +13,11 @@ export default function Hero() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
-          <div className="relative heartbeat-animation">
-            <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-2xl">
-              <defs>
-                {/* Modern bead gradient - sophisticated blue */}
-                <radialGradient id="beadGrad" cx="35%" cy="35%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.9 }} />
-                  <stop offset="60%" style={{ stopColor: '#5ba3d0', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
-                </radialGradient>
-                
-                {/* Cross gradient - elegant silver-blue */}
-                <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#8fa3b8', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#b8c5d3', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#8fa3b8', stopOpacity: 1 }} />
-                </linearGradient>
-                
-                {/* Subtle shadow */}
-                <filter id="softShadow">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
-                  <feOffset dx="0" dy="1" result="offsetblur"/>
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.15"/>
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-              
-              {/* Rosary beads forming heart shape */}
+          <div className="relative">
+            <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-lg">
+              {/* Rosary beads forming heart shape - crisp black */}
               {(() => {
-                // Perfect heart curve coordinates - evenly distributed beads
+                // Heart curve coordinates matching reference
                 const heartBeads = [
                   // Top left curve
                   {x: 75, y: 55}, {x: 62, y: 48}, {x: 50, y: 48}, {x: 40, y: 53},
@@ -65,24 +36,16 @@ export default function Hero() {
                 ];
                 
                 return heartBeads.map((bead, i) => (
-                  <g key={i} filter="url(#softShadow)">
-                    <circle cx={bead.x} cy={bead.y} r="5.5" fill="url(#beadGrad)" />
-                    {/* Highlight */}
-                    <circle cx={bead.x - 1.5} cy={bead.y - 1.5} r="2" fill="#ffffff" opacity="0.6" />
-                  </g>
+                  <circle key={i} cx={bead.x} cy={bead.y} r="6" fill="#000000" />
                 ));
               })()}
               
-              {/* Cross in center */}
-              <g filter="url(#softShadow)">
+              {/* Cross in center - crisp black */}
+              <g>
                 {/* Vertical beam */}
-                <rect x="87" y="70" width="6" height="50" rx="3" fill="url(#crossGrad)" />
+                <rect x="85" y="70" width="10" height="50" rx="1" fill="#000000" />
                 {/* Horizontal beam */}
-                <rect x="70" y="87" width="40" height="6" rx="3" fill="url(#crossGrad)" />
-                
-                {/* Highlights on cross */}
-                <rect x="88" y="70" width="2" height="50" rx="1" fill="#ffffff" opacity="0.25" />
-                <rect x="70" y="88" width="40" height="2" rx="1" fill="#ffffff" opacity="0.25" />
+                <rect x="70" y="87" width="40" height="10" rx="1" fill="#000000" />
               </g>
             </svg>
           </div>
