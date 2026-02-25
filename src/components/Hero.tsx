@@ -15,28 +15,30 @@ export default function Hero() {
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative">
             <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-lg">
-              {/* Rosary beads forming heart shape - crisp black */}
+              {/* Rosary beads forming heart shape - elegant spacing */}
               {(() => {
-                // Heart curve coordinates matching reference
+                // Elegant heart curve with well-spaced beads
                 const heartBeads = [
                   // Top left curve
-                  {x: 75, y: 55}, {x: 62, y: 48}, {x: 50, y: 48}, {x: 40, y: 53},
-                  {x: 32, y: 62}, {x: 30, y: 73}, {x: 32, y: 85},
+                  {x: 75, y: 52}, {x: 58, y: 45}, {x: 43, y: 48}, {x: 30, y: 58},
                   // Left side down
-                  {x: 38, y: 97}, {x: 48, y: 108}, {x: 60, y: 118}, {x: 72, y: 127},
-                  // Bottom point
-                  {x: 84, y: 135}, {x: 90, y: 138},
+                  {x: 24, y: 73}, {x: 26, y: 90}, {x: 35, y: 106}, {x: 50, y: 120},
+                  // Bottom left
+                  {x: 68, y: 132}, {x: 82, y: 140},
+                  // Bottom center
+                  {x: 90, y: 143},
+                  // Bottom right
+                  {x: 98, y: 140}, {x: 112, y: 132},
                   // Right side up
-                  {x: 96, y: 135}, {x: 108, y: 127}, {x: 120, y: 118}, {x: 132, y: 108},
+                  {x: 130, y: 120}, {x: 145, y: 106}, {x: 154, y: 90},
                   // Top right curve
-                  {x: 142, y: 97}, {x: 148, y: 85}, {x: 150, y: 73}, {x: 148, y: 62},
-                  {x: 140, y: 53}, {x: 130, y: 48}, {x: 118, y: 48}, {x: 105, y: 55},
+                  {x: 156, y: 73}, {x: 150, y: 58}, {x: 137, y: 48}, {x: 122, y: 45},
                   // Top center
-                  {x: 90, y: 50}
+                  {x: 105, y: 52}
                 ];
                 
                 return heartBeads.map((bead, i) => (
-                  <circle key={i} cx={bead.x} cy={bead.y} r="6" fill="#000000" />
+                  <circle key={i} cx={bead.x} cy={bead.y} r="5" fill="#000000" />
                 ));
               })()}
               
