@@ -14,42 +14,27 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative heartbeat-animation">
-            <svg width="240" height="260" viewBox="0 0 240 260" className="drop-shadow-2xl">
+            <svg width="280" height="280" viewBox="0 0 280 280" className="drop-shadow-2xl">
               <defs>
-                {/* Premium pearl bead with realistic lighting */}
-                <radialGradient id="pearlBead" cx="30%" cy="30%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-                  <stop offset="30%" style={{ stopColor: '#f8f9fa', stopOpacity: 1 }} />
-                  <stop offset="60%" style={{ stopColor: '#e3e8ed', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#c5d3e0', stopOpacity: 1 }} />
-                </radialGradient>
+                {/* Premium gradient with depth */}
+                <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#4a9fd8', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#0d5a94', stopOpacity: 1 }} />
+                </linearGradient>
                 
-                {/* Soft shadow for depth */}
-                <radialGradient id="beadShadow" cx="50%" cy="50%">
-                  <stop offset="70%" style={{ stopColor: '#176fb9', stopOpacity: 0 }} />
-                  <stop offset="100%" style={{ stopColor: '#176fb9', stopOpacity: 0.15 }} />
-                </radialGradient>
+                {/* Soft accent gradient */}
+                <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#87ceeb', stopOpacity: 0.9 }} />
+                  <stop offset="100%" style={{ stopColor: '#5ba3d0', stopOpacity: 0.9 }} />
+                </linearGradient>
                 
-                {/* Highlight shine */}
-                <radialGradient id="highlight" cx="28%" cy="28%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.95 }} />
-                  <stop offset="50%" style={{ stopColor: '#ffffff', stopOpacity: 0.4 }} />
-                  <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
-                </radialGradient>
-                
-                {/* Premium accent bead */}
-                <radialGradient id="accentPearl" cx="30%" cy="30%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-                  <stop offset="35%" style={{ stopColor: '#d4e4f0', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#a8c5db', stopOpacity: 1 }} />
-                </radialGradient>
-                
-                {/* Modern clean filter */}
-                <filter id="premiumGlow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-                  <feOffset dx="0" dy="1" result="offsetblur"/>
+                {/* Premium glow */}
+                <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+                  <feOffset dx="0" dy="2" result="offsetblur"/>
                   <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.2"/>
+                    <feFuncA type="linear" slope="0.3"/>
                   </feComponentTransfer>
                   <feMerge>
                     <feMergeNode/>
@@ -57,88 +42,91 @@ export default function Hero() {
                   </feMerge>
                 </filter>
                 
-                {/* Metallic cross gradient */}
-                <linearGradient id="metalCross" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#b8c5d3', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#8fa3b8', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#a8b9ca', stopOpacity: 1 }} />
-                </linearGradient>
+                {/* Subtle inner glow */}
+                <filter id="innerGlow">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                  <feComposite in="blur" in2="SourceGraphic" operator="in" result="innerGlow"/>
+                </filter>
                 
-                {/* Delicate thread */}
-                <linearGradient id="threadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#c5d3e0', stopOpacity: 0.3 }} />
-                  <stop offset="50%" style={{ stopColor: '#a8b9ca', stopOpacity: 0.5 }} />
-                  <stop offset="100%" style={{ stopColor: '#c5d3e0', stopOpacity: 0.3 }} />
+                {/* Highlight gradient */}
+                <linearGradient id="highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.4 }} />
+                  <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
                 </linearGradient>
               </defs>
               
-              {/* Refined connecting thread */}
-              <path 
-                d="M 105 55 Q 78 45 60 58 Q 42 72 44 95 Q 48 125 70 148 Q 95 172 120 188 Q 145 172 170 148 Q 192 125 196 95 Q 198 72 180 58 Q 162 45 135 55 Q 125 60 120 55 Q 115 60 105 55 M 120 188 L 120 230"
-                stroke="url(#threadGradient)"
-                strokeWidth="2"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              
-              {/* Bead component with shadow + pearl + highlight */}
-              {[
-                // Left side
-                {cx: 105, cy: 55, r: 7.5},
-                {cx: 85, cy: 50, r: 7.5},
-                {cx: 68, cy: 53, r: 7.5},
-                {cx: 54, cy: 64, r: 9.5, accent: true},
-                {cx: 45, cy: 80, r: 7.5},
-                {cx: 43, cy: 98, r: 7.5},
-                {cx: 48, cy: 116, r: 7.5},
-                {cx: 60, cy: 133, r: 9.5, accent: true},
-                {cx: 78, cy: 148, r: 7.5},
-                {cx: 98, cy: 162, r: 7.5},
+              {/* Main icon container with soft background glow */}
+              <g transform="translate(140, 140)">
+                {/* Soft circular glow behind icon */}
+                <circle cx="0" cy="0" r="85" fill="url(#accentGradient)" opacity="0.12" />
+                <circle cx="0" cy="0" r="70" fill="url(#accentGradient)" opacity="0.08" />
                 
-                // Right side
-                {cx: 135, cy: 55, r: 7.5},
-                {cx: 155, cy: 50, r: 7.5},
-                {cx: 172, cy: 53, r: 7.5},
-                {cx: 186, cy: 64, r: 9.5, accent: true},
-                {cx: 195, cy: 80, r: 7.5},
-                {cx: 197, cy: 98, r: 7.5},
-                {cx: 192, cy: 116, r: 7.5},
-                {cx: 180, cy: 133, r: 9.5, accent: true},
-                {cx: 162, cy: 148, r: 7.5},
-                {cx: 142, cy: 162, r: 7.5},
-                
-                // Top and bottom
-                {cx: 120, cy: 55, r: 7.5},
-                {cx: 120, cy: 188, r: 9.5, accent: true},
-                
-                // Strand
-                {cx: 120, cy: 204, r: 6.5},
-                {cx: 120, cy: 218, r: 6.5},
-              ].map((bead, i) => (
-                <g key={i} filter="url(#premiumGlow)">
-                  {/* Shadow layer */}
-                  <circle cx={bead.cx} cy={bead.cy + 0.5} r={bead.r + 0.5} fill="url(#beadShadow)" opacity="0.3" />
-                  {/* Pearl base */}
-                  <circle cx={bead.cx} cy={bead.cy} r={bead.r} fill={bead.accent ? "url(#accentPearl)" : "url(#pearlBead)"} />
-                  {/* Highlight */}
-                  <circle cx={bead.cx - bead.r * 0.15} cy={bead.cy - bead.r * 0.15} r={bead.r * 0.5} fill="url(#highlight)" />
+                {/* Modern heart shape - clean geometric style */}
+                <g filter="url(#iconGlow)">
+                  <path
+                    d="M 0 -35
+                       C -25 -55, -50 -45, -50 -20
+                       C -50 5, -25 30, 0 55
+                       C 25 30, 50 5, 50 -20
+                       C 50 -45, 25 -55, 0 -35
+                       Z"
+                    fill="url(#primaryGradient)"
+                    strokeWidth="0"
+                  />
+                  
+                  {/* Highlight overlay for 3D effect */}
+                  <path
+                    d="M -12 -42
+                       C -30 -50, -45 -42, -45 -20
+                       C -45 0, -25 20, -8 35
+                       L -8 -42
+                       Z"
+                    fill="url(#highlight)"
+                    opacity="0.5"
+                  />
                 </g>
-              ))}
-              
-              {/* Ultra-modern cross with depth */}
-              <g transform="translate(120, 245)" filter="url(#premiumGlow)">
-                {/* Shadow */}
-                <rect x="-2" y="-21" width="4.5" height="42" fill="#000000" opacity="0.08" rx="2" />
-                <rect x="-15" y="-9.5" width="30.5" height="4.5" fill="#000000" opacity="0.08" rx="2" />
                 
-                {/* Main cross */}
-                <rect x="-2" y="-20" width="4" height="40" fill="url(#metalCross)" rx="2" />
-                <rect x="-15" y="-9" width="30" height="4" fill="url(#metalCross)" rx="2" />
+                {/* Elegant cross integrated into design - subtle and refined */}
+                <g filter="url(#iconGlow)">
+                  {/* Vertical bar with soft gradient */}
+                  <rect 
+                    x="-2.5" 
+                    y="-15" 
+                    width="5" 
+                    height="35" 
+                    rx="2.5"
+                    fill="#ffffff"
+                    opacity="0.95"
+                  />
+                  
+                  {/* Horizontal bar */}
+                  <rect 
+                    x="-15" 
+                    y="-2.5" 
+                    width="30" 
+                    height="5" 
+                    rx="2.5"
+                    fill="#ffffff"
+                    opacity="0.95"
+                  />
+                  
+                  {/* Subtle center emphasis */}
+                  <circle 
+                    cx="0" 
+                    cy="0" 
+                    r="4" 
+                    fill="#ffffff"
+                    opacity="0.85"
+                  />
+                </g>
                 
-                {/* Highlights on cross */}
-                <rect x="-1.5" y="-20" width="1.5" height="40" fill="#ffffff" opacity="0.3" rx="1" />
-                <rect x="-15" y="-8.5" width="30" height="1.5" fill="#ffffff" opacity="0.3" rx="1" />
+                {/* Delicate prayer hands silhouette at bottom - minimalist */}
+                <g transform="translate(0, 35)" opacity="0.25" filter="url(#innerGlow)">
+                  <path
+                    d="M -8 0 L -8 -12 C -8 -15, -6 -16, -4 -16 L -4 -8 L 0 -10 L 4 -8 L 4 -16 C 6 -16, 8 -15, 8 -12 L 8 0 C 8 3, 6 5, 3 5 L -3 5 C -6 5, -8 3, -8 0 Z"
+                    fill="#ffffff"
+                  />
+                </g>
               </g>
             </svg>
           </div>
