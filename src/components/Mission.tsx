@@ -2,6 +2,7 @@
 
 import { Target, Users, Heart, Church } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import Image from 'next/image';
 
 export default function Mission() {
   const values = [
@@ -60,17 +61,41 @@ export default function Mission() {
           })}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-10 border border-primary-100">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-            Our Vision
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-            Mercy for Life envisions a world where every human life is cherished and protected. 
-            Through the power of prayer, peaceful witness, and compassionate outreach, we strive 
-            to transform hearts and minds, building a culture that welcomes life at every stage. 
-            United with St. Thomas the Apostle Church, we stand as beacons of hope and defenders 
-            of the most vulnerable among us.
-          </p>
+        <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary-400 to-pink-400 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+            <div className="relative bg-white rounded-3xl shadow-2xl p-8 border-4 border-primary-200">
+              <Image 
+                src="/Photo.png"
+                alt="Mother and Child - Celebrating Life"
+                width={400}
+                height={600}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <div className="bg-gradient-to-br from-primary-600 to-pink-500 rounded-2xl shadow-2xl p-10 text-white">
+              <h3 className="text-4xl font-bold mb-6">
+                Our Vision
+              </h3>
+              <p className="text-lg leading-relaxed text-primary-50 mb-6">
+                Mercy for Life envisions a world where every human life is cherished and protected. 
+                Through the power of prayer, peaceful witness, and compassionate outreach, we strive 
+                to transform hearts and minds, building a culture that welcomes life at every stage.
+              </p>
+              <p className="text-lg leading-relaxed text-primary-50">
+                United with St. Thomas the Apostle Church, we stand as beacons of hope and defenders 
+                of the most vulnerable among us.
+              </p>
+              <div className="mt-8 pt-8 border-t border-primary-400">
+                <p className="text-2xl font-semibold italic">
+                  "Every life is a gift worth celebrating"
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
