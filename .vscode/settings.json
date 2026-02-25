@@ -163,6 +163,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Make rosary heart vibrant with blue and red gradients, evenly spaced beads, and connecting thread\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Redesign rosary heart with premium sophisticated look - elegant blue gradients and shine effects\" && npx vercel --prod --yes$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
