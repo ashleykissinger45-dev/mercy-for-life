@@ -14,48 +14,76 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="mb-10 flex justify-center animate-fade-in">
           <div className="relative heartbeat-animation">
-            <svg width="140" height="140" viewBox="0 0 140 140" className="drop-shadow-xl">
+            <svg width="180" height="180" viewBox="0 0 180 180" className="drop-shadow-2xl">
               <defs>
-                {/* Sophisticated gradient */}
-                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#2d8cd4', stopOpacity: 1 }} />
+                {/* Modern bead gradient - sophisticated blue */}
+                <radialGradient id="beadGrad" cx="35%" cy="35%">
+                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.9 }} />
+                  <stop offset="60%" style={{ stopColor: '#5ba3d0', stopOpacity: 1 }} />
                   <stop offset="100%" style={{ stopColor: '#176fb9', stopOpacity: 1 }} />
+                </radialGradient>
+                
+                {/* Cross gradient - elegant silver-blue */}
+                <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#8fa3b8', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#b8c5d3', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#8fa3b8', stopOpacity: 1 }} />
                 </linearGradient>
                 
-                {/* Subtle inner glow */}
-                <radialGradient id="innerGlow" cx="50%" cy="40%">
-                  <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.3 }} />
-                  <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
-                </radialGradient>
+                {/* Subtle shadow */}
+                <filter id="softShadow">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+                  <feOffset dx="0" dy="1" result="offsetblur"/>
+                  <feComponentTransfer>
+                    <feFuncA type="linear" slope="0.15"/>
+                  </feComponentTransfer>
+                  <feMerge>
+                    <feMergeNode/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
               </defs>
               
-              {/* Clean, modern heart */}
-              <path
-                d="M 70 45
-                   C 70 45, 60 30, 45 30
-                   C 25 30, 20 45, 20 55
-                   C 20 75, 70 110, 70 110
-                   C 70 110, 120 75, 120 55
-                   C 120 45, 115 30, 95 30
-                   C 80 30, 70 45, 70 45 Z"
-                fill="url(#heartGrad)"
-                stroke="#ffffff"
-                strokeWidth="1.5"
-                opacity="0.95"
-              />
+              {/* Rosary beads forming heart shape */}
+              {(() => {
+                // Perfect heart curve coordinates - evenly distributed beads
+                const heartBeads = [
+                  // Top left curve
+                  {x: 75, y: 55}, {x: 62, y: 48}, {x: 50, y: 48}, {x: 40, y: 53},
+                  {x: 32, y: 62}, {x: 30, y: 73}, {x: 32, y: 85},
+                  // Left side down
+                  {x: 38, y: 97}, {x: 48, y: 108}, {x: 60, y: 118}, {x: 72, y: 127},
+                  // Bottom point
+                  {x: 84, y: 135}, {x: 90, y: 138},
+                  // Right side up
+                  {x: 96, y: 135}, {x: 108, y: 127}, {x: 120, y: 118}, {x: 132, y: 108},
+                  // Top right curve
+                  {x: 142, y: 97}, {x: 148, y: 85}, {x: 150, y: 73}, {x: 148, y: 62},
+                  {x: 140, y: 53}, {x: 130, y: 48}, {x: 118, y: 48}, {x: 105, y: 55},
+                  // Top center
+                  {x: 90, y: 50}
+                ];
+                
+                return heartBeads.map((bead, i) => (
+                  <g key={i} filter="url(#softShadow)">
+                    <circle cx={bead.x} cy={bead.y} r="5.5" fill="url(#beadGrad)" />
+                    {/* Highlight */}
+                    <circle cx={bead.x - 1.5} cy={bead.y - 1.5} r="2" fill="#ffffff" opacity="0.6" />
+                  </g>
+                ));
+              })()}
               
-              {/* Inner glow overlay */}
-              <path
-                d="M 70 45
-                   C 70 45, 60 30, 45 30
-                   C 25 30, 20 45, 20 55
-                   C 20 75, 70 110, 70 110
-                   C 70 110, 120 75, 120 55
-                   C 120 45, 115 30, 95 30
-                   C 80 30, 70 45, 70 45 Z"
-                fill="url(#innerGlow)"
-              />
+              {/* Cross in center */}
+              <g filter="url(#softShadow)">
+                {/* Vertical beam */}
+                <rect x="87" y="70" width="6" height="50" rx="3" fill="url(#crossGrad)" />
+                {/* Horizontal beam */}
+                <rect x="70" y="87" width="40" height="6" rx="3" fill="url(#crossGrad)" />
+                
+                {/* Highlights on cross */}
+                <rect x="88" y="70" width="2" height="50" rx="1" fill="#ffffff" opacity="0.25" />
+                <rect x="70" y="88" width="40" height="2" rx="1" fill="#ffffff" opacity="0.25" />
+              </g>
             </svg>
           </div>
         </div>
