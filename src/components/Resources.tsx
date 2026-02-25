@@ -139,7 +139,7 @@ export default function Resources() {
           </p>
         </div>
       </div>
-    </section>
+      </div>      </div>    </section>
     </ScrollReveal>
   );
 }

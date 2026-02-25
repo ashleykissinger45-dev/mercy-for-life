@@ -61,13 +61,16 @@ export default function Mission() {
           })}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-10 border border-primary-100">
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className="mt-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-2xl p-8 text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
+          
+          <div className="relative flex flex-col lg:flex-row gap-6 items-start">
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6">
+              <h3 className="text-3xl font-bold mb-4">
                 Our Vision
               </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-primary-50 leading-relaxed">
                 Mercy for Life envisions a world where every human life is cherished and protected. 
                 Through the power of prayer, peaceful witness, and compassionate outreach, we strive 
                 to transform hearts and minds, building a culture that welcomes life at every stage. 
@@ -76,14 +79,14 @@ export default function Mission() {
               </p>
             </div>
             
-            <div className="lg:ml-8">
+            <div className="lg:ml-4">
               <div className="animate-float">
                 <Image 
                   src="/Photo.png"
                   alt="Mother and Child"
-                  width={160}
-                  height={240}
-                  className="w-40 h-auto opacity-90 hover:opacity-100 transition-opacity"
+                  width={140}
+                  height={210}
+                  className="w-32 lg:w-36 h-auto opacity-95 hover:opacity-100 transition-opacity"
                   quality={100}
                 />
               </div>

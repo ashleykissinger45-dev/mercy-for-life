@@ -25,11 +25,13 @@ export default function GetInvolved() {
 
   return (
     <ScrollReveal>
-    <section id="involved" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="involved" className="py-20 bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="section-title">Get Involved</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title text-white">Get Involved</h2>
+          <p className="section-subtitle text-primary-100">
             There are many ways to support our mission and make a difference for life
           </p>
         </div>
@@ -45,7 +47,7 @@ export default function GetInvolved() {
             return (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${gradientFrom} to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border ${borderColor}`}
+                className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"}
               >
                 <div className={`inline-flex items-center justify-center w-14 h-14 ${bgColor} rounded-full mb-6`}>
                   <Icon className="h-7 w-7 text-white" />
@@ -70,11 +72,11 @@ export default function GetInvolved() {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-10 text-center text-white shadow-2xl">
+        <div className="mt-16 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm rounded-2xl p-10 text-center text-white shadow-2xl border border-white/30">
           <h3 className="text-3xl font-bold mb-4">
             Every Action Counts
           </h3>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Whether through prayer or spreading awareness, your participation 
             helps build a culture of life and brings hope to those who need it most.
           </p>

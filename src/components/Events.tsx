@@ -105,6 +105,7 @@ export default function Events() {
           </a>
         </div>
       </div>
+      </div>
     </section>
     </ScrollReveal>
   );
