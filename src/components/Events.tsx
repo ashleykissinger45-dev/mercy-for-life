@@ -10,10 +10,10 @@ export default function Events() {
       date: 'February 28th',
       time: 'Starting at 10:00am',
       location: 'Wesley Bolin Memorial Plaza',
-      description: 'Come join thousands of Pro-Lifers from Arizona for the 2026 March for Life.',
-      note: 'Our group will be meeting up on site, at the March, due to complications we will not have a bus leaving from the Parish. We will have more details soon on where exactly to meet if you would like to march with our parish group.',
-      link: 'http://www.chooselifeaz.org/azmarchforlife',
-      linkText: 'More Information'
+      description: 'Thank you to everyone who joined us at the 2026 March for Life! To see photos from the event, view our Instagram.',
+      note: '',
+      link: 'https://www.instagram.com/stamercyforlife',
+      linkText: 'View Our Instagram'
     },
     {
       title: '40 Days For Life 2026 Spring Campaign at Camelback Family Planning',
