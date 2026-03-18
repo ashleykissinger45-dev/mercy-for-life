@@ -88,6 +88,18 @@ export default function RosarySchedule() {
                 <Navigation className="h-5 w-5 mr-2" />
                 Get Directions
               </a>
+              
+              {index === 0 && (
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=3214+E+Indian+School+Rd+Phoenix+AZ+85018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-full bg-white hover:bg-gray-50 text-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 border-2 border-primary-600 mt-3"
+                >
+                  <MapPin className="h-5 w-5 mr-2" />
+                  Parking
+                </a>
+              )}
             </div>
           ))}
         </div>
