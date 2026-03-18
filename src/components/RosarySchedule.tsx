@@ -91,7 +91,7 @@ export default function RosarySchedule() {
               
               {index === 0 && (
                 <a
-                  href="https://maps.app.goo.gl/NZ8EPe5NqjcpYQVS7"
+                  href="https://www.google.com/maps/dir/?api=1&destination=3214+E+Indian+School+Rd+Phoenix+AZ+85018"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-full bg-white hover:bg-gray-50 text-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 border-2 border-primary-600 mt-3"
