@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-white text-neutral-900`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans text-neutral-900`}>
         <Navigation />
         <main className="min-h-screen pt-[68px]">
           {children}

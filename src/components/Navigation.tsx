@@ -24,7 +24,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white border-b border-neutral-200 fixed w-full top-0 z-50 h-[68px]">
+    <nav className="bg-[#FFFBF5] border-b border-neutral-200 fixed w-full top-0 z-50 h-[68px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full gap-8">
 
@@ -49,7 +49,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`px-3.5 py-1.5 text-[13.5px] font-medium tracking-wide rounded transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-primary-700 bg-primary-50'
+                    ? 'text-neutral-900 bg-neutral-100'
                     : 'text-neutral-500 hover:text-neutral-900'
                 }`}
               >
@@ -64,8 +64,8 @@ export default function Navigation() {
               href="/contact"
               className={`text-[13.5px] font-semibold tracking-wide px-5 py-2 rounded border transition-colors duration-150 ${
                 pathname === '/contact'
-                  ? 'bg-primary-600 text-white border-primary-600'
-                  : 'border-neutral-300 text-neutral-700 hover:border-primary-500 hover:text-primary-600'
+                  ? 'bg-neutral-900 text-white border-neutral-900'
+                  : 'border-neutral-800 text-neutral-800 hover:bg-neutral-900 hover:text-white'
               }`}
             >
               Contact Us
@@ -85,7 +85,7 @@ export default function Navigation() {
 
       {/* Mobile drawer */}
       {isOpen && (
-        <div className="md:hidden absolute top-[68px] inset-x-0 bg-white border-b border-neutral-200 shadow-lg">
+        <div className="md:hidden absolute top-[68px] inset-x-0 bg-[#FFFBF5] border-b border-neutral-200 shadow-lg">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <Link
@@ -93,8 +93,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-3 py-2.5 text-sm font-medium rounded transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-primary-700 bg-primary-50'
-                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
+                    ? 'text-neutral-900 bg-neutral-100'
+                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

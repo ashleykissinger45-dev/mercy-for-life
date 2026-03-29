@@ -47,16 +47,14 @@ export default function EmailSignup() {
 
   return (
     <ScrollReveal>
-      <section id="email-signup" className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+      <section id="email-signup" className="py-20 bg-neutral-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <Mail className="h-12 w-12 text-white mx-auto mb-4" />
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <Mail className="h-10 w-10 text-primary-300 mx-auto mb-4" />
+          <h2 className="text-3xl font-serif font-semibold text-white mb-4">
             Stay Connected
           </h2>
-          <p className="text-xl text-primary-100">
+          <p className="text-neutral-400 max-w-xl mx-auto">
             Receive updates about prayer times, events, and ways to make a difference
           </p>
         </div>
@@ -65,7 +63,7 @@ export default function EmailSignup() {
           <div className="bg-white rounded-xl shadow-2xl p-8">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-semibold text-neutral-700 mb-2">
                   Name
                 </label>
                 <input
@@ -74,13 +72,13 @@ export default function EmailSignup() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-neutral-700 mb-2">
                   Email Address
                 </label>
                 <input
@@ -89,7 +87,7 @@ export default function EmailSignup() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all"
                   placeholder="your@email.com"
                 />
               </div>

@@ -35,27 +35,27 @@ export default function Footer() {
             <h4 className="text-white font-serif font-bold mb-5 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/prayer" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/prayer" className="link-underline hover:text-primary-300 transition-colors inline-block">
                   Prayer Schedule
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/about" className="link-underline hover:text-primary-300 transition-colors inline-block">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/get-involved" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/get-involved" className="link-underline hover:text-primary-300 transition-colors inline-block">
                   Get Involved
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/events" className="link-underline hover:text-primary-300 transition-colors inline-block">
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/contact" className="link-underline hover:text-primary-300 transition-colors inline-block">
                   Contact
                 </Link>
               </li>
@@ -66,10 +66,10 @@ export default function Footer() {
             <h4 className="text-white font-serif font-bold mb-5 text-lg">Connect</h4>
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary-400" />
+                <Mail className="h-5 w-5 text-primary-300" />
                 <a
                   href="mailto:mercyforlife@staphx.org"
-                  className="link-underline hover:text-primary-400 transition-colors text-sm inline-block"
+                  className="link-underline hover:text-primary-300 transition-colors text-sm inline-block"
                 >
                   mercyforlife@staphx.org
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-neutral-800 p-3 rounded-full hover:bg-primary-600 transition-colors"
+                className="bg-neutral-800 p-3 rounded-full hover:bg-primary-500 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -90,7 +90,7 @@ export default function Footer() {
                 href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-underline text-sm hover:text-primary-400 transition-colors inline-block"
+                className="link-underline text-sm hover:text-primary-300 transition-colors inline-block"
               >
                 Follow our Instagram!
               </a>

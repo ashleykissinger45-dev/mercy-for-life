@@ -56,7 +56,7 @@ export default function RosarySchedule() {
                       className="flex items-center justify-between py-2 border-b border-neutral-100 last:border-0"
                     >
                       <span className="text-sm font-medium text-neutral-700">{time.day}</span>
-                      <span className="text-sm font-semibold text-primary-600 flex items-center gap-1.5">
+                      <span className="text-sm font-semibold text-primary-500 flex items-center gap-1.5">
                         <Clock className="h-3.5 w-3.5" />
                         {time.time}
                       </span>
@@ -70,7 +70,7 @@ export default function RosarySchedule() {
                     href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold py-2.5 rounded transition-colors"
+                    className="flex items-center justify-center gap-2 w-full bg-neutral-900 hover:bg-neutral-700 text-white text-sm font-semibold py-2.5 rounded transition-colors"
                   >
                     <Navigation className="h-4 w-4" />
                     Get Directions
@@ -80,7 +80,7 @@ export default function RosarySchedule() {
                       href={location.parkingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full border border-neutral-300 hover:border-neutral-400 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
+                      className="flex items-center justify-center gap-2 w-full border border-neutral-700 hover:bg-neutral-100 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
                     >
                       <MapPin className="h-4 w-4" />
                       Parking

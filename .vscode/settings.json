@@ -231,6 +231,18 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Professional redesign: Inter\\+Playfair fonts, centered nav, clean sections\n\n- Switch fonts to Inter \\(body\\) \\+ Playfair Display \\(headings\\)\n- Navigation: logo left, links centered, Contact CTA right \\(SprintLab style\\)\n- Hero: centered layout with clean typography, small uppercase eyebrow\n- All section components: remove gradients/blobs, consistent max-w-5xl/6xl, neutral palette\n- Cards: flat border style, no shadows/heavy hover effects\n- PageHeader: centered text with max-w-4xl container\n- Trim all orphaned old code from components\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add src/components/Contact\\.tsx && git commit -m \"Clean Contact\\.tsx: remove gradients/blobs, neutral palette, consistent card style\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add next\\.config\\.mjs && git commit -m \"Enable static export for faster Vercel deploys\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Redesign: #FFFBF5 cream background, #99B0C6 muted blue accent, dark buttons\n\n- Update Tailwind primary palette to muted steel blue \\(#99b0c6 family\\)\n- Body background: #FFFBF5 warm cream\n- Navigation: cream bg, dark CTA button \\(neutral-900\\)\n- Hero: clean cream, dark CTA buttons, muted blue accent text\n- Buttons: btn-primary now neutral-900 \\(dark\\), btn-secondary outlined\n- Mission: white section on cream for contrast, updated icon tones\n- About, RosarySchedule, Events, GetInvolved: dark buttons, muted blue accents\n- EmailSignup: replace gradient section with dark neutral-900\n- Footer: updated to primary-300 for accent links on dark bg\n- Contact: updated focus rings to primary-400\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
