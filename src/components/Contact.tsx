@@ -52,27 +52,25 @@ export default function Contact() {
 
   return (
     <ScrollReveal>
-      <section id="contact" className="py-20 bg-gradient-to-br from-primary-50/50 via-white to-primary-50/70 relative overflow-hidden">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary-300/25 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-red-200/15 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 pt-4">
+      <section id="contact" className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-3xl font-bold text-gray-800 mb-6">
+            <h3 className="text-3xl font-bold text-neutral-900 mb-4">
               Get in Touch
             </h3>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
               Whether you have questions about our prayer vigils, want to get involved, 
               or need information about pro-life resources, we're here to help.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                <div className="bg-primary-600 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-white" />
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4 border border-neutral-200 rounded-lg p-5">
+                <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
+                  <Mail className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800 mb-1">Email Us</h4>
+                  <h4 className="font-semibold text-neutral-900 mb-1">Email Us</h4>
                   <a
                     href="mailto:mercyforlife@staphx.org"
                     className="text-primary-600 hover:text-primary-700 transition-colors"
@@ -82,26 +80,26 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl p-8 shadow-lg text-white">
-                <h4 className="text-2xl font-bold mb-3">Join Our Email List</h4>
-                <p className="mb-6 text-primary-50">
+              <div className="bg-neutral-900 rounded-lg p-8 text-white">
+                <h4 className="text-xl font-bold mb-3">Join Our Email List</h4>
+                <p className="mb-6 text-neutral-300 text-sm leading-relaxed">
                   Stay updated on upcoming events, prayer opportunities, and ways to defend life in our community.
                 </p>
                 <a
-                  href="#email-signup"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 hover:scale-105 transition-all shadow-md"
+                  href="/get-involved"
+                  className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-neutral-900 font-semibold rounded-lg hover:bg-neutral-100 transition-colors text-sm"
                 >
-                  <Mail className="h-5 w-5 mr-2" />
+                  <Mail className="h-4 w-4 mr-2" />
                   Sign Up Now
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+          <div className="bg-neutral-50 rounded-lg p-8 border border-neutral-200">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="contact-name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="contact-name" className="block text-sm font-semibold text-neutral-700 mb-2">
                   Name *
                 </label>
                 <input
@@ -110,13 +108,13 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all bg-white"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="contact-email" className="block text-sm font-semibold text-neutral-700 mb-2">
                   Email Address *
                 </label>
                 <input
@@ -125,13 +123,13 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all bg-white"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="contact-message" className="block text-sm font-semibold text-neutral-700 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -140,7 +138,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none bg-white"
                   placeholder="How can we help you?"
                 />
               </div>
@@ -165,7 +163,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </div>
+        </div>
       </section>
     </ScrollReveal>
   );
