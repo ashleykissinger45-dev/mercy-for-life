@@ -16,7 +16,6 @@ export default function Navigation() {
     { name: 'About', href: '/about' },
     { name: 'Events', href: '/events' },
     { name: 'Get Involved', href: '/get-involved' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   const isActive = (href: string) => {
@@ -25,32 +24,33 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white border-b border-neutral-200 fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center flex-shrink-0">
-            <Image 
-              src="/Transparent logo (use).png" 
-              alt="Mercy for Life" 
-              width={240} 
-              height={68}
-              className="h-14 w-auto"
+    <nav className="bg-white border-b border-neutral-200 fixed w-full top-0 z-50 h-[68px]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full gap-8">
+
+          {/* Logo — left */}
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/Transparent logo (use).png"
+              alt="Mercy for Life"
+              width={200}
+              height={56}
+              className="h-11 w-auto"
               priority
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Nav links — center */}
+          <div className="hidden md:flex items-center gap-1 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-150 ${
+                className={`px-3.5 py-1.5 text-[13.5px] font-medium tracking-wide rounded transition-colors duration-150 ${
                   isActive(item.href)
                     ? 'text-primary-700 bg-primary-50'
-                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
+                    : 'text-neutral-500 hover:text-neutral-900'
                 }`}
               >
                 {item.name}
@@ -58,10 +58,24 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* CTA — right */}
+          <div className="hidden md:flex flex-shrink-0">
+            <Link
+              href="/contact"
+              className={`text-[13.5px] font-semibold tracking-wide px-5 py-2 rounded border transition-colors duration-150 ${
+                pathname === '/contact'
+                  ? 'bg-primary-600 text-white border-primary-600'
+                  : 'border-neutral-300 text-neutral-700 hover:border-primary-500 hover:text-primary-600'
+              }`}
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Mobile burger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+            className="md:hidden p-2 rounded text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -69,15 +83,15 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile drawer */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-neutral-100 shadow-lg">
-          <div className="px-4 py-3 space-y-1">
+        <div className="md:hidden absolute top-[68px] inset-x-0 bg-white border-b border-neutral-200 shadow-lg">
+          <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-4 py-2.5 text-sm font-medium rounded-md transition-all duration-150 ${
+                className={`block px-3 py-2.5 text-sm font-medium rounded transition-colors duration-150 ${
                   isActive(item.href)
                     ? 'text-primary-700 bg-primary-50'
                     : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
@@ -87,9 +101,17 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="block px-3 py-2.5 text-sm font-semibold text-primary-600 hover:bg-primary-50 rounded transition-colors duration-150"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       )}
     </nav>
   );
 }
+

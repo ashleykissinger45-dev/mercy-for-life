@@ -2,6 +2,7 @@
 
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import Link from 'next/link';
 
 export default function Events() {
   const events = [
@@ -10,96 +11,77 @@ export default function Events() {
       date: 'February 28th',
       time: 'Starting at 10:00am',
       location: 'Wesley Bolin Memorial Plaza',
-      description: 'Thank you to everyone who joined us at the 2026 March for Life! To see photos from the event, view our Instagram.',
-      note: '',
+      description:
+        'Thank you to everyone who joined us at the 2026 March for Life! To see photos from the event, view our Instagram.',
       link: 'https://www.instagram.com/stamercyforlife',
-      linkText: 'View Our Instagram'
+      linkText: 'View Our Instagram',
     },
     {
-      title: '40 Days For Life 2026 Spring Campaign at Camelback Family Planning',
-      date: 'February 18th - March 29th',
+      title: '40 Days For Life 2026 Spring Campaign',
+      date: 'February 18th – March 29th',
       time: '',
       location: '4141 N. 32nd Street',
-      description: 'For the first time the Forty Days for Life Spring Campaign will include Camelback Family Planning. This is the Abortion Mill right in our back yard at 4141 N. 32nd Street.',
+      description:
+        'For the first time the Forty Days for Life Spring Campaign will include Camelback Family Planning — the abortion facility right in our back yard.',
       link: 'http://www.40daysforlife.com/eastphoenix',
-      linkText: 'Sign Up Here'
+      linkText: 'Sign Up Here',
     },
   ];
 
   return (
     <ScrollReveal>
-      <section id="events" className="py-20 bg-gradient-to-br from-white via-primary-50/40 to-white relative overflow-hidden">
-        <div className="absolute top-10 left-0 w-80 h-80 bg-red-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-0 w-72 h-72 bg-primary-300/25 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="card overflow-hidden"
-            >
-              <div className="bg-gradient-to-r from-primary-600 to-primary-500 p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">{event.title}</h3>
-              </div>
-              
-              <div className="p-6 space-y-4">
-                <div className="flex items-start space-x-3">
-                  <Calendar className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-neutral-800">Date</p>
-                    <p className="text-neutral-600">{event.date}</p>
-                  </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {events.map((event, index) => (
+              <div key={index} className="border border-neutral-200 rounded-xl overflow-hidden">
+                {/* Header */}
+                <div className="bg-neutral-900 px-6 py-5">
+                  <h3 className="font-semibold text-white text-base leading-snug">{event.title}</h3>
                 </div>
-                
-                {event.time && (
-                  <div className="flex items-start space-x-3">
-                    <Clock className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-neutral-800">Time</p>
-                      <p className="text-neutral-600">{event.time}</p>
-                    </div>
+
+                {/* Details */}
+                <div className="px-6 py-5 space-y-3 border-b border-neutral-200">
+                  <div className="flex items-center gap-2 text-sm text-neutral-600">
+                    <Calendar className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                    {event.date}
                   </div>
-                )}
-                
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-neutral-800">Location</p>
-                    <p className="text-neutral-600">{event.location}</p>
-                  </div>
-                </div>
-                
-                <div className="pt-4 border-t border-neutral-200">
-                  <p className="text-neutral-700 leading-relaxed mb-4">{event.description}</p>
-                  {event.note && (
-                    <div className="bg-primary-50 border-l-4 border-primary-600 p-4 mb-4 rounded">
-                      <p className="text-sm text-neutral-700"><strong>Note:</strong> {event.note}</p>
+                  {event.time && (
+                    <div className="flex items-center gap-2 text-sm text-neutral-600">
+                      <Clock className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                      {event.time}
                     </div>
                   )}
-                  <a 
+                  <div className="flex items-center gap-2 text-sm text-neutral-600">
+                    <MapPin className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                    {event.location}
+                  </div>
+                </div>
+
+                {/* Description + CTA */}
+                <div className="px-6 py-5">
+                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">{event.description}</p>
+                  <a
                     href={event.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
                   >
                     {event.linkText}
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 text-lg mb-6">
-            Stay updated on all our events by joining our email list
-          </p>
-          <a href="#email-signup" className="btn-primary">
-            Subscribe for Updates
-          </a>
+          <div className="mt-10 text-center">
+            <p className="text-neutral-500 text-sm mb-4">Stay updated on all our events by joining our email list.</p>
+            <Link href="/get-involved" className="btn-primary">
+              Subscribe for Updates
+            </Link>
+          </div>
         </div>
-      </div>
       </section>
     </ScrollReveal>
   );

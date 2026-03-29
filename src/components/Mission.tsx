@@ -2,7 +2,6 @@
 
 import { Target, Users, Heart, Church } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
-import Image from 'next/image';
 
 export default function Mission() {
   const values = [
@@ -30,71 +29,51 @@ export default function Mission() {
 
   return (
     <ScrollReveal>
-    <section id="mission" className="py-20 bg-gradient-to-br from-primary-50 via-white to-gold-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="section-subtitle">
-            Building a culture of life through prayer, education, and peaceful witness
-          </p>
-        </div>
+      <section className="py-20 bg-neutral-50 border-b border-neutral-100">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-neutral-900 mb-3 tracking-tight">
+              Our Mission
+            </h2>
+            <p className="text-neutral-500 max-w-xl mx-auto">
+              Building a culture of life through prayer, education, and peaceful witness
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => {
-            const Icon = value.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center group hover:-translate-y-2"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6 group-hover:bg-primary-600 transition-colors duration-300">
-                  <Icon className="h-8 w-8 text-primary-600 group-hover:text-white transition-colors duration-300" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-7 border border-neutral-200 text-center hover:shadow-md transition-shadow duration-200"
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-50 rounded-lg mb-5">
+                    <Icon className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <h3 className="font-semibold text-neutral-900 mb-2 text-[15px]">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-neutral-500 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
-        <div className="mt-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl shadow-2xl p-8 text-white relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
-          
-          <div className="relative flex flex-col lg:flex-row gap-6 items-start">
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold mb-4">
-                Our Vision
-              </h3>
-              <p className="text-lg text-primary-50 leading-relaxed">
-                Mercy for Life envisions a world where every human life is cherished and protected. 
-                Through the power of prayer, peaceful witness, and compassionate outreach, we strive 
-                to transform hearts and minds, building a culture that welcomes life at every stage. 
-                United with St. Thomas the Apostle Church, we stand as beacons of hope and defenders 
-                of the most vulnerable among us.
-              </p>
-            </div>
-            
-            <div className="lg:ml-4">
-              <div className="animate-float">
-                <Image 
-                  src="/Photo.png"
-                  alt="Mother and Child"
-                  width={140}
-                  height={210}
-                  className="w-32 lg:w-36 h-auto opacity-95 hover:opacity-100 transition-opacity"
-                  quality={100}
-                />
-              </div>
-            </div>
+          <div className="mt-10 bg-primary-600 rounded-xl p-10 text-white text-center">
+            <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-4">Our Vision</h3>
+            <p className="text-primary-100 max-w-2xl mx-auto leading-relaxed">
+              Mercy for Life envisions a world where every human life is cherished and protected.
+              Through the power of prayer, peaceful witness, and compassionate outreach, we strive
+              to transform hearts and minds, building a culture that welcomes life at every stage.
+              United with St. Thomas the Apostle Church, we stand as beacons of hope and defenders
+              of the most vulnerable among us.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ScrollReveal>
   );
 }

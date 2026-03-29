@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const cormorantGaramond = Cormorant_Garamond({ 
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ["latin"],
-  variable: '--font-serif',
-});
-
-const poppins = Poppins({ 
-  weight: ['300', '400', '500', '600'],
+const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({ 
+  weight: ['400', '500', '600', '700'],
+  subsets: ["latin"],
+  variable: '--font-serif',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -37,9 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${cormorantGaramond.variable} font-sans bg-white text-neutral-900`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-white text-neutral-900`}>
         <Navigation />
-        <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-[68px]">
           {children}
         </main>
         <Footer />

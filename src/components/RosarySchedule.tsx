@@ -14,95 +14,89 @@ export default function RosarySchedule() {
         { day: 'Thursday', time: '8:30am' },
         { day: 'Saturday', time: '8:00am' },
       ],
+      parkingUrl:
+        'https://www.google.com/maps/dir/?api=1&destination=3214+E+Indian+School+Rd+Phoenix+AZ+85018',
     },
     {
       name: 'Planned Parenthood',
       address: '4715 N 15th Street, Phoenix, AZ',
       mapsQuery: '4715+N+15th+Street+Phoenix+AZ',
-      times: [
-        { day: 'Friday', time: '9:30am' },
-      ],
+      times: [{ day: 'Friday', time: '9:30am' }],
+      parkingUrl: null,
     },
   ];
 
   return (
     <ScrollReveal>
-      <section id="rosary" className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-white relative overflow-hidden">
-        <div className="absolute top-20 left-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-0 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8">
-          {locations.map((location, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-primary-50 to-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border border-primary-100"
-            >
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="bg-primary-600 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                    {location.name}
-                  </h3>
-                  <p className="text-gray-600 flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" />
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {locations.map((location, index) => (
+              <div
+                key={index}
+                className="border border-neutral-200 rounded-xl overflow-hidden"
+              >
+                {/* Card header */}
+                <div className="bg-neutral-900 px-6 py-5">
+                  <h3 className="font-semibold text-white text-lg">{location.name}</h3>
+                  <p className="text-neutral-400 text-sm mt-1 flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5" />
                     {location.address}
                   </p>
                 </div>
-              </div>
 
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center text-gray-700">
-                  <Calendar className="h-5 w-5 text-primary-600 mr-3" />
-                  <span className="font-semibold">Prayer Times:</span>
-                </div>
-                
-                {location.times.map((time, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between bg-white rounded-lg p-4 border border-gray-200"
-                  >
-                    <span className="font-semibold text-gray-800">{time.day}</span>
-                    <div className="flex items-center text-primary-600">
-                      <Clock className="h-4 w-4 mr-2" />
-                      <span className="font-bold">{time.time}</span>
+                {/* Times */}
+                <div className="px-6 py-5 space-y-3 border-b border-neutral-200">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 flex items-center gap-2">
+                    <Calendar className="h-3.5 w-3.5" /> Prayer Times
+                  </p>
+                  {location.times.map((time, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between py-2 border-b border-neutral-100 last:border-0"
+                    >
+                      <span className="text-sm font-medium text-neutral-700">{time.day}</span>
+                      <span className="text-sm font-semibold text-primary-600 flex items-center gap-1.5">
+                        <Clock className="h-3.5 w-3.5" />
+                        {time.time}
+                      </span>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="px-6 py-4 flex flex-col gap-2">
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold py-2.5 rounded transition-colors"
+                  >
+                    <Navigation className="h-4 w-4" />
+                    Get Directions
+                  </a>
+                  {location.parkingUrl && (
+                    <a
+                      href={location.parkingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full border border-neutral-300 hover:border-neutral-400 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Parking
+                    </a>
+                  )}
+                </div>
               </div>
+            ))}
+          </div>
 
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                <Navigation className="h-5 w-5 mr-2" />
-                Get Directions
-              </a>
-              
-              {index === 0 && (
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=3214+E+Indian+School+Rd+Phoenix+AZ+85018"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full bg-white hover:bg-gray-50 text-primary-600 font-semibold py-3 px-6 rounded-lg transition-all duration-300 border-2 border-primary-600 mt-3"
-                >
-                  <MapPin className="h-5 w-5 mr-2" />
-                  Parking
-                </a>
-              )}
-            </div>
-          ))}
+          <div className="mt-8 bg-neutral-50 border border-neutral-200 rounded-lg px-6 py-4">
+            <p className="text-sm text-neutral-600">
+              <span className="font-semibold text-neutral-800">What to Bring:</span> Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
+            </p>
+          </div>
         </div>
-
-        <div className="mt-12 bg-gold-50 border-l-4 border-gold-500 rounded-r-lg p-6">
-          <p className="text-gray-700 text-lg">
-            <strong className="text-gray-900">What to Bring:</strong> Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
-          </p>
-        </div>
-      </div>
       </section>
     </ScrollReveal>
   );

@@ -3,93 +3,75 @@
 import { Church, Users, BookOpen } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
+const highlights = [
+  {
+    icon: Church,
+    title: 'Parish Affiliation',
+    description:
+      'Proudly affiliated with St. Thomas the Apostle Church, we draw strength from our Catholic faith and community.',
+  },
+  {
+    icon: Users,
+    title: 'Community Driven',
+    description:
+      'Welcoming volunteers of all ages who share our commitment to protecting life through prayer and peaceful witness.',
+  },
+  {
+    icon: BookOpen,
+    title: 'Education & Advocacy',
+    description:
+      'Promoting pro-life education and supporting those in need through compassionate outreach and resources.',
+  },
+];
+
 export default function About() {
   return (
     <ScrollReveal>
-      <section id="about" className="py-20 bg-gradient-to-b from-primary-50/50 via-white to-primary-50/50 relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-72 h-72 bg-primary-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary-300/20 rounded-full blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center pt-4">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              About Mercy for Life
-            </h2>
-            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
-              <p>
-                Mercy for Life is a pro-life ministry affiliated with{' '}
-                <strong className="text-primary-600">St. Thomas the Apostle Church</strong> in Phoenix, Arizona. 
-                We are a community of faithful Catholics and friends united in our commitment to defend 
-                and celebrate the gift of human life.
-              </p>
-              <p>
-                Through peaceful prayer vigils, we gather weekly outside facilities that perform 
-                abortions, offering our rosaries as a spiritual witness to the sanctity of life. 
-                We pray for the conversion of hearts, for mothers facing difficult decisions, 
-                and for an end to abortion.
-              </p>
-              <p>
-                Our ministry is grounded in love, compassion, and hope. We believe that every 
-                prayer offered, every rosary prayed, and every peaceful presence makes a difference 
-                in building a culture of life.
-              </p>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 shadow-lg border border-primary-100">
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
-                  <Church className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Parish Affiliation
-                  </h3>
-                  <p className="text-gray-600">
-                    Proudly affiliated with St. Thomas the Apostle Church, we draw strength 
-                    from our Catholic faith and community.
-                  </p>
-                </div>
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left — text */}
+            <div>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-neutral-900 mb-6 tracking-tight">
+                About Mercy for Life
+              </h2>
+              <div className="space-y-5 text-neutral-600 leading-relaxed">
+                <p>
+                  Mercy for Life is a pro-life ministry affiliated with{' '}
+                  <strong className="text-neutral-900 font-semibold">St. Thomas the Apostle Church</strong> in Phoenix, Arizona.
+                  We are a community of faithful Catholics and friends united in our commitment to defend
+                  and celebrate the gift of human life.
+                </p>
+                <p>
+                  Through peaceful prayer vigils, we gather weekly outside facilities that perform
+                  abortions, offering our rosaries as a spiritual witness to the sanctity of life.
+                  We pray for the conversion of hearts, for mothers facing difficult decisions,
+                  and for an end to abortion.
+                </p>
+                <p>
+                  Our ministry is grounded in love, compassion, and hope. We believe that every
+                  prayer offered, every rosary prayed, and every peaceful presence makes a difference
+                  in building a culture of life.
+                </p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 shadow-lg border border-primary-100">
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
-                  <Users className="h-6 w-6 text-white" />
+            {/* Right — feature cards */}
+            <div className="space-y-4">
+              {highlights.map(({ icon: Icon, title, description }) => (
+                <div key={title} className="flex gap-4 p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center">
+                    <Icon className="h-5 w-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-neutral-900 mb-1 text-[15px]">{title}</h3>
+                    <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Community Driven
-                  </h3>
-                  <p className="text-gray-600">
-                    Welcoming volunteers of all ages who share our commitment to protecting 
-                    life through prayer and peaceful witness.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl p-8 shadow-lg border border-primary-100">
-              <div className="flex items-start space-x-4">
-                <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
-                  <BookOpen className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    Education & Advocacy
-                  </h3>
-                  <p className="text-gray-600">
-                    Promoting pro-life education and supporting those in need through 
-                    compassionate outreach and resources.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-      </div>
       </section>
     </ScrollReveal>
   );

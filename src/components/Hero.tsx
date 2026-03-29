@@ -4,46 +4,51 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative bg-white overflow-hidden">
-      {/* Subtle background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/60 via-white to-rose-50/40" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
-        <div className="max-w-3xl">
-          {/* Eyebrow label */}
-          <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-100 text-primary-700 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary-500 inline-block"></span>
-            St. Thomas the Apostle Church · Phoenix, AZ
-          </div>
+    <section className="bg-white border-b border-neutral-100">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 py-24 md:py-32 text-center">
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-semibold text-neutral-900 leading-[1.1] mb-6 tracking-tight">
-            Defending Life,<br />
-            <span className="text-primary-600">One Prayer</span><br />
-            at a Time.
-          </h1>
+        {/* Eyebrow */}
+        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-primary-600 mb-6">
+          St. Thomas the Apostle Church · Phoenix, AZ
+        </p>
 
-          <p className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed mb-10">
-            Mercy for Life is a pro-life ministry united in peaceful prayer and advocacy for the protection of all human life — from conception to natural death.
-          </p>
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 leading-[1.1] tracking-tight mb-6">
+          Defending Life,<br />
+          <span className="text-primary-600">One Prayer</span> at a Time.
+        </h1>
 
-          <div className="flex flex-wrap gap-4">
-            <Link href="/get-involved" className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors shadow-sm text-sm">
-              Get Involved
-            </Link>
-            <Link href="/prayer" className="inline-flex items-center justify-center bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-semibold px-8 py-3.5 rounded-lg transition-colors text-sm">
-              View Prayer Schedule
-            </Link>
-          </div>
+        <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed mb-10">
+          Mercy for Life is a pro-life ministry united in peaceful prayer and advocacy
+          for the protection of all human life — from conception to natural death.
+        </p>
+
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Link
+            href="/get-involved"
+            className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-7 py-3 rounded transition-colors shadow-sm"
+          >
+            Get Involved
+          </Link>
+          <Link
+            href="/prayer"
+            className="inline-flex items-center justify-center bg-white hover:bg-neutral-50 text-neutral-700 border border-neutral-300 text-sm font-semibold px-7 py-3 rounded transition-colors"
+          >
+            View Prayer Schedule
+          </Link>
         </div>
 
-        {/* Scripture quote card */}
-        <div className="mt-16 md:mt-20 max-w-xl bg-white border border-neutral-200 rounded-xl px-8 py-6 shadow-sm">
-          <p className="font-serif text-lg text-neutral-700 italic leading-relaxed">
+        {/* Divider + scripture */}
+        <div className="mt-16 pt-10 border-t border-neutral-100">
+          <p className="font-serif text-lg text-neutral-500 italic">
             "Before I formed you in the womb I knew you."
           </p>
-          <p className="mt-2 text-sm text-neutral-500 font-medium">— Jeremiah 1:5</p>
+          <p className="mt-2 text-xs font-semibold tracking-widest uppercase text-neutral-400">
+            Jeremiah 1:5
+          </p>
         </div>
+
       </div>
     </section>
   );
 }
+
