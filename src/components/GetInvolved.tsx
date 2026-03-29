@@ -29,13 +29,6 @@ export default function GetInvolved() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="section-title text-white">Get Involved</h2>
-          <p className="section-subtitle text-primary-100">
-            There are many ways to support our mission and make a difference for life
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {ways.map((way, index) => {
             const Icon = way.icon;

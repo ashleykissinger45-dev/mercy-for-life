@@ -215,6 +215,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add \\. && git commit -m \"Update heart with coral to magenta gradient and heartbeat animation\" && npx vercel --prod --yes$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Convert to multi-page app with professional redesign\n\n- Add dedicated pages: /prayer, /about, /events, /get-involved, /contact\n- Move Navigation and Footer into layout for shared rendering\n- Rewrite Navigation with Next\\.js Link and active-tab highlighting\n- Redesign Hero: left-aligned, clean typography, no heavy animations\n- Add PageHeader component for consistent page titles\n- Update Footer links to use route paths\n- Polish globals\\.css: simplified buttons, tighter spacing, remove blobs/animations\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

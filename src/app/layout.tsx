@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({ 
   weight: ['300', '400', '500', '600', '700'],
@@ -34,8 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${poppins.variable} ${cormorantGaramond.variable} font-sans`}>{children}</body>
+    <html lang="en">
+      <body className={`${poppins.variable} ${cormorantGaramond.variable} font-sans bg-white text-neutral-900`}>
+        <Navigation />
+        <main className="min-h-screen pt-20">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

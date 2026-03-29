@@ -3,73 +3,89 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Prayer Times', href: '#rosary' },
-    { name: 'About', href: '#about' },
-    { name: 'Get Involved', href: '#involved' },
-    { name: 'Events', href: '#events' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Prayer Schedule', href: '/prayer' },
+    { name: 'About', href: '/about' },
+    { name: 'Events', href: '/events' },
+    { name: 'Get Involved', href: '/get-involved' },
+    { name: 'Contact', href: '/contact' },
   ];
 
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
+
   return (
-    <nav className="bg-white/80 backdrop-blur-xl shadow-sm fixed w-full top-0 z-50 border-b border-primary-100/50">
+    <nav className="bg-white border-b border-neutral-200 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          <a href="#home" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105 group">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center flex-shrink-0">
             <Image 
               src="/Transparent logo (use).png" 
-              alt="Mercy for Life - St. Thomas the Apostle" 
-              width={280} 
-              height={80}
-              className="h-16 w-auto drop-shadow-sm transition-all duration-300 group-hover:drop-shadow-md"
+              alt="Mercy for Life" 
+              width={240} 
+              height={68}
+              className="h-14 w-auto"
               priority
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-2">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                className="px-5 py-2.5 text-neutral-700 hover:text-primary-600 hover:bg-primary-50/80 rounded-full font-medium transition-all duration-200 hover:scale-105"
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-150 ${
+                  isActive(item.href)
+                    ? 'text-primary-700 bg-primary-50'
+                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
+                }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-neutral-700 hover:text-primary-600 transition-colors"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-md text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur-xl border-t border-primary-100/50">
-          <div className="px-4 pt-3 pb-4 space-y-2">
+        <div className="md:hidden bg-white border-t border-neutral-100 shadow-lg">
+          <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                className="block px-5 py-3 text-neutral-700 hover:text-primary-600 hover:bg-primary-50/80 rounded-full font-medium transition-all duration-200"
+                className={`block px-4 py-2.5 text-sm font-medium rounded-md transition-all duration-150 ${
+                  isActive(item.href)
+                    ? 'text-primary-700 bg-primary-50'
+                    : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

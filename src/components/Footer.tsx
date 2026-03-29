@@ -2,6 +2,7 @@
 
 import { Mail, Instagram } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,29 +35,29 @@ export default function Footer() {
             <h4 className="text-white font-serif font-bold mb-5 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#rosary" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/prayer" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Prayer Schedule
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/about" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#involved" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/get-involved" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Get Involved
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#resources" className="link-underline hover:text-primary-400 transition-colors inline-block">
-                  Resources
-                </a>
+                <Link href="/events" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                  Events
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="link-underline hover:text-primary-400 transition-colors inline-block">
+                <Link href="/contact" className="link-underline hover:text-primary-400 transition-colors inline-block">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
