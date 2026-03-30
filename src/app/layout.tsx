@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ 
+const dmSans = DM_Sans({ 
   subsets: ["latin"],
   variable: '--font-sans',
   display: 'swap',
 });
 
-const playfair = Playfair_Display({ 
-  weight: ['400', '500', '600', '700'],
+const cormorant = Cormorant_Garamond({ 
+  weight: ['300', '400', '500', '600'],
   subsets: ["latin"],
   variable: '--font-serif',
   display: 'swap',
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans text-neutral-900`}>
+      <body className={`${dmSans.variable} ${cormorant.variable} font-sans text-neutral-900`}>
         <Navigation />
         <main className="min-h-screen pt-[68px]">
           {children}

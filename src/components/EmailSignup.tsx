@@ -51,7 +51,7 @@ export default function EmailSignup() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <Mail className="h-10 w-10 text-primary-300 mx-auto mb-4" />
-          <h2 className="text-3xl font-serif font-semibold text-white mb-4">
+          <h2 className="text-3xl font-serif font-light text-white mb-4">
             Stay Connected
           </h2>
           <p className="text-neutral-400 max-w-xl mx-auto">

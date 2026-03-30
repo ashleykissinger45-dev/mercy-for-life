@@ -32,7 +32,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left — text */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-neutral-900 mb-6 tracking-tight">
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-6 tracking-wide">
                 About Mercy for Life
               </h2>
               <div className="space-y-5 text-neutral-600 leading-relaxed">

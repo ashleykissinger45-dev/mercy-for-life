@@ -12,7 +12,7 @@ export default function Hero() {
           St. Thomas the Apostle Church · Phoenix, AZ
         </p>
 
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 leading-[1.1] tracking-tight mb-6">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light text-neutral-900 leading-[1.1] tracking-wide mb-6">
           Defending Life,<br />
           <span className="text-primary-500">One Prayer</span> at a Time.
         </h1>

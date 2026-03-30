@@ -243,6 +243,18 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Redesign: #FFFBF5 cream background, #99B0C6 muted blue accent, dark buttons\n\n- Update Tailwind primary palette to muted steel blue \\(#99b0c6 family\\)\n- Body background: #FFFBF5 warm cream\n- Navigation: cream bg, dark CTA button \\(neutral-900\\)\n- Hero: clean cream, dark CTA buttons, muted blue accent text\n- Buttons: btn-primary now neutral-900 \\(dark\\), btn-secondary outlined\n- Mission: white section on cream for contrast, updated icon tones\n- About, RosarySchedule, Events, GetInvolved: dark buttons, muted blue accents\n- EmailSignup: replace gradient section with dark neutral-900\n- Footer: updated to primary-300 for accent links on dark bg\n- Contact: updated focus rings to primary-400\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -10 && git add tailwind\\.config\\.ts && git commit -m \"Change accent color to #006BBA\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git commit --allow-empty -m \"Force redeploy\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -10 && git add -A && git commit -m \"Switch to Cormorant Garamond \\+ DM Sans, lighter heading weights\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

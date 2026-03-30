@@ -53,7 +53,7 @@ export default function GetInvolved() {
           </div>
 
           <div className="bg-neutral-900 rounded-xl px-10 py-8 text-center text-white">
-            <h3 className="font-serif text-2xl font-semibold mb-3">Every Action Counts</h3>
+            <h3 className="font-serif text-2xl font-light mb-3">Every Action Counts</h3>
             <p className="text-neutral-400 max-w-xl mx-auto text-sm leading-relaxed">
               Whether through prayer or spreading awareness, your participation
               helps build a culture of life and brings hope to those who need it most.

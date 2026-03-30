@@ -32,7 +32,7 @@ export default function Mission() {
       <section className="py-20 bg-white border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-neutral-900 mb-3 tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-3 tracking-wide">
               Our Mission
             </h2>
             <p className="text-neutral-500 max-w-xl mx-auto">
@@ -63,7 +63,7 @@ export default function Mission() {
           </div>
 
           <div className="mt-10 bg-primary-600 rounded-xl p-10 text-white text-center">
-            <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-4">Our Vision</h3>
+            <h3 className="font-serif text-2xl md:text-3xl font-light mb-4">Our Vision</h3>
             <p className="text-primary-100 max-w-2xl mx-auto leading-relaxed">
               Mercy for Life envisions a world where every human life is cherished and protected.
               Through the power of prayer, peaceful witness, and compassionate outreach, we strive
