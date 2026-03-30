@@ -343,6 +343,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Nav CTA button: #005492 background\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"All dark backgrounds changed to #005492\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

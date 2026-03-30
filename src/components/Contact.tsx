@@ -88,7 +88,7 @@ export default function Contact() {
                 </p>
                 <a
                   href="/get-involved"
-                  className="inline-flex items-center justify-center px-5 py-2.5 bg-[#0A1628] text-white font-medium rounded-md hover:bg-[#0d1e36] transition-colors text-sm"
+                  className="inline-flex items-center justify-center px-5 py-2.5 bg-[#005492] text-white font-medium rounded-md hover:bg-[#004578] transition-colors text-sm"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   Sign Up Now
@@ -146,7 +146,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center bg-[#0A1628] text-white font-medium py-3 rounded-md hover:bg-[#0d1e36] transition-colors text-sm"
+                className="w-full flex items-center justify-center bg-[#005492] text-white font-medium py-3 rounded-md hover:bg-[#004578] transition-colors text-sm"
               >
                 <Send className="h-4 w-4 mr-2" />
                 Send Message

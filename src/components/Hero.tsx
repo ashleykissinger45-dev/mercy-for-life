@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="bg-[#0A1628]">
+    <section className="bg-[#005492]">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center">
 
         <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-500 mb-10">
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/get-involved"
-            className="bg-white text-[#0A1628] text-[13px] font-semibold px-8 py-3.5 rounded-md hover:bg-neutral-100 transition-colors"
+            className="bg-white text-[#005492] text-[13px] font-semibold px-8 py-3.5 rounded-md hover:bg-neutral-100 transition-colors"
           >
             Get Involved
           </Link>
