@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="bg-[#005492]">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center">
 
-        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-500 mb-10">
+        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 mb-10">
           St. Thomas the Apostle Church &middot; Phoenix, AZ
         </p>
 

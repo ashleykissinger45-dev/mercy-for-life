@@ -47,15 +47,15 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-[11.5px] font-semibold tracking-[0.1em] uppercase transition-colors duration-150 py-1 ${
+                className={`relative text-[12px] font-medium tracking-[0.06em] transition-colors duration-150 py-1 ${
                   isActive(item.href)
-                    ? 'text-[#4DA0E0]'
-                    : 'text-neutral-400 hover:text-neutral-900'
+                    ? 'text-[#005492]'
+                    : 'text-neutral-400 hover:text-neutral-700'
                 }`}
               >
                 {item.name}
                 {isActive(item.href) && (
-                  <span className="absolute -bottom-[26px] left-0 right-0 h-[2px] bg-[#4DA0E0] rounded-full" />
+                  <span className="absolute -bottom-[26px] left-0 right-0 h-[2px] bg-[#005492] rounded-full" />
                 )}
               </Link>
             ))}
@@ -90,10 +90,10 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-3 py-2.5 text-[11.5px] font-semibold tracking-[0.1em] uppercase rounded transition-colors duration-150 ${
+                className={`block px-3 py-2.5 text-[12px] font-medium tracking-[0.06em] rounded transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-[#4DA0E0] bg-[#4DA0E0]/5'
-                    : 'text-neutral-500 hover:text-neutral-900 hover:bg-neutral-50'
+                    ? 'text-[#005492] bg-[#005492]/5'
+                    : 'text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
