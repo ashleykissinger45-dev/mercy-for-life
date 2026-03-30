@@ -36,24 +36,24 @@ export default function Events() {
             {events.map((event, index) => (
               <div key={index} className="rounded-xl overflow-hidden shadow-sm">
                 {/* Header */}
-                <div className="bg-neutral-900 px-6 py-5">
+                <div className="bg-[#0A1628] px-6 py-5">
                   <h3 className="font-semibold text-white text-base leading-snug">{event.title}</h3>
                 </div>
 
                 {/* Details */}
                 <div className="px-6 py-5 space-y-3">
                   <div className="flex items-center gap-2 text-sm text-neutral-600">
-                    <Calendar className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                    <Calendar className="h-4 w-4 text-primary-600 flex-shrink-0" />
                     {event.date}
                   </div>
                   {event.time && (
                     <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <Clock className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                      <Clock className="h-4 w-4 text-primary-600 flex-shrink-0" />
                       {event.time}
                     </div>
                   )}
                   <div className="flex items-center gap-2 text-sm text-neutral-600">
-                    <MapPin className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                    <MapPin className="h-4 w-4 text-primary-600 flex-shrink-0" />
                     {event.location}
                   </div>
                 </div>

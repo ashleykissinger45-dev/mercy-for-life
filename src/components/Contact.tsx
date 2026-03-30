@@ -73,14 +73,14 @@ export default function Contact() {
                   <h4 className="font-semibold text-neutral-900 mb-1">Email Us</h4>
                   <a
                     href="mailto:mercyforlife@staphx.org"
-                    className="text-primary-600 hover:text-primary-700 transition-colors"
+                    className="text-primary-300 hover:text-primary-200 transition-colors"
                   >
                     mercyforlife@staphx.org
                   </a>
                 </div>
               </div>
 
-              <div className="bg-neutral-900 rounded-lg p-8 text-white">
+              <div className="bg-[#0A1628] rounded-lg p-8 text-white">
                 <h4 className="text-xl font-bold mb-3">Join Our Email List</h4>
                 <p className="mb-6 text-neutral-300 text-sm leading-relaxed">
                   Stay updated on upcoming events, prayer opportunities, and ways to defend life in our community.

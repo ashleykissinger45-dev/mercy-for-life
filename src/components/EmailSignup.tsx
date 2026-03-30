@@ -47,7 +47,7 @@ export default function EmailSignup() {
 
   return (
     <ScrollReveal>
-      <section id="email-signup" className="py-20 bg-neutral-900">
+      <section id="email-signup" className="py-20 bg-[#0A1628]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <Mail className="h-10 w-10 text-primary-300 mx-auto mb-4" />

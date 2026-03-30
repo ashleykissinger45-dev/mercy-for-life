@@ -26,7 +26,7 @@ export default function GetInvolved() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-primary-50">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {ways.map((way, index) => {
@@ -43,7 +43,7 @@ export default function GetInvolved() {
                   <p className="text-neutral-500 text-sm leading-relaxed mb-6">{way.description}</p>
                   <Link
                     href={way.href}
-                    className="inline-flex items-center justify-center bg-neutral-900 hover:bg-neutral-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
                   >
                     {way.action}
                   </Link>
@@ -52,9 +52,9 @@ export default function GetInvolved() {
             })}
           </div>
 
-          <div className="bg-neutral-900 rounded-xl px-10 py-8 text-center text-white">
+          <div className="bg-[#0A1628] rounded-xl px-10 py-8 text-center text-white">
             <h3 className="font-serif text-2xl font-light mb-3">Every Action Counts</h3>
-            <p className="text-neutral-400 max-w-xl mx-auto text-sm leading-relaxed">
+            <p className="text-neutral-300 max-w-xl mx-auto text-sm leading-relaxed font-light">
               Whether through prayer or spreading awareness, your participation
               helps build a culture of life and brings hope to those who need it most.
             </p>
