@@ -291,6 +291,22 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Logo: unified blue filter on nav, white on footer\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^which convert && identify \"/Users/ashleykissinger/Mercy for Life/public/Transparent logo \\(use\\)\\.png\" 2>&1 \\| head -3$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python3 -c \"from PIL import Image; print\\('PIL available'\\)\" 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python3 << 'EOF'\nfrom PIL import Image\nimport os\n\nsrc = \"/Users/ashleykissinger/Mercy for Life/public/Transparent logo \\(use\\)\\.png\"\ndst = \"/Users/ashleykissinger/Mercy for Life/public/logo-white-text\\.png\"\n\nimg = Image\\.open\\(src\\)\\.convert\\(\"RGBA\"\\)\npixels = img\\.load\\(\\)\nw, h = img\\.size\n\nfor y in range\\(h\\):\n    for x in range\\(w\\):\n        r, g, b, a = pixels\\[x, y\\]\n        if a < 10:\n            continue  # keep transparent\n        # Red pixel: high red, low green\\+blue relative to red\n        is_red = r > 150 and r > g \\* 1\\.8 and r > b \\* 1\\.8\n        if not is_red:\n            # Turn to white\n            pixels\\[x, y\\] = \\(255, 255, 255, a\\)\n\nimg\\.save\\(dst\\)\nprint\\(\"Done:\", dst\\)\nEOF$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -8 && git add -A && git commit -m \"Logo: red heart \\+ white text variant for footer; original on nav\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

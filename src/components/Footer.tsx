@@ -14,15 +14,12 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <Image 
-                src="/Transparent logo (use).png" 
+                src="/logo-white-text.png" 
                 alt="Mercy for Life - St. Thomas the Apostle" 
                 width={240} 
                 height={70}
                 className="h-14 w-auto"
-                style={{
-                  imageRendering: '-webkit-optimize-contrast',
-                  filter: 'brightness(0) invert(1)',
-                }}
+                style={{ imageRendering: '-webkit-optimize-contrast' }}
               />
             </div>
             <p className="text-neutral-400 leading-relaxed mb-6 max-w-md">
