@@ -26,8 +26,9 @@ export default function GetInvolved() {
 
   return (
     <ScrollReveal>
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-white/[0.93]" />
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-14">
             <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
               Make a Difference

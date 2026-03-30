@@ -387,6 +387,14 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Slightly lighter blue across all buttons and backgrounds\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cp \"/Users/ashleykissinger/Mercy for Life/public/pic\\.jpg\" \"/Users/ashleykissinger/Mercy for Life/public/pic2\\.jpg\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"pic2\\.jpg background on all content sections except home\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

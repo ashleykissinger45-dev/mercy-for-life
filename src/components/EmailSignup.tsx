@@ -47,8 +47,9 @@ export default function EmailSignup() {
 
   return (
     <ScrollReveal>
-      <section id="email-signup" className="py-24 bg-neutral-50">
-        <div className="max-w-xl mx-auto px-6 lg:px-8 text-center">
+      <section id="email-signup" className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-white/[0.93]" />
+        <div className="max-w-xl mx-auto px-6 lg:px-8 text-center relative">
         <div className="mb-10">
           <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
             Newsletter

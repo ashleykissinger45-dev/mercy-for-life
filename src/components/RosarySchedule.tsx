@@ -28,8 +28,9 @@ export default function RosarySchedule() {
 
   return (
     <ScrollReveal>
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-white/[0.93]" />
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 gap-8">
             {locations.map((location, index) => (
               <div

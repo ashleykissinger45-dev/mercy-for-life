@@ -27,8 +27,9 @@ const highlights = [
 export default function About() {
   return (
     <ScrollReveal>
-      <section className="py-24 bg-neutral-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-white/[0.93]" />
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
