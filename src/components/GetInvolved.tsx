@@ -44,9 +44,9 @@ export default function GetInvolved() {
               return (
                 <div
                   key={index}
-                  className="p-8 rounded-lg border border-neutral-100"
+                  className="p-8 bg-white rounded-xl shadow-sm border border-neutral-100/60"
                 >
-                  <Icon className="h-6 w-6 text-primary-600 mb-5" strokeWidth={1.5} />
+                  <Icon className="h-6 w-6 text-[#005999] mb-5" strokeWidth={1.5} />
                   <h3 className="font-semibold text-neutral-900 text-lg mb-2">{way.title}</h3>
                   <p className="text-neutral-500 text-sm leading-relaxed mb-6">{way.description}</p>
                   <Link
@@ -60,7 +60,7 @@ export default function GetInvolved() {
             })}
           </div>
 
-          <div className="bg-neutral-50 rounded-lg px-10 py-10 text-center">
+          <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 px-10 py-10 text-center">
             <h3 className="font-serif text-xl font-light text-neutral-900 mb-3">Every Action Counts</h3>
             <p className="text-neutral-500 max-w-lg mx-auto text-sm leading-relaxed">
               Whether through prayer or spreading awareness, your participation

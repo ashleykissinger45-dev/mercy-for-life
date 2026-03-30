@@ -35,7 +35,7 @@ export default function RosarySchedule() {
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="rounded-lg border border-neutral-100 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden"
               >
                 <div className="px-6 py-5 border-b border-neutral-100">
                   <h3 className="font-semibold text-neutral-900 text-base">{location.name}</h3>
@@ -86,9 +86,11 @@ export default function RosarySchedule() {
             ))}
           </div>
 
-          <div className="mt-10 text-sm text-neutral-500">
-            <span className="font-semibold text-neutral-700">What to bring: </span>
-            Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
+          <div className="mt-10 bg-white rounded-xl shadow-sm border border-neutral-100/60 px-6 py-5">
+            <p className="text-sm text-neutral-500">
+              <span className="font-semibold text-neutral-700">What to bring: </span>
+              Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
+            </p>
           </div>
         </div>
       </section>

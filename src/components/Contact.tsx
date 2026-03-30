@@ -75,14 +75,14 @@ export default function Contact() {
                   <h4 className="font-semibold text-neutral-900 text-sm mb-1">Email Us</h4>
                   <a
                     href="mailto:mercyforlife@staphx.org"
-                    className="text-primary-600 hover:text-primary-700 transition-colors text-sm"
+                    className="text-[#005999] hover:text-[#004C82] transition-colors text-sm"
                   >
                     mercyforlife@staphx.org
                   </a>
                 </div>
               </div>
 
-              <div className="bg-neutral-50 rounded-lg p-6">
+              <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-6">
                 <h4 className="font-semibold text-neutral-900 text-sm mb-2">Join Our Email List</h4>
                 <p className="mb-4 text-neutral-500 text-sm leading-relaxed">
                   Stay updated on upcoming events, prayer opportunities, and ways to defend life.
@@ -98,7 +98,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div>
+          <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-medium text-neutral-700 mb-1.5">
@@ -110,7 +110,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-neutral-50 rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-neutral-50/70 rounded-md border border-neutral-200 focus:border-[#005999]/40 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="Your name"
                 />
               </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-neutral-50 rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-neutral-50/70 rounded-md border border-neutral-200 focus:border-[#005999]/40 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="your@email.com"
                 />
               </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-neutral-50 rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors resize-none text-sm"
+                  className="w-full px-4 py-3 bg-neutral-50/70 rounded-md border border-neutral-200 focus:border-[#005999]/40 focus:ring-0 outline-none transition-colors resize-none text-sm"
                   placeholder="How can we help you?"
                 />
               </div>

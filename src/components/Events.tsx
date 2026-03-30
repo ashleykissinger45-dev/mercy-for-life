@@ -35,7 +35,7 @@ export default function Events() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 gap-8">
             {events.map((event, index) => (
-              <div key={index} className="rounded-lg border border-neutral-100 overflow-hidden">
+              <div key={index} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden">
                 <div className="px-6 py-5 border-b border-neutral-100">
                   <h3 className="font-semibold text-neutral-900 text-base leading-snug">{event.title}</h3>
                 </div>
@@ -63,7 +63,7 @@ export default function Events() {
                     href={event.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005999] hover:text-[#004C82] transition-colors"
                   >
                     {event.linkText}
                     <ExternalLink className="h-3.5 w-3.5" />

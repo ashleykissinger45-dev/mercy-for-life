@@ -61,8 +61,8 @@ export default function About() {
 
             <div className="space-y-5">
               {highlights.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-5 p-5">
-                  <Icon className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                <div key={title} className="flex gap-5 p-5 bg-white rounded-xl shadow-sm border border-neutral-100/60">
+                  <Icon className="h-5 w-5 text-[#005999] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-semibold text-neutral-900 mb-1 text-[15px]">{title}</h3>
                     <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>

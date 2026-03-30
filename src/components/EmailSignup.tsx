@@ -50,7 +50,8 @@ export default function EmailSignup() {
       <section id="email-signup" className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-white/[0.93]" />
         <div className="max-w-xl mx-auto px-6 lg:px-8 text-center relative">
-        <div className="mb-10">
+        <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8 md:p-10">
+        <div className="mb-8 text-center">
           <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
             Newsletter
           </p>
@@ -71,7 +72,7 @@ export default function EmailSignup() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-white rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-neutral-50/70 rounded-md border border-neutral-200 focus:border-[#005999]/40 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="Your name"
                 />
               </div>
@@ -83,7 +84,7 @@ export default function EmailSignup() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-white rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
+                  className="w-full px-4 py-3 bg-neutral-50/70 rounded-md border border-neutral-200 focus:border-[#005999]/40 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="your@email.com"
                 />
               </div>
@@ -113,6 +114,7 @@ export default function EmailSignup() {
               </div>
             )}
         </form>
+        </div>
       </div>
       </section>
     </ScrollReveal>

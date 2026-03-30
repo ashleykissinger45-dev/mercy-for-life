@@ -41,8 +41,8 @@ export default function Hero() {
 
       </div>
 
-      <div className="border-t border-white/15 py-8">
-        <p className="text-center font-serif text-base text-white/70 italic">
+      <div className="border-t border-white/10 py-7">
+        <p className="text-center font-serif text-[15px] text-white/60 italic tracking-wide">
           &ldquo;Before I formed you in the womb I knew you.&rdquo;
           <span className="text-white/60 not-italic text-sm ml-3">Jeremiah 1:5</span>
         </p>
