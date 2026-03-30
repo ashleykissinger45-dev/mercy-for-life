@@ -351,6 +351,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Elegant nav tabs: title case, #005492 blue; hero eyebrow white\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Nav: remove underline from active tabs\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

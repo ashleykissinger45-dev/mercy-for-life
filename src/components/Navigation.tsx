@@ -47,16 +47,13 @@ export default function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-[12px] font-medium tracking-[0.06em] transition-colors duration-150 py-1 ${
+                className={`text-[12px] font-medium tracking-[0.06em] transition-colors duration-150 ${
                   isActive(item.href)
                     ? 'text-[#005492]'
                     : 'text-neutral-400 hover:text-neutral-700'
                 }`}
               >
                 {item.name}
-                {isActive(item.href) && (
-                  <span className="absolute -bottom-[26px] left-0 right-0 h-[2px] bg-[#005492] rounded-full" />
-                )}
               </Link>
             ))}
           </div>
