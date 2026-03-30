@@ -379,6 +379,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Hero: stripped to essentials — heading, two buttons, scripture\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Hero: balanced layout with subtitle text, natural spacing\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
