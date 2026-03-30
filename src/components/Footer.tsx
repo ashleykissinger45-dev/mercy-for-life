@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#005999]" style={{ backgroundImage: 'url(/pic.jpg)', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
+    <footer className="bg-[#005999]">
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-14">
           <div>
