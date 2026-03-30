@@ -5,10 +5,14 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="relative bg-[#070e1a]"
-      style={{ backgroundImage: 'url(/backgroun.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="relative overflow-hidden"
+      style={{
+        background: '#070e1a',
+      }}
     >
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-28 md:py-40 text-center">
+      {/* CSS ambient glow layers */}
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 60% at 70% 40%, rgba(10,108,187,0.28) 0%, transparent 65%), radial-gradient(ellipse 60% 50% at 30% 70%, rgba(6,79,140,0.18) 0%, transparent 60%), radial-gradient(ellipse 100% 80% at 50% 50%, rgba(5,20,50,0.9) 0%, transparent 100%)' }} />
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 py-28 md:py-40 text-center">
 
         {/* Eyebrow */}
         <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary-300 mb-8">
