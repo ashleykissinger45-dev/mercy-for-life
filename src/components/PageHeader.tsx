@@ -5,7 +5,10 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
-    <div className="bg-[#0A1628] py-14 md:py-20">
+    <div
+      className="relative py-14 md:py-20 bg-[#070e1a]"
+      style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h1 className="font-serif text-4xl md:text-5xl font-light text-white tracking-wide mb-4">
           {title}

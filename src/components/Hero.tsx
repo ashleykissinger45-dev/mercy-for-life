@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="bg-[#0A1628]">
+    <section
+      className="relative bg-[#070e1a]"
+      style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-28 md:py-40 text-center">
 
         {/* Eyebrow */}
