@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${cormorant.variable} font-sans bg-white text-neutral-900`}>
         <Navigation />
-        <main className="min-h-screen pt-[68px]">
+        <main className="min-h-screen pt-[76px]">
           {children}
         </main>
         <Footer />

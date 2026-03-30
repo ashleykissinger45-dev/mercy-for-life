@@ -263,6 +263,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -14 && git add -A && git commit -m \"Premium redesign: navy hero, #0A6CBB accent, white pages, navy dark sections\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -10 && git add -A && git commit -m \"Professional nav: uppercase tracking, active underline indicator, solid blue CTA\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
