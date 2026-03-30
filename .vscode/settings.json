@@ -315,6 +315,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -6 && git add -A && git commit -m \"Hero: replace background image with CSS dark blue radial glow\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -8 && git add -A && git commit -m \"Polish: richer hero gradient \\+ bottom fade, frosted nav, accent bars on section headings\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

@@ -32,6 +32,7 @@ export default function Mission() {
       <section className="py-20 bg-primary-50">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
+            <div className="w-8 h-[3px] bg-primary-600 mx-auto mb-5 rounded-full" />
             <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-3 tracking-wide">
               Our Mission
             </h2>

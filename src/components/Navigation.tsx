@@ -24,7 +24,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white border-b border-neutral-100 fixed w-full top-0 z-50 h-[76px]">
+    <nav className="bg-white/90 backdrop-blur-md border-b border-neutral-100/60 fixed w-full top-0 z-50 h-[76px]">
       <div className="max-w-7xl mx-auto px-8 lg:px-12 h-full">
         <div className="flex items-center justify-between h-full">
 
