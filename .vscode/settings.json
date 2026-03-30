@@ -331,6 +331,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -6 && git add -A && git commit -m \"Nav: softer steel blue for links and CTA button\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Nav: lighter tint of logo blue \\(#4DA0E0\\)\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
