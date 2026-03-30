@@ -29,7 +29,7 @@ export default function Mission() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white border-b border-neutral-200">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-3 tracking-wide">
@@ -46,7 +46,7 @@ export default function Mission() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-7 border border-neutral-200 text-center hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-xl p-7 shadow-sm text-center hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-5">
                     <Icon className="h-6 w-6 text-primary-600" />

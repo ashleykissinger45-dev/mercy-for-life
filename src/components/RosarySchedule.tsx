@@ -34,7 +34,7 @@ export default function RosarySchedule() {
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="border border-neutral-200 rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-sm"
               >
                 {/* Card header */}
                 <div className="bg-neutral-900 px-6 py-5">
@@ -46,14 +46,14 @@ export default function RosarySchedule() {
                 </div>
 
                 {/* Times */}
-                <div className="px-6 py-5 space-y-3 border-b border-neutral-200">
+                <div className="px-6 py-5 space-y-3">
                   <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 flex items-center gap-2">
                     <Calendar className="h-3.5 w-3.5" /> Prayer Times
                   </p>
                   {location.times.map((time, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center justify-between py-2 border-b border-neutral-100 last:border-0"
+                      className="flex items-center justify-between py-2"
                     >
                       <span className="text-sm font-medium text-neutral-700">{time.day}</span>
                       <span className="text-sm font-semibold text-primary-500 flex items-center gap-1.5">
@@ -80,7 +80,7 @@ export default function RosarySchedule() {
                       href={location.parkingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full border border-neutral-700 hover:bg-neutral-100 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
+                      className="flex items-center justify-center gap-2 w-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
                     >
                       <MapPin className="h-4 w-4" />
                       Parking
@@ -91,7 +91,7 @@ export default function RosarySchedule() {
             ))}
           </div>
 
-          <div className="mt-8 bg-neutral-50 border border-neutral-200 rounded-lg px-6 py-4">
+          <div className="mt-8 bg-neutral-50 rounded-lg px-6 py-4">
             <p className="text-sm text-neutral-600">
               <span className="font-semibold text-neutral-800">What to Bring:</span> Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
             </p>

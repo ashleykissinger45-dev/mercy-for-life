@@ -65,7 +65,7 @@ export default function Contact() {
             </p>
 
             <div className="space-y-4">
-              <div className="flex items-start space-x-4 border border-neutral-200 rounded-lg p-5">
+              <div className="flex items-start space-x-4 bg-neutral-50 rounded-lg p-5">
                 <div className="bg-primary-600 p-3 rounded-lg flex-shrink-0">
                   <Mail className="h-5 w-5 text-white" />
                 </div>
@@ -96,7 +96,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-neutral-50 rounded-lg p-8 border border-neutral-200">
+          <div className="bg-neutral-50 rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-semibold text-neutral-700 mb-2">
@@ -108,7 +108,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-primary-400 outline-none transition-all shadow-sm"
                   placeholder="Your name"
                 />
               </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-primary-400 outline-none transition-all shadow-sm"
                   placeholder="your@email.com"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-400 focus:border-transparent outline-none transition-all resize-none bg-white"
+                  className="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-primary-400 outline-none transition-all resize-none shadow-sm"
                   placeholder="How can we help you?"
                 />
               </div>

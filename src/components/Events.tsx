@@ -34,14 +34,14 @@ export default function Events() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {events.map((event, index) => (
-              <div key={index} className="border border-neutral-200 rounded-xl overflow-hidden">
+              <div key={index} className="rounded-xl overflow-hidden shadow-sm">
                 {/* Header */}
                 <div className="bg-neutral-900 px-6 py-5">
                   <h3 className="font-semibold text-white text-base leading-snug">{event.title}</h3>
                 </div>
 
                 {/* Details */}
-                <div className="px-6 py-5 space-y-3 border-b border-neutral-200">
+                <div className="px-6 py-5 space-y-3">
                   <div className="flex items-center gap-2 text-sm text-neutral-600">
                     <Calendar className="h-4 w-4 text-primary-500 flex-shrink-0" />
                     {event.date}

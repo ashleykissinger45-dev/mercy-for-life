@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 pt-8 text-center">
+        <div className="pt-8 text-center">
           <p className="text-sm text-neutral-500">
             © {currentYear} Mercy for Life. All rights reserved. | Affiliated with St. Thomas the Apostle Church
           </p>

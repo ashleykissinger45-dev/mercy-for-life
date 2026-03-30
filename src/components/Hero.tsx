@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="border-b border-neutral-200">
+    <section>
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-24 md:py-36 text-center">
 
         {/* Eyebrow */}
@@ -38,7 +38,7 @@ export default function Hero() {
         </div>
 
         {/* Divider + scripture */}
-        <div className="mt-16 pt-10 border-t border-neutral-200">
+        <div className="mt-16 pt-10">
           <p className="font-serif text-lg text-neutral-500 italic">
             &ldquo;Before I formed you in the womb I knew you.&rdquo;
           </p>

@@ -59,7 +59,7 @@ export default function About() {
             {/* Right — feature cards */}
             <div className="space-y-4">
               {highlights.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-4 p-6 bg-white rounded-xl border border-neutral-200">
+                <div key={title} className="flex gap-4 p-6 bg-white rounded-xl shadow-sm">
                   <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
                     <Icon className="h-5 w-5 text-primary-600" />
                   </div>

@@ -255,6 +255,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -10 && git add -A && git commit -m \"Switch to Cormorant Garamond \\+ DM Sans, lighter heading weights\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -12 && git add -A && git commit -m \"Remove all dividing lines: shadows \\+ bg contrast replace borders throughout\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

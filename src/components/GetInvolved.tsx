@@ -26,7 +26,7 @@ export default function GetInvolved() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white border-b border-neutral-200">
+      <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {ways.map((way, index) => {
@@ -34,7 +34,7 @@ export default function GetInvolved() {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-8 border border-neutral-200 hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="w-11 h-11 bg-primary-100 rounded-lg flex items-center justify-center mb-5">
                     <Icon className="h-5 w-5 text-primary-600" />

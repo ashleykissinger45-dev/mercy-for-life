@@ -24,7 +24,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-[#FFFBF5] border-b border-neutral-200 fixed w-full top-0 z-50 h-[68px]">
+    <nav className="bg-[#FFFBF5] shadow-sm fixed w-full top-0 z-50 h-[68px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full gap-8">
 
@@ -85,7 +85,7 @@ export default function Navigation() {
 
       {/* Mobile drawer */}
       {isOpen && (
-        <div className="md:hidden absolute top-[68px] inset-x-0 bg-[#FFFBF5] border-b border-neutral-200 shadow-lg">
+        <div className="md:hidden absolute top-[68px] inset-x-0 bg-[#FFFBF5] shadow-lg">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <Link
