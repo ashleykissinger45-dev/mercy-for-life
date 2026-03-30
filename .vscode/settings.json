@@ -319,6 +319,14 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -8 && git add -A && git commit -m \"Polish: richer hero gradient \\+ bottom fade, frosted nav, accent bars on section headings\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Clean professional redesign: minimal typography, restrained color, no effects\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

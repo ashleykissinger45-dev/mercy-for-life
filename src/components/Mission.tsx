@@ -29,29 +29,23 @@ export default function Mission() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <div className="w-8 h-[3px] bg-primary-600 mx-auto mb-5 rounded-full" />
-            <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-3 tracking-wide">
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
+              What We Stand For
+            </p>
+            <h2 className="font-serif text-3xl md:text-[2.5rem] font-light text-neutral-900 leading-tight">
               Our Mission
             </h2>
-            <p className="text-neutral-500 max-w-xl mx-auto">
-              Building a culture of life through prayer, education, and peaceful witness
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-7 shadow-sm text-center hover:shadow-md transition-shadow duration-200"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-5">
-                    <Icon className="h-6 w-6 text-primary-600" />
-                  </div>
+                <div key={index} className="text-center">
+                  <Icon className="h-6 w-6 text-primary-600 mx-auto mb-4" strokeWidth={1.5} />
                   <h3 className="font-semibold text-neutral-900 mb-2 text-[15px]">
                     {value.title}
                   </h3>
@@ -63,9 +57,9 @@ export default function Mission() {
             })}
           </div>
 
-          <div className="mt-10 bg-[#0A1628] rounded-xl p-10 text-white text-center">
-            <h3 className="font-serif text-2xl md:text-3xl font-light mb-4">Our Vision</h3>
-            <p className="text-neutral-300 max-w-2xl mx-auto leading-relaxed font-light">
+          <div className="mt-16 bg-neutral-50 rounded-lg p-10 md:p-12 text-center">
+            <h3 className="font-serif text-2xl md:text-[1.75rem] font-light text-neutral-900 mb-4">Our Vision</h3>
+            <p className="text-neutral-500 max-w-2xl mx-auto leading-relaxed">
               Mercy for Life envisions a world where every human life is cherished and protected.
               Through the power of prayer, peaceful witness, and compassionate outreach, we strive
               to transform hearts and minds, building a culture that welcomes life at every stage.

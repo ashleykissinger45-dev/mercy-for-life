@@ -24,8 +24,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white/90 backdrop-blur-md border-b border-neutral-100/60 fixed w-full top-0 z-50 h-[76px]">
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 h-full">
+    <nav className="bg-white fixed w-full top-0 z-50 h-[76px] shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
 
           {/* Logo — left */}

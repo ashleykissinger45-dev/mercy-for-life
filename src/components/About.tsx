@@ -27,16 +27,17 @@ const highlights = [
 export default function About() {
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="py-24 bg-neutral-50">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left — text */}
             <div>
-              <div className="w-8 h-[3px] bg-primary-600 mb-5 rounded-full" />
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-neutral-900 mb-6 tracking-wide">
+              <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
+                Who We Are
+              </p>
+              <h2 className="font-serif text-3xl md:text-[2.5rem] font-light text-neutral-900 mb-8 leading-tight">
                 About Mercy for Life
               </h2>
-              <div className="space-y-5 text-neutral-600 leading-relaxed">
+              <div className="space-y-5 text-neutral-600 leading-relaxed text-[15px]">
                 <p>
                   Mercy for Life is a pro-life ministry affiliated with{' '}
                   <strong className="text-neutral-900 font-semibold">St. Thomas the Apostle Church</strong> in Phoenix, Arizona.
@@ -57,13 +58,10 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right — feature cards */}
-            <div className="space-y-4">
+            <div className="space-y-5">
               {highlights.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-4 p-6 bg-white rounded-xl shadow-sm">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <Icon className="h-5 w-5 text-primary-600" />
-                  </div>
+                <div key={title} className="flex gap-5 p-5">
+                  <Icon className="h-5 w-5 text-primary-600 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-semibold text-neutral-900 mb-1 text-[15px]">{title}</h3>
                     <p className="text-sm text-neutral-500 leading-relaxed">{description}</p>

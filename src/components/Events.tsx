@@ -30,37 +30,34 @@ export default function Events() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {events.map((event, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-sm">
-                {/* Header */}
-                <div className="bg-[#0A1628] px-6 py-5">
-                  <h3 className="font-semibold text-white text-base leading-snug">{event.title}</h3>
+              <div key={index} className="rounded-lg border border-neutral-100 overflow-hidden">
+                <div className="px-6 py-5 border-b border-neutral-100">
+                  <h3 className="font-semibold text-neutral-900 text-base leading-snug">{event.title}</h3>
                 </div>
 
-                {/* Details */}
-                <div className="px-6 py-5 space-y-3">
+                <div className="px-6 py-5 space-y-2.5">
                   <div className="flex items-center gap-2 text-sm text-neutral-600">
-                    <Calendar className="h-4 w-4 text-primary-600 flex-shrink-0" />
+                    <Calendar className="h-4 w-4 text-neutral-400 flex-shrink-0" />
                     {event.date}
                   </div>
                   {event.time && (
                     <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <Clock className="h-4 w-4 text-primary-600 flex-shrink-0" />
+                      <Clock className="h-4 w-4 text-neutral-400 flex-shrink-0" />
                       {event.time}
                     </div>
                   )}
                   <div className="flex items-center gap-2 text-sm text-neutral-600">
-                    <MapPin className="h-4 w-4 text-primary-600 flex-shrink-0" />
+                    <MapPin className="h-4 w-4 text-neutral-400 flex-shrink-0" />
                     {event.location}
                   </div>
                 </div>
 
-                {/* Description + CTA */}
-                <div className="px-6 py-5">
-                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">{event.description}</p>
+                <div className="px-6 py-5 border-t border-neutral-100">
+                  <p className="text-sm text-neutral-500 leading-relaxed mb-4">{event.description}</p>
                   <a
                     href={event.link}
                     target="_blank"
@@ -75,9 +72,12 @@ export default function Events() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
-            <p className="text-neutral-500 text-sm mb-4">Stay updated on all our events by joining our email list.</p>
-            <Link href="/get-involved" className="btn-primary">
+          <div className="mt-12 text-center">
+            <p className="text-neutral-500 text-sm mb-5">Stay updated on all our events.</p>
+            <Link
+              href="/get-involved"
+              className="inline-flex items-center justify-center bg-[#0A1628] text-white text-sm font-medium px-7 py-3 rounded-md hover:bg-[#0d1e36] transition-colors"
+            >
               Subscribe for Updates
             </Link>
           </div>

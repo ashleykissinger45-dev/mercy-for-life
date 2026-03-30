@@ -28,49 +28,43 @@ export default function RosarySchedule() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden shadow-sm"
+                className="rounded-lg border border-neutral-100 overflow-hidden"
               >
-                {/* Card header */}
-                <div className="bg-[#0A1628] px-6 py-5">
-                  <h3 className="font-semibold text-white text-lg">{location.name}</h3>
+                <div className="px-6 py-5 border-b border-neutral-100">
+                  <h3 className="font-semibold text-neutral-900 text-base">{location.name}</h3>
                   <p className="text-neutral-400 text-sm mt-1 flex items-center gap-1.5">
                     <MapPin className="h-3.5 w-3.5" />
                     {location.address}
                   </p>
                 </div>
 
-                {/* Times */}
                 <div className="px-6 py-5 space-y-3">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-neutral-400 flex items-center gap-2">
+                  <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-neutral-400 flex items-center gap-2">
                     <Calendar className="h-3.5 w-3.5" /> Prayer Times
                   </p>
                   {location.times.map((time, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center justify-between py-2"
-                    >
-                      <span className="text-sm font-medium text-neutral-700">{time.day}</span>
-                      <span className="text-sm font-semibold text-primary-600 flex items-center gap-1.5">
-                        <Clock className="h-3.5 w-3.5" />
+                    <div key={idx} className="flex items-center justify-between py-1.5">
+                      <span className="text-sm text-neutral-700">{time.day}</span>
+                      <span className="text-sm font-semibold text-neutral-900 flex items-center gap-1.5">
+                        <Clock className="h-3.5 w-3.5 text-neutral-400" />
                         {time.time}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                {/* Actions */}
-                <div className="px-6 py-4 flex flex-col gap-2">
+                <div className="px-6 py-4 border-t border-neutral-100 flex flex-col gap-2">
                   <a
                     href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold py-2.5 rounded transition-colors"
+                    className="flex items-center justify-center gap-2 w-full bg-[#0A1628] hover:bg-[#0d1e36] text-white text-sm font-medium py-2.5 rounded-md transition-colors"
                   >
                     <Navigation className="h-4 w-4" />
                     Get Directions
@@ -80,7 +74,7 @@ export default function RosarySchedule() {
                       href={location.parkingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-sm font-semibold py-2.5 rounded transition-colors"
+                      className="flex items-center justify-center gap-2 w-full text-neutral-600 hover:text-neutral-900 text-sm font-medium py-2.5 rounded-md border border-neutral-200 hover:border-neutral-300 transition-colors"
                     >
                       <MapPin className="h-4 w-4" />
                       Parking
@@ -91,10 +85,9 @@ export default function RosarySchedule() {
             ))}
           </div>
 
-          <div className="mt-8 bg-neutral-50 rounded-lg px-6 py-4">
-            <p className="text-sm text-neutral-600">
-              <span className="font-semibold text-neutral-800">What to Bring:</span> Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
-            </p>
+          <div className="mt-10 text-sm text-neutral-500">
+            <span className="font-semibold text-neutral-700">What to bring: </span>
+            Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
           </div>
         </div>
       </section>

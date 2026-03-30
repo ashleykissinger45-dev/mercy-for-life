@@ -26,24 +26,31 @@ export default function GetInvolved() {
 
   return (
     <ScrollReveal>
-      <section className="py-20 bg-primary-50">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
+              Make a Difference
+            </p>
+            <h2 className="font-serif text-3xl md:text-[2.5rem] font-light text-neutral-900 leading-tight">
+              Get Involved
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-14">
             {ways.map((way, index) => {
               const Icon = way.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="p-8 rounded-lg border border-neutral-100"
                 >
-                  <div className="w-11 h-11 bg-primary-100 rounded-lg flex items-center justify-center mb-5">
-                    <Icon className="h-5 w-5 text-primary-600" />
-                  </div>
+                  <Icon className="h-6 w-6 text-primary-600 mb-5" strokeWidth={1.5} />
                   <h3 className="font-semibold text-neutral-900 text-lg mb-2">{way.title}</h3>
                   <p className="text-neutral-500 text-sm leading-relaxed mb-6">{way.description}</p>
                   <Link
                     href={way.href}
-                    className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center bg-[#0A1628] hover:bg-[#0d1e36] text-white text-sm font-medium px-6 py-2.5 rounded-md transition-colors"
                   >
                     {way.action}
                   </Link>
@@ -52,9 +59,9 @@ export default function GetInvolved() {
             })}
           </div>
 
-          <div className="bg-[#0A1628] rounded-xl px-10 py-8 text-center text-white">
-            <h3 className="font-serif text-2xl font-light mb-3">Every Action Counts</h3>
-            <p className="text-neutral-300 max-w-xl mx-auto text-sm leading-relaxed font-light">
+          <div className="bg-neutral-50 rounded-lg px-10 py-10 text-center">
+            <h3 className="font-serif text-xl font-light text-neutral-900 mb-3">Every Action Counts</h3>
+            <p className="text-neutral-500 max-w-lg mx-auto text-sm leading-relaxed">
               Whether through prayer or spreading awareness, your participation
               helps build a culture of life and brings hope to those who need it most.
             </p>

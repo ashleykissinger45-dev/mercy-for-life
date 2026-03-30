@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 export default function EmailSignup() {
@@ -47,73 +47,70 @@ export default function EmailSignup() {
 
   return (
     <ScrollReveal>
-      <section id="email-signup" className="py-20 bg-[#0A1628]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <Mail className="h-10 w-10 text-primary-300 mx-auto mb-4" />
-          <h2 className="text-3xl font-serif font-light text-white mb-4">
+      <section id="email-signup" className="py-24 bg-neutral-50">
+        <div className="max-w-xl mx-auto px-6 lg:px-8 text-center">
+        <div className="mb-10">
+          <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-3">
+            Newsletter
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-3">
             Stay Connected
           </h2>
-          <p className="text-neutral-400 max-w-xl mx-auto">
-            Receive updates about prayer times, events, and ways to make a difference
+          <p className="text-neutral-500 text-sm">
+            Receive updates about prayer times, events, and ways to make a difference.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-xl shadow-2xl p-8">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <form onSubmit={handleSubmit}>
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
               <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-neutral-700 mb-2">
-                  Name
-                </label>
                 <input
                   type="text"
                   id="name"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-primary-400 outline-none transition-all shadow-sm"
+                  className="w-full px-4 py-3 bg-white rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-neutral-700 mb-2">
-                  Email Address
-                </label>
                 <input
                   type="email"
                   id="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-primary-400 outline-none transition-all shadow-sm"
+                  className="w-full px-4 py-3 bg-white rounded-md border border-neutral-200 focus:border-neutral-400 focus:ring-0 outline-none transition-colors text-sm"
                   placeholder="your@email.com"
                 />
               </div>
             </div>
 
-            <button type="submit" className="w-full btn-primary">
+            <button
+              type="submit"
+              className="w-full bg-[#0A1628] text-white font-medium py-3 rounded-md hover:bg-[#0d1e36] transition-colors text-sm"
+            >
               Join Our Email List
             </button>
 
-            <p className="text-xs text-gray-500 mt-4 text-center">
-              We respect your privacy. Your information will never be shared with third parties.
+            <p className="text-xs text-neutral-400 mt-4">
+              We respect your privacy. Your information will never be shared.
             </p>
 
             {status === 'success' && (
-              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start space-x-3">
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <p className="text-green-800">{message}</p>
+                <p className="text-green-800 text-sm">{message}</p>
               </div>
             )}
 
             {status === 'error' && (
-              <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-800">{message}</p>
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                <p className="text-red-800 text-sm">{message}</p>
               </div>
             )}
-          </div>
         </form>
       </div>
       </section>
