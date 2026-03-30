@@ -279,6 +279,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -8 && git add -A && git commit -m \"Use background\\.jpg as hero and page header background\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && mv background\\.jpg public/background\\.jpg && git add -A && git commit -m \"Move background\\.jpg into public folder\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
