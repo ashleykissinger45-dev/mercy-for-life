@@ -18,8 +18,11 @@ export default function Footer() {
                 alt="Mercy for Life - St. Thomas the Apostle" 
                 width={240} 
                 height={70}
-                className="h-14 w-auto opacity-95"
-                style={{ imageRendering: '-webkit-optimize-contrast' }}
+                className="h-14 w-auto"
+                style={{
+                  imageRendering: '-webkit-optimize-contrast',
+                  filter: 'brightness(0) invert(1)',
+                }}
               />
             </div>
             <p className="text-neutral-400 leading-relaxed mb-6 max-w-md">

@@ -37,7 +37,10 @@ export default function Navigation() {
               height={56}
               className="h-10 w-auto"
               priority
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
+              style={{
+                imageRendering: '-webkit-optimize-contrast',
+                filter: 'brightness(0) saturate(100%) invert(26%) sepia(91%) saturate(900%) hue-rotate(188deg) brightness(102%)',
+              }}
             />
           </Link>
 

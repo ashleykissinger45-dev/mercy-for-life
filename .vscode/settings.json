@@ -283,6 +283,14 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && mv background\\.jpg public/background\\.jpg && git add -A && git commit -m \"Move background\\.jpg into public folder\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm run build 2>&1 \\| tail -8 && git add -A && git commit -m \"Logo: unified blue filter on nav, white on footer\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Logo: unified blue filter on nav, white on footer\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
