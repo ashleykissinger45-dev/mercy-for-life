@@ -20,14 +20,14 @@ export default function Footer() {
               className="h-10 w-auto mb-5"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
-            <p className="text-neutral-500 text-sm leading-relaxed">
+            <p className="text-white/60 text-sm leading-relaxed">
               A pro-life ministry dedicated to defending the sanctity of human life 
               through prayer, peaceful witness, and compassionate action.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-500 mb-5">Navigation</h4>
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/50 mb-5">Navigation</h4>
             <ul className="space-y-3">
               {[
                 { label: 'Prayer Schedule', href: '/prayer' },
@@ -37,7 +37,7 @@ export default function Footer() {
                 { label: 'Contact', href: '/contact' },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-neutral-400 hover:text-white transition-colors text-sm">
+                  <Link href={item.href} className="text-white/70 hover:text-white transition-colors text-sm">
                     {item.label}
                   </Link>
                 </li>
@@ -46,11 +46,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-500 mb-5">Connect</h4>
+            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/50 mb-5">Connect</h4>
             <div className="space-y-4">
               <a
                 href="mailto:mercyforlife@staphx.org"
-                className="flex items-center gap-3 text-neutral-400 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Mail className="h-4 w-4" />
                 mercyforlife@staphx.org
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://www.instagram.com/stamercyforlife"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-neutral-400 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
               >
                 <Instagram className="h-4 w-4" />
                 @stamercyforlife
@@ -68,8 +68,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/[0.06] pt-8 text-center">
-          <p className="text-xs text-neutral-600">
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-xs text-white/40">
             &copy; {currentYear} Mercy for Life &middot; St. Thomas the Apostle Church
           </p>
         </div>
