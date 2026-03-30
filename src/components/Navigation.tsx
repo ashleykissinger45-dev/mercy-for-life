@@ -65,7 +65,7 @@ export default function Navigation() {
           <div className="hidden md:flex flex-shrink-0">
             <Link
               href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#4DA0E0] text-white hover:bg-[#3a8fd0] transition-colors duration-150"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005492] text-white hover:bg-[#004578] transition-colors duration-150"
             >
               Contact Us
             </Link>
@@ -103,7 +103,7 @@ export default function Navigation() {
             <div className="pt-3">
               <Link
                 href="/contact"
-                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-[#4DA0E0] text-white rounded-md hover:bg-[#3a8fd0] transition-colors duration-150"
+                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-[#005492] text-white rounded-md hover:bg-[#004578] transition-colors duration-150"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
