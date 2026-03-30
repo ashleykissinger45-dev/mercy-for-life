@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="bg-[#005492]">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center">
 
-        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/70 mb-10">
+        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/90 mb-10">
           St. Thomas the Apostle Church &middot; Phoenix, AZ
         </p>
 
@@ -16,7 +16,7 @@ export default function Hero() {
           One Prayer at a Time
         </h1>
 
-        <p className="text-[1.05rem] text-white/70 max-w-lg mx-auto leading-relaxed mb-12">
+        <p className="text-[1.05rem] text-white/80 max-w-lg mx-auto leading-relaxed mb-12">
           A pro-life ministry united in peaceful prayer and advocacy
           for the protection of all human life.
         </p>
@@ -30,7 +30,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/prayer"
-            className="text-white text-[13px] font-semibold px-8 py-3.5 rounded-md border border-white/30 hover:border-white/60 transition-colors"
+            className="text-white text-[13px] font-semibold px-8 py-3.5 rounded-md border border-white/50 hover:border-white hover:bg-white/10 transition-colors"
           >
             Prayer Schedule
           </Link>
@@ -38,10 +38,10 @@ export default function Hero() {
 
       </div>
 
-      <div className="border-t border-white/10 py-8">
-        <p className="text-center font-serif text-base text-white/60 italic">
+      <div className="border-t border-white/15 py-8">
+        <p className="text-center font-serif text-base text-white/70 italic">
           &ldquo;Before I formed you in the womb I knew you.&rdquo;
-          <span className="text-white/50 not-italic text-sm ml-3">Jeremiah 1:5</span>
+          <span className="text-white/60 not-italic text-sm ml-3">Jeremiah 1:5</span>
         </p>
       </div>
     </section>
