@@ -6,7 +6,7 @@ interface PageHeaderProps {
 export default function PageHeader({ title, subtitle }: PageHeaderProps) {
   return (
     <div
-      className="bg-[#005492] py-16 md:py-24"
+      className="bg-[#005999] py-16 md:py-24"
       style={{ backgroundImage: 'url(/pic.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">

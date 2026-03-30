@@ -49,7 +49,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`text-[12px] font-medium tracking-[0.06em] transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-[#005492]'
+                    ? 'text-[#005999]'
                     : 'text-neutral-400 hover:text-neutral-700'
                 }`}
               >
@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="hidden md:flex flex-shrink-0">
             <Link
               href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005492] text-white hover:bg-[#004578] transition-colors duration-150"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-colors duration-150"
             >
               Contact Us
             </Link>
@@ -89,7 +89,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-3 py-2.5 text-[12px] font-medium tracking-[0.06em] rounded transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-[#005492] bg-[#005492]/5'
+                    ? 'text-[#005999] bg-[#005999]/5'
                     : 'text-neutral-500 hover:text-neutral-700 hover:bg-neutral-50'
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -100,7 +100,7 @@ export default function Navigation() {
             <div className="pt-3">
               <Link
                 href="/contact"
-                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-[#005492] text-white rounded-md hover:bg-[#004578] transition-colors duration-150"
+                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-[#005999] text-white rounded-md hover:bg-[#004C82] transition-colors duration-150"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us

@@ -64,7 +64,7 @@ export default function RosarySchedule() {
                     href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-[#005492] hover:bg-[#004578] text-white text-sm font-medium py-2.5 rounded-md transition-colors"
+                    className="flex items-center justify-center gap-2 w-full bg-[#005999] hover:bg-[#004C82] text-white text-sm font-medium py-2.5 rounded-md transition-colors"
                   >
                     <Navigation className="h-4 w-4" />
                     Get Directions

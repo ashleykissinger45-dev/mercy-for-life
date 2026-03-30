@@ -76,7 +76,7 @@ export default function Events() {
             <p className="text-neutral-500 text-sm mb-5">Stay updated on all our events.</p>
             <Link
               href="/get-involved"
-              className="inline-flex items-center justify-center bg-[#005492] text-white text-sm font-medium px-7 py-3 rounded-md hover:bg-[#004578] transition-colors"
+              className="inline-flex items-center justify-center bg-[#005999] text-white text-sm font-medium px-7 py-3 rounded-md hover:bg-[#004C82] transition-colors"
             >
               Subscribe for Updates
             </Link>

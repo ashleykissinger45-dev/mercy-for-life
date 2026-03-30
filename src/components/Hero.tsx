@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="bg-[#005492]"
+      className="bg-[#005999]"
       style={{ backgroundImage: 'url(/pic.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="max-w-2xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center">
@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-3.5 justify-center">
           <Link
             href="/get-involved"
-            className="bg-white text-[#005492] text-[13px] font-medium px-8 py-3 rounded-md hover:bg-white/90 transition-all"
+            className="bg-white text-[#005999] text-[13px] font-medium px-8 py-3 rounded-md hover:bg-white/90 transition-all"
           >
             Get Involved
           </Link>
