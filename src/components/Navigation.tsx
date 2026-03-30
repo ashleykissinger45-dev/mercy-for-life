@@ -49,13 +49,13 @@ export default function Navigation() {
                 href={item.href}
                 className={`relative text-[11.5px] font-semibold tracking-[0.1em] uppercase transition-colors duration-150 py-1 ${
                   isActive(item.href)
-                    ? 'text-primary-600'
+                    ? 'text-[#4A7FA5]'
                     : 'text-neutral-400 hover:text-neutral-900'
                 }`}
               >
                 {item.name}
                 {isActive(item.href) && (
-                  <span className="absolute -bottom-[26px] left-0 right-0 h-[2px] bg-primary-600 rounded-full" />
+                  <span className="absolute -bottom-[26px] left-0 right-0 h-[2px] bg-[#4A7FA5] rounded-full" />
                 )}
               </Link>
             ))}
@@ -65,7 +65,7 @@ export default function Navigation() {
           <div className="hidden md:flex flex-shrink-0">
             <Link
               href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition-colors duration-150"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#4A7FA5] text-white hover:bg-[#3d6d8f] transition-colors duration-150"
             >
               Contact Us
             </Link>
@@ -92,7 +92,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`block px-3 py-2.5 text-[11.5px] font-semibold tracking-[0.1em] uppercase rounded transition-colors duration-150 ${
                   isActive(item.href)
-                    ? 'text-primary-600 bg-primary-50'
+                    ? 'text-[#4A7FA5] bg-[#4A7FA5]/5'
                     : 'text-neutral-500 hover:text-neutral-900 hover:bg-neutral-50'
                 }`}
                 onClick={() => setIsOpen(false)}
@@ -103,7 +103,7 @@ export default function Navigation() {
             <div className="pt-3">
               <Link
                 href="/contact"
-                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-150"
+                className="block text-center px-3 py-2.5 text-[11.5px] font-bold tracking-[0.1em] uppercase bg-[#4A7FA5] text-white rounded-md hover:bg-[#3d6d8f] transition-colors duration-150"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
