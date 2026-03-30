@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="bg-[#005492]">
+    <section
+      className="bg-[#005492]"
+      style={{ backgroundImage: 'url(/pic.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center">
 
         <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/90 mb-10">
