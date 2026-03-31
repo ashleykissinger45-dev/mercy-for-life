@@ -26,6 +26,11 @@ export default function Prayers() {
       icon: Baby,
       prayers: [
         {
+          name: 'Priests for Life Call to Prayer',
+          description: 'A daily prayer committing to speak and act on behalf of the unborn, by Fr. Frank Pavone.',
+          link: 'https://www.priestsforlife.org/novenas/novena.aspx?id=10',
+        },
+        {
           name: 'Prayer to End Abortion',
           description: 'A prayer asking God to protect the unborn and change hearts.',
           link: 'https://www.usccb.org/prayers/prayer-end-abortion',

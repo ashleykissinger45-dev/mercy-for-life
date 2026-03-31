@@ -411,6 +411,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -6 && git add -A && git commit -m \"Add Prayers page with categorized prayer links\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Add Priests for Life Call to Prayer link\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
