@@ -423,6 +423,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Events: add upcoming, previous, and weekly rosaries; remove RosarySchedule from prayer page\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Remove Prayer Schedule tab from nav and footer\" && git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

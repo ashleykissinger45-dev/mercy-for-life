@@ -30,7 +30,6 @@ export default function Footer() {
             <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/60 mb-5">Navigation</h4>
             <ul className="space-y-3">
               {[
-                { label: 'Prayer Schedule', href: '/prayer' },
                 { label: 'Prayers', href: '/prayers' },
                 { label: 'About Us', href: '/about' },
                 { label: 'Get Involved', href: '/get-involved' },
