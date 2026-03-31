@@ -31,6 +31,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: 'Prayer Schedule', href: '/prayer' },
+                { label: 'Prayers', href: '/prayers' },
                 { label: 'About Us', href: '/about' },
                 { label: 'Get Involved', href: '/get-involved' },
                 { label: 'Events', href: '/events' },
