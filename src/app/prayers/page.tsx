@@ -11,9 +11,41 @@ export default function PrayersPage() {
     <>
       <PageHeader
         title="Rosaries & Prayers"
-        subtitle="Join us each week to pray the Rosary outside abortion facilities, and pray along with our daily prayer to end abortion."
+        subtitle="Two ways to pray with us — join us on the sidewalk each week, or pray along from home."
       />
+
+      {/* Section 1 */}
+      <div className="bg-white pt-14 pb-2">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-2">
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#005999]">Section 1</span>
+            <div className="flex-1 h-px bg-neutral-200" />
+          </div>
+          <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-2">
+            Weekly Rosaries Outside Abortion Facilities
+          </h2>
+          <p className="text-neutral-500 text-sm max-w-xl">
+            Every week we gather peacefully outside local abortion facilities to pray the Rosary for mothers, their babies, and those working inside.
+          </p>
+        </div>
+      </div>
       <RosarySchedule />
+
+      {/* Section 2 */}
+      <div className="bg-white pt-14 pb-2">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-2">
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-[#005999]">Section 2</span>
+            <div className="flex-1 h-px bg-neutral-200" />
+          </div>
+          <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-2">
+            Prayers from Our Ministry
+          </h2>
+          <p className="text-neutral-500 text-sm max-w-xl">
+            Prayers used by our group that you can read and pray along with from anywhere.
+          </p>
+        </div>
+      </div>
       <Prayers />
     </>
   );
