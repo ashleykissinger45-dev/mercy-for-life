@@ -5,12 +5,11 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[92vh] flex flex-col justify-center bg-[#003A63]"
+      className="relative min-h-[92vh] flex flex-col justify-center bg-[#005999]"
       style={{ backgroundImage: 'url(/pic.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       {/* Layered overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-      <div className="absolute inset-0 bg-[#003A63]/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#005999]/70 via-[#005999]/50 to-[#005999]/75" />
 
       {/* Decorative top accent line */}
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-white/40 to-transparent" />
