@@ -92,7 +92,7 @@ export default function RosarySchedule() {
                         Parking
                       </a>
                       {location.parkingNote && (
-                        <p className="text-xs text-[#005999] font-medium text-center bg-[#005999]/8 rounded-md px-3 py-2 leading-snug">{location.parkingNote}</p>
+                        <p className="text-xs text-neutral-500 leading-snug"><span className="font-semibold text-neutral-700">Note: </span>{location.parkingNote}</p>
                       )}
                     </div>
                   )}
