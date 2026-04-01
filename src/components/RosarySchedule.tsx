@@ -31,6 +31,14 @@ export default function RosarySchedule() {
       <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-white/[0.93]" />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-2">
+              Weekly Rosaries Outside Abortion Facilities
+            </h2>
+            <p className="text-neutral-500 text-sm max-w-xl mx-auto">
+              Every week we gather peacefully outside local abortion facilities to pray the Rosary for mothers, their babies, and those working inside.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             {locations.map((location, index) => (
               <div
