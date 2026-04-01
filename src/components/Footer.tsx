@@ -13,11 +13,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-14">
           <div>
             <Image 
-              src="/logo-white-text.png" 
+              src="/Transparent%20logo%20(use).png" 
               alt="Mercy for Life" 
               width={200} 
               height={56}
-              className="h-10 w-auto mb-5"
+              className="h-12 w-auto mb-5"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
             <p className="text-white/75 text-sm leading-relaxed">
