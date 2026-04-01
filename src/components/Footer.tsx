@@ -17,7 +17,7 @@ export default function Footer() {
               alt="Mercy for Life" 
               width={200} 
               height={56}
-              className="h-12 w-auto mb-5"
+              className="h-16 w-auto mb-5"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
             <p className="text-white/75 text-sm leading-relaxed">
