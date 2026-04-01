@@ -58,12 +58,14 @@ export default function RosarySchedule() {
                     <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-neutral-400 flex items-center gap-2 mb-2">
                       <Calendar className="h-3.5 w-3.5" /> Prayer Times
                     </p>
-                    <div className="flex flex-wrap gap-x-6 gap-y-1">
+                    <div className="flex flex-col gap-1">
                       {location.times.map((time, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 py-1">
-                          <Clock className="h-3.5 w-3.5 text-neutral-400" />
+                        <div key={idx} className="flex items-center justify-between py-1 border-b border-neutral-50 last:border-0">
                           <span className="text-sm text-neutral-700">{time.day}</span>
-                          <span className="text-sm font-semibold text-neutral-900">{time.time}</span>
+                          <span className="text-sm font-semibold text-neutral-900 flex items-center gap-1.5">
+                            <Clock className="h-3.5 w-3.5 text-neutral-400" />
+                            {time.time}
+                          </span>
                         </div>
                       ))}
                     </div>
