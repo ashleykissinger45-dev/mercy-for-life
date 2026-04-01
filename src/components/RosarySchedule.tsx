@@ -15,7 +15,7 @@ export default function RosarySchedule() {
         { day: 'Saturday', time: '8:00am' },
       ],
       parkingUrl:
-        'https://www.google.com/maps/dir/?api=1&destination=3214+E+Indian+School+Rd+Phoenix+AZ+85018',
+        'https://www.google.com/maps/dir/?api=1&destination=33.4967142,-112.0121464',
     },
     {
       name: 'Planned Parenthood',
