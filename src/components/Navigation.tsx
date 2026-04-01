@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +8,14 @@ import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -24,11 +31,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white fixed w-full top-0 z-50 h-[76px] shadow-[0_1px_0_0_rgba(0,0,0,0.04)]">
+    <nav className={`bg-white fixed w-full top-0 z-50 h-[76px] transition-shadow duration-300 ${
+      scrolled ? 'shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : 'shadow-[0_1px_0_0_rgba(0,0,0,0.04)]'
+    }`}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
 
-          {/* Logo — left */}
+          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/Transparent logo (use).png"
@@ -41,28 +50,31 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Nav links — center */}
-          <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
+          {/* Nav links */}
+          <div className="hidden md:flex items-center gap-7 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-[12px] font-medium tracking-[0.06em] transition-colors duration-150 ${
+                className={`relative text-[12px] font-medium tracking-[0.05em] transition-colors duration-150 pb-0.5 ${
                   isActive(item.href)
                     ? 'text-[#005999]'
                     : 'text-neutral-400 hover:text-neutral-700'
                 }`}
               >
                 {item.name}
+                {isActive(item.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#005999] rounded-full" />
+                )}
               </Link>
             ))}
           </div>
 
-          {/* CTA — right */}
+          {/* CTA */}
           <div className="hidden md:flex flex-shrink-0">
             <Link
               href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-colors duration-150"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-all duration-150 shadow-sm hover:shadow-md hover:-translate-y-px"
             >
               Contact Us
             </Link>

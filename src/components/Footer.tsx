@@ -68,10 +68,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/15 pt-8 text-center">
-          <p className="text-xs text-white/50">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-white/40">
             &copy; {currentYear} Mercy for Life &middot; St. Thomas the Apostle Church
           </p>
+          <p className="font-serif text-xs text-white/25 italic">"Before I formed you in the womb I knew you." — Jer. 1:5</p>
         </div>
       </div>
     </footer>

@@ -11,6 +11,8 @@
     @apply bg-white text-neutral-900;
     font-family: var(--font-sans);
     letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -21,6 +23,16 @@
   
   p {
     line-height: 1.75;
+  }
+
+  * {
+    @apply transition-none;
+  }
+
+  a, button {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
