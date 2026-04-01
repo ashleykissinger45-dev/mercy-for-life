@@ -15,7 +15,7 @@ export default function RosarySchedule() {
         { day: 'Saturday', time: '8:00am' },
       ],
       parkingUrl:
-        'https://maps.app.goo.gl/5SLB8RamGeG1d9Yq6',
+        'https://www.google.com/maps/search/?api=1&query=D-Lite+Healthy+On+The+Go+4141+N+32nd+St+Phoenix+AZ',
     },
     {
       name: 'Planned Parenthood',
