@@ -45,7 +45,7 @@ export default function RosarySchedule() {
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden flex flex-col"
               >
                 <div className="px-6 py-5 border-b border-neutral-100">
                   <h3 className="font-semibold text-neutral-900 text-base">{location.name}</h3>
@@ -55,7 +55,7 @@ export default function RosarySchedule() {
                   </p>
                 </div>
 
-                <div className="px-6 py-5 space-y-3">
+                <div className="px-6 py-5 space-y-3 flex-1">
                   <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-neutral-400 flex items-center gap-2">
                     <Calendar className="h-3.5 w-3.5" /> Prayer Times
                   </p>
