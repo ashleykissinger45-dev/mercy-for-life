@@ -15,7 +15,7 @@ export default function RosarySchedule() {
         { day: 'Saturday', time: '8:00am' },
       ],
       parkingUrl:
-        'https://maps.google.com/?q=33.4967142,-112.0121464',
+        'https://maps.app.goo.gl/5SLB8RamGeG1d9Yq6',
     },
     {
       name: 'Planned Parenthood',
