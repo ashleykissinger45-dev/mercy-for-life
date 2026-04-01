@@ -8,7 +8,7 @@ export default function RosarySchedule() {
     {
       name: 'Camelback Family Planning',
       address: '4141 N 32nd Street, Phoenix, AZ',
-      mapsQuery: '4141+N+32nd+Street+Phoenix+AZ',
+      mapsQuery: 'Camelback+Family+Planning+4141+N+32nd+Street+Phoenix+AZ',
       times: [
         { day: 'Wednesday', time: '9:30am' },
         { day: 'Thursday', time: '8:30am' },
@@ -20,7 +20,7 @@ export default function RosarySchedule() {
     {
       name: 'Planned Parenthood',
       address: '4715 N 15th Street, Phoenix, AZ',
-      mapsQuery: '4715+N+15th+Street+Phoenix+AZ',
+      mapsQuery: 'Planned+Parenthood+4715+N+15th+Street+Phoenix+AZ',
       times: [{ day: 'Friday', time: '9:30am' }],
       parkingUrl: null,
     },
