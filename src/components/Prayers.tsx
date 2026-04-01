@@ -1,9 +1,33 @@
 'use client';
 
-import { BookOpen, Shield, Cross, Church, Baby } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
-export default function Prayers() {
+export type SanityPrayer = {
+  _id: string;
+  title: string;
+  description?: string;
+  author?: string;
+  externalLink?: string;
+  linkText?: string;
+};
+
+type Props = {
+  prayers: SanityPrayer[];
+};
+
+export default function Prayers({ prayers }: Props) {
+  // Fallback to hardcoded prayer if Sanity has none yet
+  const displayPrayers: SanityPrayer[] = prayers.length > 0 ? prayers : [
+    {
+      _id: 'fallback-1',
+      title: 'Daily Prayer to End Abortion',
+      description: 'A daily prayer committing to speak and act on behalf of the unborn, by Fr. Frank Pavone.',
+      author: 'Fr. Frank Pavone',
+      externalLink: 'https://www.priestsforlife.org/novenas/novena.aspx?id=10',
+      linkText: 'Read the Prayer',
+    },
+  ];
+
   return (
     <ScrollReveal>
       <section className="pt-12 pb-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -17,21 +41,29 @@ export default function Prayers() {
               Prayers used by our group that you can read and pray along with from anywhere.
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8 text-center">
-            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-4">
-              Daily Prayer to End Abortion
-            </h2>
-            <p className="text-neutral-500 text-sm mb-6 max-w-md mx-auto">
-              A daily prayer committing to speak and act on behalf of the unborn, by Fr. Frank Pavone.
-            </p>
-            <a
-              href="https://www.priestsforlife.org/novenas/novena.aspx?id=10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#005999] hover:bg-[#004C82] text-white text-sm font-medium px-7 py-3 rounded-md transition-colors shadow"
-            >
-              Read the Prayer
-            </a>
+          <div className="space-y-6">
+            {displayPrayers.map((prayer) => (
+              <div key={prayer._id} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8 text-center">
+                <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-4">
+                  {prayer.title}
+                </h2>
+                {prayer.description && (
+                  <p className="text-neutral-500 text-sm mb-6 max-w-md mx-auto">
+                    {prayer.description}
+                  </p>
+                )}
+                {prayer.externalLink && (
+                  <a
+                    href={prayer.externalLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-[#005999] hover:bg-[#004C82] text-white text-sm font-medium px-7 py-3 rounded-md transition-colors shadow"
+                  >
+                    {prayer.linkText || 'Read the Prayer'}
+                  </a>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

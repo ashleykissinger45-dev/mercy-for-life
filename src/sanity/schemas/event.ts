@@ -1,0 +1,99 @@
+import { defineType, defineField } from 'sanity';
+
+export const eventSchema = defineType({
+  name: 'event',
+  title: 'Events',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Event Title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Upcoming', value: 'upcoming' },
+          { title: 'Previous', value: 'previous' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'upcoming',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'date',
+      title: 'Date',
+      type: 'string',
+      description: 'e.g. "April 3, 2026"',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'time',
+      title: 'Time',
+      type: 'string',
+      description: 'e.g. "11 AM"',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Each item is a separate paragraph. The last item will be styled as a quote.',
+    }),
+    defineField({
+      name: 'details',
+      title: 'Extra Details',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Bullet points shown in the details box (e.g. parking info, what to bring)',
+    }),
+    defineField({
+      name: 'link',
+      title: 'External Link URL',
+      type: 'url',
+      description: 'Optional link for previous events (e.g. Instagram)',
+    }),
+    defineField({
+      name: 'linkText',
+      title: 'Link Text',
+      type: 'string',
+      description: 'Label for the link button (e.g. "View Our Instagram")',
+    }),
+    defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers appear first',
+    }),
+  ],
+  orderings: [
+    {
+      title: 'Display Order',
+      name: 'orderAsc',
+      by: [{ field: 'order', direction: 'asc' }],
+    },
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date',
+      status: 'status',
+    },
+    prepare({ title, subtitle, status }) {
+      return {
+        title,
+        subtitle: `${status === 'upcoming' ? '🟢 Upcoming' : '⚫ Previous'} · ${subtitle}`,
+      };
+    },
+  },
+});

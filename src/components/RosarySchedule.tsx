@@ -3,30 +3,24 @@
 import { MapPin, Calendar, Clock, Navigation } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
-export default function RosarySchedule() {
-  const locations = [
-    {
-      name: 'Camelback Family Planning',
-      address: '4141 N 32nd Street, Phoenix, AZ',
-      mapsQuery: 'Camelback+Family+Planning+4141+N+32nd+Street+Phoenix+AZ',
-      times: [
-        { day: 'Wednesday', time: '9:30am' },
-        { day: 'Thursday', time: '8:30am' },
-        { day: 'Saturday', time: '8:00am' },
-      ],
-      parkingUrl:
-        'https://maps.app.goo.gl/LXJMybJezkGgxw196',
-      parkingNote: 'Park in the lot next to the Shell station (not the front lot).',
-    },
-    {
-      name: 'Planned Parenthood',
-      address: '4715 N 15th Street, Phoenix, AZ',
-      mapsQuery: 'Planned+Parenthood+4715+N+15th+Street+Phoenix+AZ',
-      times: [{ day: 'Friday', time: '9:30am' }],
-      parkingUrl: null,
-      parkingNote: null,
-    },
-  ];
+export type RosaryTime = { day: string; time: string };
+
+export type SanityRosaryLocation = {
+  _id: string;
+  name: string;
+  address: string;
+  mapsQuery: string;
+  times: RosaryTime[];
+  parkingUrl?: string | null;
+  parkingNote?: string | null;
+};
+
+type Props = {
+  locations: SanityRosaryLocation[];
+  whatToBring?: string;
+};
+
+export default function RosarySchedule({ locations, whatToBring }: Props) {
 
   return (
     <ScrollReveal>
@@ -107,7 +101,7 @@ export default function RosarySchedule() {
           <div className="mt-10 bg-white rounded-xl shadow-sm border border-neutral-100/60 px-6 py-5">
             <p className="text-sm text-neutral-500">
               <span className="font-semibold text-neutral-700">What to bring: </span>
-              Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.
+              {whatToBring || 'Please bring your rosary and a peaceful spirit. We pray quietly and respectfully. All ages welcome.'}
             </p>
           </div>
         </div>

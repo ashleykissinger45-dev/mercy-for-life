@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Instagram } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -61,7 +61,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
               >
-                <Instagram className="h-4 w-4" />
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" strokeWidth="0" />
+                </svg>
                 @stamercyforlife
               </a>
             </div>

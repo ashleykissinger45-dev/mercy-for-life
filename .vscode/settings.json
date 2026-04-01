@@ -443,6 +443,50 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add dedicated Rosaries page and nav tab\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add src/components/RosarySchedule\\.tsx && git commit -m \"Fix rosary card height balance with flex layout\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add src/components/RosarySchedule\\.tsx && git commit -m \"Let rosary cards be natural height, no empty space\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add src/components/RosarySchedule\\.tsx && git commit -m \"Redesign rosary cards to horizontal stacked layout\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install next-sanity sanity 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install next@latest next-sanity sanity 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install next@latest react@latest react-dom@latest lucide-react@latest next-sanity sanity 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install @sanity/image-url 2>&1 \\| tail -5$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install @sanity/image-url$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npm install @sanity/vision$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add Sanity CMS: studio, schemas, and Sanity-powered components\" && git push 2>&1$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

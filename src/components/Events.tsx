@@ -1,11 +1,30 @@
 'use client';
 
-import { Calendar, Clock, MapPin, Navigation, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, ExternalLink } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import Link from 'next/link';
+import { MapPin, Clock as ClockIcon } from 'lucide-react';
 
-// Good Friday event
-const upcomingEvents = [
+export type SanityEvent = {
+  _id: string;
+  title: string;
+  status: 'upcoming' | 'previous';
+  date: string;
+  time?: string;
+  location?: string;
+  description?: string[];
+  details?: string[];
+  link?: string;
+  linkText?: string;
+};
+
+type Props = {
+  upcomingEvents: SanityEvent[];
+  previousEvents: SanityEvent[];
+};
+
+// LEGACY FALLBACK — replaced by Sanity data passed from page
+const _upcomingEvents = [
   {
     title: 'Good Friday Rosary',
     date: 'April 3, 2026',
@@ -23,7 +42,7 @@ const upcomingEvents = [
   },
 ];
 
-const previousEvents = [
+const _previousEvents = [
   {
     title: '2026 AZ March For Life',
     date: 'February 28th',
@@ -46,7 +65,7 @@ const previousEvents = [
   },
 ];
 
-export default function Events() {
+export default function Events({ upcomingEvents, previousEvents }: Props) {
   return (
     <ScrollReveal>
       <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -55,94 +74,110 @@ export default function Events() {
           {/* Upcoming Events */}
           <div className="text-center">
             <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-10">Upcoming Events</h2>
-            <div className="max-w-2xl mx-auto">
-              {upcomingEvents.map((event, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-md border border-neutral-100/60 overflow-hidden">
-                  {/* Date banner */}
-                  <div className="bg-[#005999] px-8 py-5 text-center">
-                    <p className="text-white/70 text-[10px] font-bold tracking-[0.25em] uppercase mb-1">Upcoming</p>
-                    <p className="text-white text-xl font-semibold">{event.date}</p>
-                  </div>
-                  {/* Body */}
-                  <div className="px-8 py-8 text-center">
-                    <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7">
-                      {event.time && (
-                        <span className="flex items-center gap-2 text-sm text-neutral-600">
-                          <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
-                          {event.time}
-                        </span>
-                      )}
-                      <span className="flex items-center gap-2 text-sm text-neutral-600">
-                        <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0" />
-                        {event.location}
-                      </span>
+            {upcomingEvents.length === 0 ? (
+              <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-sm border border-neutral-100/60 px-8 py-12">
+                <p className="text-neutral-400 text-sm">No upcoming events at this time. Check back soon!</p>
+              </div>
+            ) : (
+              <div className="max-w-2xl mx-auto space-y-8">
+                {upcomingEvents.map((event) => (
+                  <div key={event._id} className="bg-white rounded-2xl shadow-md border border-neutral-100/60 overflow-hidden">
+                    <div className="bg-[#005999] px-8 py-5 text-center">
+                      <p className="text-white/70 text-[10px] font-bold tracking-[0.25em] uppercase mb-1">Upcoming</p>
+                      <p className="text-white text-xl font-semibold">{event.date}</p>
                     </div>
-                    <div className="space-y-3 mb-7 max-w-md mx-auto">
-                      {(Array.isArray(event.description) ? event.description : [event.description]).map((line, i) => (
-                        <p key={i} className={`text-sm leading-relaxed ${
-                          i === (Array.isArray(event.description) ? event.description.length : 1) - 1
-                            ? 'text-[#005999] font-medium italic'
-                            : 'text-neutral-600'
-                        }`}>{line}</p>
-                      ))}
-                    </div>
-                    {event.details && (
-                      <div className="inline-flex flex-col gap-1.5 bg-neutral-50 border border-neutral-100 rounded-lg px-5 py-3 text-xs text-neutral-500 mb-2">
-                        {event.details.map((d, i) => (
-                          <span key={i} className="flex items-center gap-2"><span className="text-[#005999]">·</span>{d}</span>
-                        ))}
+                    <div className="px-8 py-8 text-center">
+                      <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7">
+                        {event.time && (
+                          <span className="flex items-center gap-2 text-sm text-neutral-600">
+                            <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                            {event.time}
+                          </span>
+                        )}
+                        {event.location && (
+                          <span className="flex items-center gap-2 text-sm text-neutral-600">
+                            <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                            {event.location}
+                          </span>
+                        )}
                       </div>
-                    )}
+                      {event.description && event.description.length > 0 && (
+                        <div className="space-y-3 mb-7 max-w-md mx-auto">
+                          {event.description.map((line, i) => (
+                            <p key={i} className={`text-sm leading-relaxed ${
+                              i === event.description!.length - 1
+                                ? 'text-[#005999] font-medium italic'
+                                : 'text-neutral-600'
+                            }`}>{line}</p>
+                          ))}
+                        </div>
+                      )}
+                      {event.details && event.details.length > 0 && (
+                        <div className="inline-flex flex-col gap-1.5 bg-neutral-50 border border-neutral-100 rounded-lg px-5 py-3 text-xs text-neutral-500 mb-2">
+                          {event.details.map((d, i) => (
+                            <span key={i} className="flex items-center gap-2"><span className="text-[#005999]">·</span>{d}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Previous Events */}
-          <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-8 text-center">Previous Events</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {previousEvents.map((event, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden">
-                  <div className="px-6 py-5 border-b border-neutral-100">
-                    <h3 className="font-semibold text-neutral-900 text-base leading-snug">{event.title}</h3>
-                  </div>
-                  <div className="px-6 py-5 space-y-2.5">
-                    <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <Calendar className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                      {event.date}
+          {previousEvents.length > 0 && (
+            <div>
+              <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-8 text-center">Previous Events</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                {previousEvents.map((event) => (
+                  <div key={event._id} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden">
+                    <div className="px-6 py-5 border-b border-neutral-100">
+                      <h3 className="font-semibold text-neutral-900 text-base leading-snug">{event.title}</h3>
                     </div>
-                    {event.time && (
+                    <div className="px-6 py-5 space-y-2.5">
                       <div className="flex items-center gap-2 text-sm text-neutral-600">
-                        <Clock className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                        {event.time}
+                        <Calendar className="h-4 w-4 text-neutral-400 flex-shrink-0" />
+                        {event.date}
                       </div>
-                    )}
-                    <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <MapPin className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                      {event.location}
+                      {event.time && (
+                        <div className="flex items-center gap-2 text-sm text-neutral-600">
+                          <Clock className="h-4 w-4 text-neutral-400 flex-shrink-0" />
+                          {event.time}
+                        </div>
+                      )}
+                      {event.location && (
+                        <div className="flex items-center gap-2 text-sm text-neutral-600">
+                          <MapPin className="h-4 w-4 text-neutral-400 flex-shrink-0" />
+                          {event.location}
+                        </div>
+                      )}
+                    </div>
+                    <div className="px-6 py-5 border-t border-neutral-100">
+                      {event.description && (
+                        <p className="text-sm text-neutral-500 leading-relaxed mb-4">
+                          {Array.isArray(event.description) ? event.description.join(' ') : event.description}
+                        </p>
+                      )}
+                      {event.link && (
+                        <a
+                          href={event.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005999] hover:text-[#004C82] transition-colors"
+                        >
+                          {event.linkText || 'Learn More'}
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      )}
                     </div>
                   </div>
-                  <div className="px-6 py-5 border-t border-neutral-100">
-                    <p className="text-sm text-neutral-500 leading-relaxed mb-4">{event.description}</p>
-                    {event.link && (
-                      <a
-                        href={event.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#005999] hover:text-[#004C82] transition-colors"
-                      >
-                        {event.linkText}
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="text-center">
             <p className="text-neutral-500 text-sm mb-5">Stay updated on all our events.</p>
