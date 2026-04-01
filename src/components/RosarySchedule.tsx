@@ -15,7 +15,8 @@ export default function RosarySchedule() {
         { day: 'Saturday', time: '8:00am' },
       ],
       parkingUrl:
-        'https://www.google.com/maps/search/?api=1&query=D-Lite+Healthy+On+The+Go+4141+N+32nd+St+Phoenix+AZ',
+        'https://maps.app.goo.gl/LXJMybJezkGgxw196',
+      parkingNote: 'Park in the lot next to the Shell station (not the front lot).',
     },
     {
       name: 'Planned Parenthood',
@@ -23,6 +24,7 @@ export default function RosarySchedule() {
       mapsQuery: 'Planned+Parenthood+4715+N+15th+Street+Phoenix+AZ',
       times: [{ day: 'Friday', time: '9:30am' }],
       parkingUrl: null,
+      parkingNote: null,
     },
   ];
 
@@ -79,15 +81,20 @@ export default function RosarySchedule() {
                     Get Directions
                   </a>
                   {location.parkingUrl && (
-                    <a
-                      href={location.parkingUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full text-neutral-600 hover:text-neutral-900 text-sm font-medium py-2.5 rounded-md border border-neutral-200 hover:border-neutral-300 transition-colors"
-                    >
-                      <MapPin className="h-4 w-4" />
-                      Parking
-                    </a>
+                    <div className="flex flex-col gap-1.5">
+                      <a
+                        href={location.parkingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full text-neutral-600 hover:text-neutral-900 text-sm font-medium py-2.5 rounded-md border border-neutral-200 hover:border-neutral-300 transition-colors"
+                      >
+                        <MapPin className="h-4 w-4" />
+                        Parking
+                      </a>
+                      {location.parkingNote && (
+                        <p className="text-xs text-neutral-400 text-center leading-snug">{location.parkingNote}</p>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
