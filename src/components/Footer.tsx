@@ -18,7 +18,7 @@ export default function Footer() {
               width={200} 
               height={56}
               className="h-10 w-auto mb-5"
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
+              style={{ imageRendering: '-webkit-optimize-contrast', filter: 'brightness(0) invert(1)' }}
             />
             <p className="text-white/75 text-sm leading-relaxed">
               A pro-life ministry dedicated to defending the sanctity of human life 
