@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-14">
           <div>
             <Image 
-              src="/logo-footer.png" 
+              src="/logo-white-text.png" 
               alt="Mercy for Life" 
               width={200} 
               height={56}
