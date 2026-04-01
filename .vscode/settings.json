@@ -431,6 +431,18 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && npx next build 2>&1 \\| tail -4 && git add -A && git commit -m \"Events: center all content and cards\" && git push origin main$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^npm run build && npm run export$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add src/components/Prayers\\.tsx && git commit -m \"Rename prayer title and remove heart icon\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add dedicated Rosaries page and nav tab\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
