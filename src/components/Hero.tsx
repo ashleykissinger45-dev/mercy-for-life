@@ -17,13 +17,9 @@ export default function Hero() {
       <div className="relative max-w-3xl mx-auto px-6 lg:px-8 py-32 md:py-44 text-center flex-1 flex flex-col items-center justify-center">
 
         {/* Eyebrow */}
-        <div className="flex items-center gap-3 justify-center mb-8">
-          <div className="h-px w-8 bg-white/30" />
-          <p className="text-[10.5px] tracking-[0.35em] uppercase text-white/60 font-medium">
+        <p className="text-[10.5px] tracking-[0.35em] uppercase text-white/60 font-medium mb-8">
             St. Thomas the Apostle &middot; Phoenix, AZ
           </p>
-          <div className="h-px w-8 bg-white/30" />
-        </div>
 
         <h1
           className="font-serif text-[2.75rem] md:text-[3.75rem] lg:text-[4.75rem] font-light text-white leading-[1.1] mb-7 tracking-tight"
