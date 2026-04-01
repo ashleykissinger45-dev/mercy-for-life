@@ -491,6 +491,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Remove all hardcoded fallbacks — Sanity is now single source of truth\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming events: single big banner or side-by-side grid for multiple\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
