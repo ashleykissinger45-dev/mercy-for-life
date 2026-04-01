@@ -11,7 +11,7 @@ export default function Prayers() {
         <div className="max-w-xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-10">
             <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-2">
-              Prayers from Our Ministry
+              Prayers Used in Our Ministry
             </h2>
             <p className="text-neutral-500 text-sm max-w-xl mx-auto">
               Prayers used by our group that you can read and pray along with from anywhere.
