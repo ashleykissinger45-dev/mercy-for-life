@@ -49,37 +49,39 @@ export default function Events() {
         <div className="absolute inset-0 bg-white/[0.93]" />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative space-y-20">
           {/* Upcoming Events */}
-          <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-8">Upcoming Events</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="text-center">
+            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-10">Upcoming Events</h2>
+            <div className="max-w-2xl mx-auto">
               {upcomingEvents.map((event, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden">
-                  <div className="px-6 py-5 border-b border-neutral-100">
-                    <h3 className="font-semibold text-neutral-900 text-base leading-snug">{event.title}</h3>
+                <div key={index} className="bg-white rounded-2xl shadow-md border border-neutral-100/60 overflow-hidden">
+                  {/* Date banner */}
+                  <div className="bg-[#005999] px-8 py-5 text-center">
+                    <p className="text-white/70 text-[10px] font-bold tracking-[0.25em] uppercase mb-1">Upcoming</p>
+                    <p className="text-white text-xl font-semibold">{event.date}</p>
                   </div>
-                  <div className="px-6 py-5 space-y-2.5">
-                    <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <Calendar className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                      {event.date}
+                  {/* Body */}
+                  <div className="px-8 py-8 text-center">
+                    <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7">
+                      {event.time && (
+                        <span className="flex items-center gap-2 text-sm text-neutral-600">
+                          <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                          {event.time}
+                        </span>
+                      )}
+                      <span className="flex items-center gap-2 text-sm text-neutral-600">
+                        <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                        {event.location}
+                      </span>
                     </div>
-                    {event.time && (
-                      <div className="flex items-center gap-2 text-sm text-neutral-600">
-                        <Clock className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                        {event.time}
-                      </div>
+                    <p className="text-sm text-neutral-500 leading-relaxed mb-6 whitespace-pre-line max-w-md mx-auto">{event.description}</p>
+                    {event.details && (
+                      <ul className="text-xs text-neutral-400 space-y-1 mb-2">
+                        {event.details.map((d, i) => (
+                          <li key={i}>{d}</li>
+                        ))}
+                      </ul>
                     )}
-                    <div className="flex items-center gap-2 text-sm text-neutral-600">
-                      <MapPin className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                      {event.location}
-                    </div>
-                  </div>
-                  <div className="px-6 py-5 border-t border-neutral-100">
-                    <p className="text-sm text-neutral-500 leading-relaxed mb-4 whitespace-pre-line">{event.description}</p>
-                    <ul className="text-xs text-neutral-500 space-y-1 mb-2">
-                      {event.details && event.details.map((d, i) => (
-                        <li key={i}>• {d}</li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               ))}
@@ -88,7 +90,7 @@ export default function Events() {
 
           {/* Previous Events */}
           <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-8">Previous Events</h2>
+            <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-8 text-center">Previous Events</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {previousEvents.map((event, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden">
