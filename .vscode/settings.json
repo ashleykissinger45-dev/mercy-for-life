@@ -487,6 +487,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add Sanity CMS: studio, schemas, and Sanity-powered components\" && git push 2>&1$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Remove all hardcoded fallbacks — Sanity is now single source of truth\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

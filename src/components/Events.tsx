@@ -1,9 +1,8 @@
 'use client';
 
-import { Calendar, Clock, ExternalLink } from 'lucide-react';
+import { Calendar, Clock, ExternalLink, MapPin } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import Link from 'next/link';
-import { MapPin, Clock as ClockIcon } from 'lucide-react';
 
 export type SanityEvent = {
   _id: string;
@@ -22,48 +21,6 @@ type Props = {
   upcomingEvents: SanityEvent[];
   previousEvents: SanityEvent[];
 };
-
-// LEGACY FALLBACK — replaced by Sanity data passed from page
-const _upcomingEvents = [
-  {
-    title: 'Good Friday Rosary',
-    date: 'April 3, 2026',
-    time: '11 AM',
-    location: 'Planned Parenthood, 5771 W. Eugie Ave, Glendale 85304',
-    description: [
-      'Pray for one hour at Planned Parenthood where babies are brought to die.',
-      'Join Bishop Emeritus Thomas J. Olmsted and hundreds of pro-lifers to pray for women about to have an abortion and those working in the industry.',
-      '\u201cCome follow me.\u201d — Matthew 4:19',
-    ],
-    details: [
-      'Park on public streets',
-      'Bring water and umbrellas for shade',
-    ],
-  },
-];
-
-const _previousEvents = [
-  {
-    title: '2026 AZ March For Life',
-    date: 'February 28th',
-    time: 'Starting at 10:00am',
-    location: 'Wesley Bolin Memorial Plaza',
-    description:
-      'Thank you to everyone who joined us at the 2026 March for Life! To see photos from the event, view our Instagram.',
-    link: 'https://www.instagram.com/stamercyforlife',
-    linkText: 'View Our Instagram',
-  },
-  {
-    title: '40 Days For Life 2026 Spring Campaign',
-    date: 'February 18th – March 29th',
-    time: '',
-    location: '4141 N. 32nd Street',
-    description:
-      'For the first time the Forty Days for Life Spring Campaign will include Camelback Family Planning — the abortion facility right in our back yard.',
-    link: 'http://www.40daysforlife.com/eastphoenix',
-    linkText: 'Sign Up Here',
-  },
-];
 
 export default function Events({ upcomingEvents, previousEvents }: Props) {
   return (

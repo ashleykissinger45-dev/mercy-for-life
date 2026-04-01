@@ -16,18 +16,6 @@ type Props = {
 };
 
 export default function Prayers({ prayers }: Props) {
-  // Fallback to hardcoded prayer if Sanity has none yet
-  const displayPrayers: SanityPrayer[] = prayers.length > 0 ? prayers : [
-    {
-      _id: 'fallback-1',
-      title: 'Daily Prayer to End Abortion',
-      description: 'A daily prayer committing to speak and act on behalf of the unborn, by Fr. Frank Pavone.',
-      author: 'Fr. Frank Pavone',
-      externalLink: 'https://www.priestsforlife.org/novenas/novena.aspx?id=10',
-      linkText: 'Read the Prayer',
-    },
-  ];
-
   return (
     <ScrollReveal>
       <section className="pt-12 pb-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -42,7 +30,7 @@ export default function Prayers({ prayers }: Props) {
             </p>
           </div>
           <div className="space-y-6">
-            {displayPrayers.map((prayer) => (
+            {prayers.map((prayer) => (
               <div key={prayer._id} className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8 text-center">
                 <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-4">
                   {prayer.title}

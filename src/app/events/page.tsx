@@ -13,12 +13,7 @@ const EVENTS_QUERY = `*[_type == "event"] | order(order asc) {
 }`;
 
 export default async function EventsPage() {
-  let allEvents: SanityEvent[] = [];
-  try {
-    allEvents = await sanityFetch<SanityEvent[]>({ query: EVENTS_QUERY });
-  } catch (e) {
-    // Sanity not yet configured — events will show empty state
-  }
+  const allEvents = await sanityFetch<SanityEvent[]>({ query: EVENTS_QUERY });
 
   const upcomingEvents = allEvents.filter((e) => e.status === 'upcoming');
   const previousEvents = allEvents.filter((e) => e.status === 'previous');
