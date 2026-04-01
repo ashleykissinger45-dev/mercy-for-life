@@ -13,12 +13,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-14">
           <div>
             <Image 
-              src="/logo-white-text.png" 
+              src="/logo-footer.png" 
               alt="Mercy for Life" 
               width={200} 
               height={56}
               className="h-10 w-auto mb-5"
-              style={{ imageRendering: '-webkit-optimize-contrast', filter: 'brightness(0) invert(1)' }}
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
             <p className="text-white/75 text-sm leading-relaxed">
               A pro-life ministry dedicated to defending the sanctity of human life 
