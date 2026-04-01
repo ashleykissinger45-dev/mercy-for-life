@@ -11,10 +11,10 @@ export default function GetInvolvedPage() {
     <>
       <PageHeader
         title="Get Involved"
-        subtitle="There are many ways to support our mission and make a difference for life. Every action counts."
+        subtitle="Sign up to stay connected, and find other ways to support our mission."
       />
-      <GetInvolved />
       <EmailSignup />
+      <GetInvolved />
     </>
   );
 }

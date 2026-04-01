@@ -47,7 +47,7 @@ export default function EmailSignup() {
 
   return (
     <ScrollReveal>
-      <section id="email-signup" className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section id="email-signup" className="pt-24 pb-12 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-white/[0.93]" />
         <div className="max-w-xl mx-auto px-6 lg:px-8 text-center relative">
         <div className="bg-white rounded-xl shadow-sm border border-neutral-100/60 p-8 md:p-10">
