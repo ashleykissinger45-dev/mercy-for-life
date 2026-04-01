@@ -11,7 +11,11 @@ const upcomingEvents = [
     date: 'April 3, 2026',
     time: '11 AM',
     location: 'Planned Parenthood, 5771 W. Eugie Ave, Glendale 85304',
-    description: 'Pray for one hour at Planned Parenthood where babies are brought to die.\nJoin Bishop Emeritus Thomas J. Olmsted and hundreds of pro-lifers to pray for women about to have an abortion and those working in the industry.\nCome follow me. Matthew 4:19',
+    description: [
+      'Pray for one hour at Planned Parenthood where babies are brought to die.',
+      'Join Bishop Emeritus Thomas J. Olmsted and hundreds of pro-lifers to pray for women about to have an abortion and those working in the industry.',
+      '\u201cCome follow me.\u201d — Matthew 4:19',
+    ],
     details: [
       'Park on public streets',
       'Bring water and umbrellas for shade',
@@ -74,13 +78,21 @@ export default function Events() {
                         {event.location}
                       </span>
                     </div>
-                    <p className="text-sm text-neutral-500 leading-relaxed mb-6 whitespace-pre-line max-w-md mx-auto">{event.description}</p>
+                    <div className="space-y-3 mb-7 max-w-md mx-auto">
+                      {(Array.isArray(event.description) ? event.description : [event.description]).map((line, i) => (
+                        <p key={i} className={`text-sm leading-relaxed ${
+                          i === (Array.isArray(event.description) ? event.description.length : 1) - 1
+                            ? 'text-[#005999] font-medium italic'
+                            : 'text-neutral-600'
+                        }`}>{line}</p>
+                      ))}
+                    </div>
                     {event.details && (
-                      <ul className="text-xs text-neutral-400 space-y-1 mb-2">
+                      <div className="inline-flex flex-col gap-1.5 bg-neutral-50 border border-neutral-100 rounded-lg px-5 py-3 text-xs text-neutral-500 mb-2">
                         {event.details.map((d, i) => (
-                          <li key={i}>{d}</li>
+                          <span key={i} className="flex items-center gap-2"><span className="text-[#005999]">·</span>{d}</span>
                         ))}
-                      </ul>
+                      </div>
                     )}
                   </div>
                 </div>
