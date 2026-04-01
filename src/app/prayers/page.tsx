@@ -1,17 +1,19 @@
 import PageHeader from '@/components/PageHeader';
 import Prayers from '@/components/Prayers';
+import RosarySchedule from '@/components/RosarySchedule';
 
 export const metadata = {
-  title: 'Prayers – Mercy for Life',
+  title: 'Rosaries & Prayers – Mercy for Life',
 };
 
 export default function PrayersPage() {
   return (
     <>
       <PageHeader
-        title="Prayers"
-        subtitle="A collection of prayers we use in our ministry. Click any prayer to read or pray along."
+        title="Rosaries & Prayers"
+        subtitle="Join us each week to pray the Rosary outside abortion facilities, and pray along with our daily prayer to end abortion."
       />
+      <RosarySchedule />
       <Prayers />
     </>
   );
