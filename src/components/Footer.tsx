@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/60 mb-5">Navigation</h4>
+            <h4 className="font-serif text-base font-semibold text-white mb-5">Navigation</h4>
             <ul className="space-y-3">
               {[
                 { label: 'Prayers', href: '/prayers' },
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-medium tracking-[0.25em] uppercase text-white/60 mb-5">Connect</h4>
+            <h4 className="font-serif text-base font-semibold text-white mb-5">Connect</h4>
             <div className="space-y-4">
               <a
                 href="mailto:mercyforlife@staphx.org"
