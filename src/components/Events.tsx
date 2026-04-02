@@ -36,7 +36,7 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                 <p className="text-neutral-400 text-sm">No upcoming events at this time. Check back soon!</p>
               </div>
             ) : (
-              <div className={upcomingEvents.length === 1 ? 'max-w-2xl mx-auto' : 'flex flex-col gap-6'}>
+              <div className={`max-w-xl mx-auto w-full ${upcomingEvents.length > 1 ? 'flex flex-col gap-6' : ''}`}>
                 {upcomingEvents.map((event) => (
                   <div key={event._id} className="bg-white rounded-2xl shadow-md border border-neutral-100/60 overflow-hidden">
                     <div className="bg-[#005999] px-8 py-5 text-center">

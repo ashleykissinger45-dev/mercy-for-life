@@ -519,6 +519,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Remove dot pattern from Our Vision box\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming event cards: narrower max-width\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
