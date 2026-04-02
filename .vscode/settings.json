@@ -507,6 +507,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Events: previous events stacked full-width cards\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming events: stack multiple cards instead of side-by-side\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
