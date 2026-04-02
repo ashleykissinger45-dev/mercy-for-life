@@ -531,6 +531,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming events: 1 card = centered, multiple = side-by-side grid\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: clean stacked time/location layout\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

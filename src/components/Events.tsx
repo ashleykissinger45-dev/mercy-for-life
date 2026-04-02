@@ -45,20 +45,22 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                     </div>
                     <div className="px-8 py-8 text-center">
                       <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7">
-                        {event.time && (
-                          <span className="flex items-center gap-2 text-sm text-neutral-600">
-                            <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
-                            {event.time}
-                          </span>
-                        )}
-                        {event.location && (
-                          <span className="flex items-center gap-2 text-sm text-neutral-600">
-                            <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0" />
-                            {event.location}
-                          </span>
-                        )}
-                      </div>
+                      {(event.time || event.location) && (
+                        <div className="inline-flex flex-col gap-2 mb-7 text-left">
+                          {event.time && (
+                            <span className="flex items-center gap-2 text-sm text-neutral-600">
+                              <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                              {event.time}
+                            </span>
+                          )}
+                          {event.location && (
+                            <span className="flex items-center gap-2 text-sm text-neutral-600">
+                              <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                              {event.location}
+                            </span>
+                          )}
+                        </div>
+                      )}
                       {event.description && event.description.length > 0 && (
                         <div className="space-y-3 mb-7 max-w-md mx-auto">
                           {event.description.map((line, i) => (
