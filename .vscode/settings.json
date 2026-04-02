@@ -555,6 +555,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: remove mt offset, identical icon alignment\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"About: remove underline, use brand blue for church link\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
