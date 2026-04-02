@@ -46,7 +46,7 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                     <div className="px-8 py-8 text-center">
                       <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
                       {(event.time || event.location) && (
-                        <div className="flex flex-col gap-2 text-left mb-7">
+                        <div className={`flex flex-col gap-2 mb-7 ${upcomingEvents.length === 1 ? 'w-fit mx-auto text-left' : 'text-left'}`}>
                           {event.time && (
                             <span className="flex items-center gap-2 text-sm text-neutral-600">
                               <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
