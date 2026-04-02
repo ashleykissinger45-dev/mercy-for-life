@@ -575,6 +575,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: location icon gap-0\\.5\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: location icon gap 3px inline style\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
