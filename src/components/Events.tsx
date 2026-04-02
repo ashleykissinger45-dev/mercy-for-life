@@ -54,8 +54,8 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                             </span>
                           )}
                           {event.location && (
-                            <span className="flex items-start text-sm text-neutral-600" style={{ gap: '0px' }}>
-                              <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0 mt-0.5 -mr-0.5" />
+                            <span className="flex items-center gap-2 text-sm text-neutral-600">
+                              <MapPin className="h-3.5 w-3.5 text-[#005999] flex-shrink-0" />
                               {event.location}
                             </span>
                           )}
