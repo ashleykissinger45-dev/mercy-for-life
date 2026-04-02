@@ -37,17 +37,20 @@ export default function Navigation() {
       <div className="w-full px-6 lg:px-12 h-full">
         <div className="flex items-center justify-between h-full">
 
-          {/* CTA - left on desktop */}
-          <div className="hidden md:flex flex-shrink-0">
-            <Link
-              href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-all duration-150 shadow-sm hover:shadow-md hover:-translate-y-px"
-            >
-              Contact Us
-            </Link>
-          </div>
+          {/* Logo - left */}
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/Transparent logo (use).png"
+              alt="Mercy for Life"
+              width={200}
+              height={56}
+              className="h-10 w-auto"
+              priority
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
+            />
+          </Link>
 
-          {/* Mobile burger - left */}
+          {/* Mobile burger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
@@ -76,18 +79,15 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Logo - right */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/Transparent logo (use).png"
-              alt="Mercy for Life"
-              width={200}
-              height={56}
-              className="h-10 w-auto"
-              priority
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
-            />
-          </Link>
+          {/* CTA - right */}
+          <div className="hidden md:flex flex-shrink-0">
+            <Link
+              href="/contact"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-all duration-150 shadow-sm hover:shadow-md hover:-translate-y-px"
+            >
+              Contact Us
+            </Link>
+          </div>
 
         </div>
       </div>
