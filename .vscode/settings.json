@@ -495,6 +495,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming events: single big banner or side-by-side grid for multiple\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Rosary cards: bigger side-by-side grid with full-width buttons\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
