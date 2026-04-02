@@ -35,13 +35,13 @@ export default function RosarySchedule({ locations, whatToBring }: Props) {
               Every week we gather peacefully outside local abortion facilities to pray the Rosary for mothers, their babies, and those working inside.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6">
             {locations.map((location, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden flex flex-col"
+                className="bg-white rounded-xl shadow-sm border border-neutral-100/60 overflow-hidden"
               >
-                <div className="px-8 py-7 flex-1">
+                <div className="px-8 py-7">
                   <h3 className="font-semibold text-neutral-900 text-lg mb-1">{location.name}</h3>
                   <p className="text-neutral-400 text-sm flex items-center gap-1.5 mb-6">
                     <MapPin className="h-3.5 w-3.5 shrink-0" />

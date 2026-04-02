@@ -499,6 +499,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Rosary cards: bigger side-by-side grid with full-width buttons\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Rosary cards: stacked full-width layout with bigger cards\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
