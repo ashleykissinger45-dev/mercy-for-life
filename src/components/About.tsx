@@ -3,6 +3,10 @@
 import { Church, Users, BookOpen } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
+type Props = {
+  churchUrl?: string | null;
+};
+
 const highlights = [
   {
     icon: Church,
@@ -24,7 +28,7 @@ const highlights = [
   },
 ];
 
-export default function About() {
+export default function About({ churchUrl }: Props = {}) {
   return (
     <ScrollReveal>
       <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -41,7 +45,11 @@ export default function About() {
               <div className="space-y-5 text-neutral-600 leading-relaxed text-[15px]">
                 <p>
                   Mercy for Life is a pro-life ministry affiliated with{' '}
-                  <strong className="text-neutral-900 font-semibold">St. Thomas the Apostle Church</strong> in Phoenix, Arizona.
+                  {churchUrl ? (
+                    <a href={churchUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-neutral-900 underline underline-offset-2 hover:text-[#005999] transition-colors">St. Thomas the Apostle Church</a>
+                  ) : (
+                    <strong className="text-neutral-900 font-semibold">St. Thomas the Apostle Church</strong>
+                  )}{' '}in Phoenix, Arizona.
                   We are a community of faithful Catholics and friends united in our commitment to defend
                   and celebrate the gift of human life.
                 </p>

@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { sanityFetch } from "@/lib/sanity";
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"],
@@ -31,11 +32,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const settings = await sanityFetch<{ churchUrl?: string | null }>({
+    query: `*[_type == "siteSettings"][0]{ churchUrl }`,
+    revalidate: 3600,
+  });
+
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${cormorant.variable} font-sans bg-white text-neutral-900`}>
@@ -43,7 +49,7 @@ export default function RootLayout({
         <main className="min-h-screen pt-[76px]">
           {children}
         </main>
-        <Footer />
+        <Footer churchUrl={settings?.churchUrl} />
       </body>
     </html>
   );

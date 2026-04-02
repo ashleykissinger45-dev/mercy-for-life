@@ -1,10 +1,14 @@
 'use client';
 
-import { Mail } from 'lucide-react';
+import { Mail, Globe } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Footer() {
+type Props = {
+  churchUrl?: string | null;
+};
+
+export default function Footer({ churchUrl }: Props = {}) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -68,6 +72,17 @@ export default function Footer() {
                 </svg>
                 @stamercyforlife
               </a>
+              {churchUrl && (
+                <a
+                  href={churchUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  <Globe className="h-4 w-4" />
+                  St. Thomas the Apostle
+                </a>
+              )}
             </div>
           </div>
         </div>

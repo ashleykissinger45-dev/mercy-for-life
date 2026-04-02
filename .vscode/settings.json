@@ -511,6 +511,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming events: stack multiple cards instead of side-by-side\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add parish website URL: Sanity field, footer link, About hyperlink\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

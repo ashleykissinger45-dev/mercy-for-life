@@ -44,6 +44,12 @@ export const siteSettingsSchema = defineType({
       type: 'string',
       description: 'Optional site-wide announcement (leave blank to hide)',
     }),
+    defineField({
+      name: 'churchUrl',
+      title: 'Parish Website URL',
+      type: 'url',
+      description: 'St. Thomas the Apostle Church website (e.g. https://staphx.org)',
+    }),
   ],
   preview: {
     prepare() {
