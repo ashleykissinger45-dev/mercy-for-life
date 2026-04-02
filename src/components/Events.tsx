@@ -46,19 +46,21 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                     <div className="px-8 py-8 text-center">
                       <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
                       {(event.time || event.location) && (
-                        <div className="inline-flex flex-col gap-2 mb-7 text-left mx-auto">
-                          {event.time && (
-                            <span className="flex items-center gap-2 text-sm text-neutral-600">
-                              <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
-                              {event.time}
-                            </span>
-                          )}
-                          {event.location && (
-                            <span className="flex items-start gap-2 text-sm text-neutral-600">
-                              <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0 mt-[2px]" />
-                              {event.location}
-                            </span>
-                          )}
+                        <div className="flex justify-center mb-7">
+                          <div className="flex flex-col gap-2">
+                            {event.time && (
+                              <span className="flex items-center gap-2 text-sm text-neutral-600">
+                                <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                                {event.time}
+                              </span>
+                            )}
+                            {event.location && (
+                              <span className="flex items-start gap-2 text-sm text-neutral-600">
+                                <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0 mt-[2px]" />
+                                {event.location}
+                              </span>
+                            )}
+                          </div>
                         </div>
                       )}
                       {event.description && event.description.length > 0 && (

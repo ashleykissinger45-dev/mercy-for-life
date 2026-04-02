@@ -595,6 +595,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: inline-flex block centered, icons stay with text\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: flex justify-center wrapper to center icon block\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
