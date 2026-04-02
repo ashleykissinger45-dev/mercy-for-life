@@ -503,6 +503,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Rosary cards: stacked full-width layout with bigger cards\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Events: previous events stacked full-width cards\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
