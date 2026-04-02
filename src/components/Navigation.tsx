@@ -37,20 +37,26 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
 
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/Transparent logo (use).png"
-              alt="Mercy for Life"
-              width={200}
-              height={56}
-              className="h-10 w-auto"
-              priority
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
-            />
-          </Link>
+          {/* CTA - left on desktop */}
+          <div className="hidden md:flex flex-shrink-0">
+            <Link
+              href="/contact"
+              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-all duration-150 shadow-sm hover:shadow-md hover:-translate-y-px"
+            >
+              Contact Us
+            </Link>
+          </div>
 
-          {/* Nav links */}
+          {/* Mobile burger - left */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+
+          {/* Nav links - center */}
           <div className="hidden md:flex items-center gap-7 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
@@ -70,24 +76,19 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:flex flex-shrink-0">
-            <Link
-              href="/contact"
-              className="text-[11.5px] font-bold tracking-[0.1em] uppercase px-6 py-2.5 rounded-md bg-[#005999] text-white hover:bg-[#004C82] transition-all duration-150 shadow-sm hover:shadow-md hover:-translate-y-px"
-            >
-              Contact Us
-            </Link>
-          </div>
+          {/* Logo - right */}
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/Transparent logo (use).png"
+              alt="Mercy for Life"
+              width={200}
+              height={56}
+              className="h-10 w-auto"
+              priority
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
+            />
+          </Link>
 
-          {/* Mobile burger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
         </div>
       </div>
 
