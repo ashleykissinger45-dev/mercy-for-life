@@ -515,6 +515,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Add parish website URL: Sanity field, footer link, About hyperlink\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Remove dot pattern from Our Vision box\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

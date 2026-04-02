@@ -59,7 +59,6 @@ export default function Mission() {
           </div>
 
           <div className="mt-16 relative overflow-hidden bg-[#005999] rounded-2xl p-10 md:p-14 text-center shadow-xl">
-            <div className="absolute inset-0 opacity-[0.09]" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
             <div className="relative">
               <h3 className="font-serif text-2xl md:text-[1.85rem] font-light text-white mb-5">Our Vision</h3>
               <p className="text-white/75 max-w-2xl mx-auto leading-relaxed text-[15px]">
