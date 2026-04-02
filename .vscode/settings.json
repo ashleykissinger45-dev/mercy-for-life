@@ -547,6 +547,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Fix location icon alignment for wrapped text\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Layout: lower churchUrl revalidate to 60s so footer updates consistently\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

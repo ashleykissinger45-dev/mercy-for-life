@@ -39,7 +39,7 @@ export default async function RootLayout({
 }>) {
   const settings = await sanityFetch<{ churchUrl?: string | null }>({
     query: `*[_type == "siteSettings"][0]{ churchUrl }`,
-    revalidate: 3600,
+    revalidate: 60,
   });
 
   return (
