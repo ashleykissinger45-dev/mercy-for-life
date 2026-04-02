@@ -535,6 +535,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: clean stacked time/location layout\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: center time/location block\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
