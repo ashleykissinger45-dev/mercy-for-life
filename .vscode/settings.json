@@ -559,6 +559,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"About: remove underline, use brand blue for church link\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: tighten gap between location icon and text\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
