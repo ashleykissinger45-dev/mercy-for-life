@@ -591,6 +591,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: match location icon size/spacing to time icon\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: inline-flex block centered, icons stay with text\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
