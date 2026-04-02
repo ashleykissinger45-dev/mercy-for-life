@@ -46,7 +46,7 @@ export default function About({ churchUrl }: Props = {}) {
                 <p>
                   Mercy for Life is a pro-life ministry affiliated with{' '}
                   {churchUrl ? (
-                    <a href={churchUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#005999] hover:text-[#004C82] transition-colors">St. Thomas the Apostle Church</a>
+                    <a href={churchUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#005999] hover:text-[#004C82] transition-colors underline decoration-1 decoration-[#005999]/50 underline-offset-2">St. Thomas the Apostle Church</a>
                   ) : (
                     <strong className="text-neutral-900 font-semibold">St. Thomas the Apostle Church</strong>
                   )}{' '}in Phoenix, Arizona.
