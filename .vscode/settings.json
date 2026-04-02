@@ -567,6 +567,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: pin location icon to top of wrapped text\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: tighter gap between location icon and text\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
