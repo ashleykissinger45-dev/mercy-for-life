@@ -551,6 +551,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Layout: lower churchUrl revalidate to 60s so footer updates consistently\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Event cards: remove mt offset, identical icon alignment\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
