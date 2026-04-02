@@ -34,7 +34,7 @@ export default function Navigation() {
     <nav className={`bg-white fixed w-full top-0 z-50 h-[76px] transition-shadow duration-300 ${
       scrolled ? 'shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : 'shadow-[0_1px_0_0_rgba(0,0,0,0.04)]'
     }`}>
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 h-full">
+      <div className="w-full px-6 lg:px-12 h-full">
         <div className="flex items-center justify-between h-full">
 
           {/* CTA - left on desktop */}
