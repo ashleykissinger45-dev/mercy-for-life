@@ -523,6 +523,10 @@
         "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming event cards: narrower max-width\" && git push$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Mercy for Life\" && git add -A && git commit -m \"Upcoming event cards: slightly wider at 620px\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
