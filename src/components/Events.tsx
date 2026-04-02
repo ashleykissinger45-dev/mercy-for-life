@@ -48,8 +48,8 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                       {(event.time || event.location) && (
                         <div className="flex flex-col items-center gap-2 mb-7">
                           {event.time && (
-                            <span className="flex items-center gap-2 text-sm text-neutral-600">
-                              <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                            <span className="flex items-start gap-2 text-sm text-neutral-600">
+                              <Clock className="h-4 w-4 text-[#005999] flex-shrink-0 mt-0.5" />
                               {event.time}
                             </span>
                           )}
