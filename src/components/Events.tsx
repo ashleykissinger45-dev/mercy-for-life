@@ -49,14 +49,14 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                         <div className="flex justify-center mb-7">
                           <div className="flex flex-col gap-2">
                             {event.time && (
-                              <span className="flex items-center gap-2 text-sm text-neutral-600">
-                                <Clock className="h-4 w-4 text-[#005999] flex-shrink-0" />
+                              <span className="flex items-start gap-2 text-sm text-neutral-600">
+                                <Clock className="h-4 w-4 text-[#005999] flex-shrink-0 mt-[3px]" />
                                 {event.time}
                               </span>
                             )}
                             {event.location && (
                               <span className="flex items-start gap-2 text-sm text-neutral-600">
-                                <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0 mt-[2px]" />
+                                <MapPin className="h-4 w-4 text-[#005999] flex-shrink-0 mt-[3px]" />
                                 {event.location}
                               </span>
                             )}
