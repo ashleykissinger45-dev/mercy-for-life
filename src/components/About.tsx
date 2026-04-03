@@ -31,8 +31,7 @@ const highlights = [
 export default function About({ churchUrl }: Props = {}) {
   return (
     <ScrollReveal>
-      <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-white/[0.93]" />
+      <section className="py-24 relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
