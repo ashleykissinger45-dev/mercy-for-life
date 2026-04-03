@@ -105,6 +105,4 @@ export const eventSchema = defineType({
       };
     },
   },
-    },
-  },
 });
