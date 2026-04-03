@@ -100,14 +100,18 @@ export const eventSchema = defineType({
   preview: {
     select: {
       title: 'title',
-      subtitle: 'date',
-      status: 'status',
+      subtitle: 'dateISO',
     },
-    prepare({ title, subtitle, status }) {
+    prepare({ title, subtitle }: { title: string; subtitle?: string }) {
+      const today = new Date().toISOString().split('T')[0];
+      const isUpcoming = subtitle ? subtitle >= today : false;
+      const display = subtitle ? new Date(subtitle + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '';
       return {
         title,
-        subtitle: `${status === 'upcoming' ? '🟢 Upcoming' : '⚫ Previous'} · ${subtitle}`,
+        subtitle: `${isUpcoming ? '🟢 Upcoming' : '⚫ Previous'} · ${display}`,
       };
+    },
+  },
     },
   },
 });
