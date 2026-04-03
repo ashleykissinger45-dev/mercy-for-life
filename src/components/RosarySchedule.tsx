@@ -24,7 +24,8 @@ export default function RosarySchedule({ locations, whatToBring }: Props) {
 
   return (
     <ScrollReveal>
-      <section className="pt-24 pb-12 relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="pt-24 pb-12 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-white/[0.93]" />
         
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-10">
