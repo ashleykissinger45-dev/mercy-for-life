@@ -9,14 +9,22 @@ export const metadata = {
 export const revalidate = 60;
 
 const EVENTS_QUERY = `*[_type == "event"] | order(order asc) {
-  _id, title, status, date, time, location, description, details, directionsUrl, link, linkText
+  _id, title, status, dateISO, date, time, location, description, details, directionsUrl, link, linkText
 }`;
 
 export default async function EventsPage() {
   const allEvents = await sanityFetch<SanityEvent[]>({ query: EVENTS_QUERY });
 
-  const upcomingEvents = allEvents.filter((e) => e.status === 'upcoming');
-  const previousEvents = allEvents.filter((e) => e.status === 'previous');
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const isUpcoming = (e: SanityEvent) => {
+    if (e.dateISO) return new Date(e.dateISO) >= today;
+    return e.status === 'upcoming';
+  };
+
+  const upcomingEvents = allEvents.filter(isUpcoming);
+  const previousEvents = allEvents.filter((e) => !isUpcoming(e));
 
   return (
     <>

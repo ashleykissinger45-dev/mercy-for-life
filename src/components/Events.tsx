@@ -8,6 +8,7 @@ export type SanityEvent = {
   _id: string;
   title: string;
   status: 'upcoming' | 'previous';
+  dateISO?: string;
   date: string;
   time?: string;
   location?: string;
