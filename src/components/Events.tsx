@@ -26,7 +26,7 @@ type Props = {
 export default function Events({ upcomingEvents, previousEvents }: Props) {
   return (
     <ScrollReveal>
-      <section className="py-24 relative" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="py-24 relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-white/[0.93]" />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative space-y-20">
           {/* Upcoming Events */}

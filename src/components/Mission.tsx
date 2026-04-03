@@ -29,7 +29,7 @@ export default function Mission() {
 
   return (
     <ScrollReveal>
-      <section className="py-28 relative overflow-hidden" style={{ backgroundImage: 'url(/pic2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="py-28 relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.97] via-white/[0.93] to-white/[0.97]" />
         <div className="max-w-5xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-16">
