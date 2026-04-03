@@ -8,6 +8,7 @@ export type SanityEvent = {
   _id: string;
   title: string;
   dateISO: string;
+  displayDate?: string;
   time?: string;
   location?: string;
   description?: string[];
@@ -45,7 +46,7 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                   <div key={event._id} className="bg-white rounded-2xl shadow-md border border-neutral-100/60 overflow-hidden">
                     <div className="bg-[#005999] px-8 py-5 text-center">
                       <p className="text-white/70 text-[10px] font-bold tracking-[0.25em] uppercase mb-1">Upcoming</p>
-                      <p className="text-white text-xl font-semibold">{formatDate(event.dateISO)}</p>
+                      <p className="text-white text-xl font-semibold">{event.displayDate || formatDate(event.dateISO)}</p>
                     </div>
                     <div className="px-8 py-8 text-center">
                       <h3 className="font-serif text-2xl font-light text-neutral-900 mb-5">{event.title}</h3>
@@ -115,7 +116,7 @@ export default function Events({ upcomingEvents, previousEvents }: Props) {
                       <div className="flex flex-wrap gap-x-6 gap-y-2 mb-4">
                         <div className="flex items-center gap-2 text-sm text-neutral-600">
                           <Calendar className="h-4 w-4 text-neutral-400 flex-shrink-0" />
-                          {formatDate(event.dateISO)}
+                          {event.displayDate || formatDate(event.dateISO)}
                         </div>
                         {event.time && (
                           <div className="flex items-center gap-2 text-sm text-neutral-600">

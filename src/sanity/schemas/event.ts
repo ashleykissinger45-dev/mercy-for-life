@@ -12,26 +12,17 @@ export const eventSchema = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'status',
-      title: 'Status (fallback)',
-      type: 'string',
-      description: 'Only used if no Event Date is set above. The site auto-determines upcoming vs previous from the date.',
-      options: {
-        list: [
-          { title: 'Upcoming', value: 'upcoming' },
-          { title: 'Previous', value: 'previous' },
-        ],
-        layout: 'radio',
-      },
-      initialValue: 'upcoming',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'dateISO',
       title: 'Event Date',
       type: 'date',
-      description: 'The event date — displayed on the site and used to auto-determine upcoming vs previous',
+      description: 'Start date — used to auto-determine upcoming vs previous. For a range, set this to the start date.',
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'displayDate',
+      title: 'Display Date (optional override)',
+      type: 'string',
+      description: 'Leave blank for a single date. For a range, type it here — e.g. "February 18 – March 29, 2026"',
     }),
     defineField({
       name: 'time',
