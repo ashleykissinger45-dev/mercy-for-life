@@ -19,7 +19,7 @@ export default function Prayers({ prayers }: Props) {
   return (
     <ScrollReveal>
       <section className="pt-12 pb-24 relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-white/[0.93]" />
+        
         <div className="max-w-xl mx-auto px-6 lg:px-8 relative">
           <div className="text-center mb-10">
             <h2 className="font-serif text-2xl md:text-3xl font-light text-neutral-900 mb-2">

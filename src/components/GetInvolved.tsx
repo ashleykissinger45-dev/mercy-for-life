@@ -27,7 +27,7 @@ export default function GetInvolved() {
   return (
     <ScrollReveal>
       <section className="pt-0 pb-24 relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-white/[0.93]" />
+        
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative">
           <p className="text-center text-[11px] font-medium tracking-[0.25em] uppercase text-neutral-400 mb-8">Other Ways to Help</p>
           <div className="grid md:grid-cols-2 gap-6">
