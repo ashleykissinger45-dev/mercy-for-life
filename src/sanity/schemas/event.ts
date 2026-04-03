@@ -58,6 +58,12 @@ export const eventSchema = defineType({
       description: 'Bullet points shown in the details box (e.g. parking info, what to bring)',
     }),
     defineField({
+      name: 'directionsUrl',
+      title: 'Directions URL',
+      type: 'url',
+      description: 'Google Maps or other directions link for upcoming events',
+    }),
+    defineField({
       name: 'link',
       title: 'External Link URL',
       type: 'url',

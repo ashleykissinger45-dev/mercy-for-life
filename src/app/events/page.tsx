@@ -9,7 +9,7 @@ export const metadata = {
 export const revalidate = 60;
 
 const EVENTS_QUERY = `*[_type == "event"] | order(order asc) {
-  _id, title, status, date, time, location, description, details, link, linkText
+  _id, title, status, date, time, location, description, details, directionsUrl, link, linkText
 }`;
 
 export default async function EventsPage() {
