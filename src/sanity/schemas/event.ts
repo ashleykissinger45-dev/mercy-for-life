@@ -30,14 +30,7 @@ export const eventSchema = defineType({
       name: 'dateISO',
       title: 'Event Date',
       type: 'date',
-      description: 'Pick the actual date — used to auto-determine upcoming vs previous',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'date',
-      title: 'Display Date',
-      type: 'string',
-      description: 'How the date appears on the site, e.g. "April 3, 2026" or "Feb 28th – Mar 29th"',
+      description: 'The event date — displayed on the site and used to auto-determine upcoming vs previous',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
