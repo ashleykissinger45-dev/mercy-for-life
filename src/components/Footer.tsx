@@ -12,9 +12,8 @@ export default function Footer({ churchUrl }: Props = {}) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
-      <div className="absolute inset-0 bg-[#005999]/90" />
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16 relative">
+    <footer className="bg-[#005999]">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-14">
           <div>
             <Image 

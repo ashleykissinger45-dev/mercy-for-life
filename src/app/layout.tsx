@@ -49,6 +49,7 @@ export default async function RootLayout({
         <main className="min-h-screen pt-[76px]">
           {children}
         </main>
+        <div className="h-48" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <Footer churchUrl={settings?.churchUrl} />
       </body>
     </html>
